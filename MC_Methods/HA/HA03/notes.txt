@@ -1,0 +1,7 @@
+Knowledge concerning the physics of the fission process is summarized in various nuclear data libraries such as JEFF, ENDF, or ENSDF. JEFF and ENDF list the cross sections of a wide range of nuclear reactions as well as the fission yields. ENSDF, on the other hand, is primarily concerned with nuclear structural data.
+
+The process of a neutron colliding with a nucleus is known as nuclear fission. The nucleus fractures into smaller pieces, and a little quantity of mass is "left behind" and released as energy.
+
+Each uranium-235 (U-235) atom has 92 protons and 143 neutrons, for a total of 235. The particle arrangement within uranium-235 is somewhat unstable, and the nucleus can dissolve if energized by an outside source. When a U-235 nucleus absorbs an additional neutron, it swiftly splits into two halves. This is known as fission. When a U-235 nucleus divides, two or three neutrons are released. As a result, the chance of starting a chain reaction exists.
+
+Assumption total macroscopic cross section is constant along the flight in between the two collisions.

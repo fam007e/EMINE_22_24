@@ -1,0 +1,12 @@
+Instructions:
+1-  Choose an event or incident that you would like to study closer
+2-  Discuss the event and explain operational and accident conditions during the event, why and where the defense-in-depth breached, and what safety objectives should be considered for the event.
+3- Discuss different concepts of nuclear power safety talked about during the course and explain how they are relevant to the event.
+4- Consider that you are in charge of the safety assessments of the unit, discuss types of safety analysis that you can do, DSA, PSA, BE, BEPU, and Conservative, and which acceptance criteria should be used for it.
+
+
+
+
+
+
+

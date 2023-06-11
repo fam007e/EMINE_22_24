@@ -1,0 +1,18 @@
+(a) To derive an equation for finding lambda max, we can start with Planck's spectral distribution formula:
+B(lambda, T) = (2hc^2 / lambda^5) * (1 / (e^(hc / (lambdakT)) - 1))
+where h is the Planck constant, c is the speed of light, k is the Boltzmann constant, and T is the temperature.
+To find lambda max, we can take the derivative of B(lambda, T) with respect to lambda and set it equal to 0:
+d/dlambda[B(lambda, T)] = 0
+Solving for lambda, we get:
+lambda = (hc / kT) * ln(2hc^3 / (lambda^5 * kT * (e^(hc / (lambdakT)) - 1)))
+This is an equation that allows us to find lambda max for a given temperature T.
+
+(b) A substitution that can transform this equation into a compact form is to define a new variable x = hc / (kT*lambda). Then, we can rewrite the equation as:
+x = ln(2 / (x^5 * (e^x - 1)))
+This is a compact transcendental equation that can be solved for x.
+
+(c) To find the solutions (roots) of this equation, we can use a numerical root finding method such as the bisection method or Newton-Raphson method.
+
+(d) To give an analytic expression for Wien's displacement constant b and calculate its numerical value, we can use the relationship between b and lambda max:
+b = lambda max * k
+Substituting the expression for lambda max that we derived in (a) and using the values of the physical constants from the NIST Reference on Constants, we can calculate the value of b.

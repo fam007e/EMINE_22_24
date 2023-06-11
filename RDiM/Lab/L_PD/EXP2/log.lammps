@@ -1,0 +1,304 @@
+LAMMPS (11 Nov 2013)
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+# Input file for vacancy formation energy in Fe
+# E. Mansouri, 2022
+# KTH, Nuclear Engineering
+# ebrman@kth.se
+
+# ---------- Initioalisation ---------------
+
+clear
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+units 		metal
+dimension	3
+boundary	p  p  p
+atom_style	atomic
+atom_style atomic
+atom_modify map array
+
+# ----------- Lattice  Defenition ---------------
+
+variable ao equal 2.855			#Fe equilibrium lattice parameter (from previous exercise!)
+
+lattice	bcc ${ao}
+lattice	bcc 2.8549999999999999822
+Lattice spacing in x,y,z = 2.855 2.855 2.855
+region	simbox block 0 10  0 10  0 10	#supercell dimentions
+create_box 1 simbox
+Created orthogonal box = (0 0 0) to (28.55 28.55 28.55)
+  1 by 1 by 1 MPI processor grid
+
+lattice bcc ${ao} orient x 1 0 0  orient y 0 1 0  orient z 0 0 1
+lattice bcc 2.8549999999999999822 orient x 1 0 0  orient y 0 1 0  orient z 0 0 1
+Lattice spacing in x,y,z = 2.855 2.855 2.855
+create_atoms 1 region simbox
+Created 2000 atoms
+
+# ---------- Define Interatomic Potential --------
+
+pair_style hybrid/overlay eam/alloy eam/fs
+pair_coeff * * eam/alloy ../potentials/FeCr_d.eam.alloy Fe
+pair_coeff * * eam/fs ../potentials/FeCr_s.eam.fs Fe
+
+neighbor 0.3 bin
+neigh_modify  delay  1
+
+# ---------- Define Settings ---------------------
+
+compute csym all centro/atom bcc
+compute eng all pe/atom
+compute eatoms all reduce sum c_eng
+
+# ---------- 1st: Run Energy Minimization ---------
+
+reset_timestep	0
+thermo 10
+thermo_style custom step pe lx ly lz press c_eatoms
+
+dump 1 all custom 200 dump.relax.1.* id type xs ys zs c_csym c_eng
+
+min_style cg
+minimize 1e-20 1e-20 5000 5000
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Memory usage per processor = 5.12946 Mbytes
+Step PotEng Lx Ly Lz Press eatoms 
+       0   -8244.8687        28.55        28.55        28.55    606.57679   -8244.8687 
+       1   -8244.8687        28.55        28.55        28.55    606.57679   -8244.8687 
+Loop time of 0.0459199 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 2000 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -8244.86869887     -8244.86869887     -8244.86869887
+  Force two-norm initial, final = 6.88278e-13 6.88278e-13
+  Force max component initial, final = 1.9082e-14 1.9082e-14
+  Final line search alpha, max atom move = 0.5 9.54098e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.032373 (70.4987)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 6.17504e-05 (0.134474)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.0134852 (29.3668)
+
+Nlocal:    2000 ave 2000 max 2000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    2941 ave 2941 max 2941 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    58000 ave 58000 max 58000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  116000 ave 116000 max 116000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 116000
+Ave neighs/atom = 58
+Neighbor list builds = 0
+Dangerous builds = 0
+
+run 0
+WARNING: No fixes defined, atoms won't move (../verlet.cpp:54)
+Memory usage per processor = 4.44274 Mbytes
+Step PotEng Lx Ly Lz Press eatoms 
+       1   -8244.8687        28.55        28.55        28.55    606.57679   -8244.8687 
+Loop time of 0 on 1 procs (1 MPI x 1 OpenMP) for 0 steps with 2000 atoms
+
+Pair  time (%) = 0 (0)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 0 (0)
+Outpt time (%) = 0 (0)
+Other time (%) = 0 (0)
+
+Nlocal:    2000 ave 2000 max 2000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    2941 ave 2941 max 2941 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    58000 ave 58000 max 58000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  116000 ave 116000 max 116000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 116000
+Ave neighs/atom = 58
+Neighbor list builds = 0
+Dangerous builds = 0
+undump 1
+
+#variable N equal count(all), counts the total number of atoms in the cell
+
+variable N equal count(all)
+variable No equal $N
+variable No equal 2000
+
+#variable Ei equal "c_eatoms" computes the initial energy of the cell system before vacancy insertion
+
+variable E equal "c_eatoms"
+variable Ei equal $E
+variable Ei equal -8244.8686988773388293
+
+# ---------- Define a virtual radius for Fe atom (r = ao*sqrt(3)/4 )
+
+variable r1 equal ${ao}*sqrt(3)/4
+variable r1 equal 2.8549999999999999822*sqrt(3)/4
+
+#region select is a region defined so that all atoms within this region are removed
+
+region select sphere 0 0 0 ${r1} units box
+region select sphere 0 0 0 1.2362512639022860128 units box
+delete_atoms region select compress yes
+Deleted 1 atoms, new total = 1999
+
+# ---------- Get unrelaxed formation energy -----------------------
+
+reset_timestep	0
+thermo 1
+thermo_style custom step pe lx ly lz press c_eatoms
+
+dump 1 all custom 200 dump.relax.1.* id type xs ys zs c_csym c_eng
+
+min_style cg
+minimize 1e-20 1e-20 0 0
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Memory usage per processor = 5.12937 Mbytes
+Step PotEng Lx Ly Lz Press eatoms 
+       0   -8238.9104        28.55        28.55        28.55    515.19326   -8238.9104 
+Loop time of 2.59876e-05 on 1 procs (1 MPI x 1 OpenMP) for 0 steps with 1999 atoms
+
+Minimization stats:
+  Stopping criterion = max iterations
+  Energy initial, next-to-last, final = 
+        -8238.91035574     -8244.86869887     -8238.91035574
+  Force two-norm initial, final = 1.13478 1.13478
+  Force max component initial, final = 0.218804 0.218804
+  Final line search alpha, max atom move = 0.5 0.109402
+  Iterations, force evaluations = 0 0
+
+Pair  time (%) = 0 (0)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 0 (0)
+Outpt time (%) = 0 (0)
+Other time (%) = 2.59876e-05 (100)
+
+Nlocal:    1999 ave 1999 max 1999 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    2934 ave 2934 max 2934 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    57942 ave 57942 max 57942 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  115884 ave 115884 max 115884 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 115884
+Ave neighs/atom = 57.971
+Neighbor list builds = 0
+Dangerous builds = 0
+
+variable Y equal "c_eatoms"
+variable Eu equal $Y
+variable Eu equal -8238.9103557478301809
+run 0
+WARNING: No fixes defined, atoms won't move (../verlet.cpp:54)
+Memory usage per processor = 4.44265 Mbytes
+Step PotEng Lx Ly Lz Press eatoms 
+       0   -8238.9104        28.55        28.55        28.55    515.19326   -8238.9104 
+Loop time of 1.19209e-06 on 1 procs (1 MPI x 1 OpenMP) for 0 steps with 1999 atoms
+
+Pair  time (%) = 0 (0)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 0 (0)
+Outpt time (%) = 0 (0)
+Other time (%) = 1.19209e-06 (100)
+
+Nlocal:    1999 ave 1999 max 1999 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    2934 ave 2934 max 2934 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    57942 ave 57942 max 57942 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  115884 ave 115884 max 115884 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 115884
+Ave neighs/atom = 57.971
+Neighbor list builds = 0
+Dangerous builds = 0
+undump 1
+
+
+# ---------- 2nd: Run Energy Minimization -------------------------
+
+reset_timestep	0
+thermo 10
+thermo_style custom step pe lx ly lz press c_eatoms
+
+dump 1 all custom 200 dump.relax.2.* id type xs ys zs c_csym c_eng
+
+min_style cg
+minimize 1e-20 1e-20 5000 5000
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Memory usage per processor = 5.12937 Mbytes
+Step PotEng Lx Ly Lz Press eatoms 
+       0   -8238.9104        28.55        28.55        28.55    515.19326   -8238.9104 
+      10   -8239.0347        28.55        28.55        28.55    401.19156   -8239.0347 
+      20   -8239.0348        28.55        28.55        28.55    400.81812   -8239.0348 
+      23   -8239.0348        28.55        28.55        28.55    400.81754   -8239.0348 
+Loop time of 0.968047 on 1 procs (1 MPI x 1 OpenMP) for 23 steps with 1999 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -8238.91035574     -8239.03475912     -8239.03475912
+  Force two-norm initial, final = 1.13478 0.000184811
+  Force max component initial, final = 0.218804 1.41704e-05
+  Final line search alpha, max atom move = 0.25 3.54261e-06
+  Iterations, force evaluations = 23 89
+
+Pair  time (%) = 0.943073 (97.4202)
+Neigh time (%) = 0.00340199 (0.351429)
+Comm  time (%) = 0.00197816 (0.204345)
+Outpt time (%) = 0.00014782 (0.0152699)
+Other time (%) = 0.0194459 (2.00878)
+
+Nlocal:    1999 ave 1999 max 1999 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    2934 ave 2934 max 2934 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    57942 ave 57942 max 57942 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  115884 ave 115884 max 115884 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 115884
+Ave neighs/atom = 57.971
+Neighbor list builds = 1
+Dangerous builds = 1
+
+#variable Ef equal "c_eatoms" computes the final energy of the cell system after vacancy insertion
+
+variable Ef equal "c_eatoms"
+variable Ev equal (${Ef}-((${No}-1)/${No})*${Ei})
+variable Ev equal (-8239.0347591221106995-((${No}-1)/${No})*${Ei})
+variable Ev equal (-8239.0347591221106995-((2000-1)/${No})*${Ei})
+variable Ev equal (-8239.0347591221106995-((2000-1)/2000)*${Ei})
+variable Ev equal (-8239.0347591221106995-((2000-1)/2000)*-8244.8686988773388293)
+variable Evu equal (${Eu}-((${No}-1)/${No})*${Ei})
+variable Evu equal (-8238.9103557478301809-((${No}-1)/${No})*${Ei})
+variable Evu equal (-8238.9103557478301809-((2000-1)/${No})*${Ei})
+variable Evu equal (-8238.9103557478301809-((2000-1)/2000)*${Ei})
+variable Evu equal (-8238.9103557478301809-((2000-1)/2000)*-8244.8686988773388293)
+
+#---------------------------------------------
+
+print "All done"
+All done
+print "Energy of perfect system = ${Ei}"
+Energy of perfect system = -8244.8686988773388293
+print "Energy of unrelaxed defected system = ${Eu}"
+Energy of unrelaxed defected system = -8238.9103557478301809
+print "Energy of relaxed defected system = ${Ef}"
+Energy of relaxed defected system = -8239.0347591221106995
+print "Unrelaxed vacancy formation energy = ${Evu}"
+Unrelaxed vacancy formation energy = 1.8359087800708948635
+print "Relaxed vacancy formation energy = ${Ev}"
+Relaxed vacancy formation energy = 1.7115054057903762441

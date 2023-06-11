@@ -1,0 +1,39 @@
+CR_ip = (sigma_c(fert) * C(fert)) / (sigma_f(fis) * C(fis))
+
+U238-fert
+
+Pu239-fis
+
+
+mat fertile 1.0 92238.12c 1.0 %top up U238
+mat fissile 1.0 94239.12c 1.0 %P239 is spaltprodukt
+mat cfissile 1.0 94240.12c 1.0 %P240
+mat ccfissile 1.0 94241.12c 1.0 %P241
+mat cccfissile 1.0 94238.12c 1.0 %P238
+mat ccccfissile 1.0 94242.12c 1.0 %P242
+
+
+det flux            dm fuel
+det fission-fertile dm fuel dr -6  fertile dt 3 flux % (=fission cross) det name dm whichmaterial dr responsenumber materialname dt type param (=result is divided by flux)
+det capture-fertile dm fuel dr 102 fertile dt 3 flux %(=capture cross)
+det nubar-fertile   dm fuel dr -7  fertile dt 3 fission-fertile % (=/ sigma f)
+
+det fission-fissile dm fuel dr -6  fissile dt 3 flux
+det capture-fissile dm fuel dr 102 fissile dt 3 flux
+det nubar-fissile   dm fuel dr -7  fissile dt 3 fission-fissile
+
+det fission-cfissile dm fuel dr -6  cfissile dt 3 flux
+det capture-cfissile dm fuel dr 102 cfissile dt 3 flux
+det nubar-cfissile   dm fuel dr -7  cfissile dt 3 fission-cfissile
+
+det fission-ccfissile dm fuel dr -6  ccfissile dt 3 flux
+det capture-ccfissile dm fuel dr 102 ccfissile dt 3 flux
+det nubar-ccfissile   dm fuel dr -7  ccfissile dt 3 fission-ccfissile
+
+det fission-cccfissile dm fuel dr -6  cccfissile dt 3 flux
+det capture-cccfissile dm fuel dr 102 cccfissile dt 3 flux
+det nubar-cccfissile   dm fuel dr -7  cccfissile dt 3 fission-cccfissile
+
+det fission-ccccfissile dm fuel dr -6  ccccfissile dt 3 flux
+det capture-ccccfissile dm fuel dr 102 ccccfissile dt 3 flux
+det nubar-ccccfissile   dm fuel dr -7  ccccfissile dt 3 fission-ccccfissile

@@ -1,0 +1,45 @@
+Business Model canvas consists of these section:
+"Key partners", "Key activities", "Key resources", "Value proposition", "Customer relationships", "Channels", "Customer segments", "Cost structure", and "Revenue".
+
+Customer segments section:
+How are they integrated with the rest of our business model?
+How costly are they?
+
+Value propositions section:
+What value does the business deliver to the customer?
+Which one of the business's customer's problems is the business helping to solve?
+What bundles of products and services are the business offering to each Customer segment?
+Which customer needs are the business satisfying?
+
+Channels section:
+Through which Channels do the business's Customer segment want to be reached?
+How are the business's Channels integrated?
+
+Customer relationships section:
+For whom are the business creating value?
+Who are the business's most important customers?
+
+Key activities section:
+What "Key activities" do the business "Value propositions" require?
+What are the business's Distribution channels?
+
+Key resources section:
+Customer relationships?
+Revenue streams?
+
+Key partners section:
+Who are the business's "Key partners"?
+Who are the business's "Key suppliers"?
+Which "Key resources" are the business acquiring from partners?
+Which "Key activities" do partners perform?
+
+Revenue streams section:
+For what value are the business's customers really willing to pay?
+For what do they currently pay? How are they currently paying? How would they prefer to pay?
+How much does each "Revenue streams" contribute to overall revenues?
+
+Cost structure section:
+What are the most important costs inherent in the business's model?
+Which Key resources are most expensive?
+Which Key activities are most expensive?
+

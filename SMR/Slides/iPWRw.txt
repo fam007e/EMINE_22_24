@@ -1,0 +1,446 @@
+ set title "PWR Burnup Calculation Based on NEA Benchmark"
+
+pin 1          % coolant 
+He     0.6225  % coolant channel radius 
+graphite10     % moderator 
+
+% --- Fuel pins:
+
+pin 10
+UN     0.4025
+clad    0.475
+water
+
+pin 11
+UN     0.4025
+clad    0.4750
+water
+
+pin 12
+UN     0.4025
+clad    0.4750
+water
+
+pin 13
+UN     0.4025
+clad    0.4750
+water
+
+pin 14
+UN     0.4025
+clad    0.4750
+water
+
+pin 15
+UN     0.4025
+clad    0.4750
+water
+
+pin 16
+UN     0.4025
+clad    0.4750
+water
+
+pin 17
+UN     0.4025
+clad    0.4750
+water
+
+pin 18
+UN     0.4025
+clad    0.4750
+water
+
+pin 19
+UN     0.4025
+clad    0.4750
+water
+
+pin 20
+UN     0.4025
+clad    0.4750
+water
+
+pin 21
+UN     0.4025
+clad    0.4750
+water
+
+pin 22
+UN     0.4025
+clad    0.4750
+water
+
+pin 23
+UN     0.4025
+clad    0.4750
+water
+
+pin 24
+UN     0.4025
+clad    0.4750
+water
+
+pin 25
+UN     0.4025
+clad    0.4750
+water
+
+pin 26
+UN     0.4025
+clad    0.4750
+water
+
+pin 27
+UN     0.4025
+clad    0.4750
+water
+
+pin 28
+UN     0.4025
+clad    0.4750
+water
+
+pin 29
+UN     0.4025
+clad    0.4750
+water
+
+pin 30
+UN     0.4025
+clad    0.4750
+water
+
+pin 31
+UN     0.4025
+clad    0.4750
+water
+
+pin 32
+UN     0.4025
+clad    0.4750
+water
+
+pin 33
+UN     0.4025
+clad    0.4750
+water
+
+pin 34
+UN     0.4025
+clad    0.4750
+water
+
+pin 35
+UN     0.4025
+clad    0.4750
+water
+
+pin 36
+UN     0.4025
+clad    0.4750
+water
+
+pin 37
+UN     0.4025
+clad    0.4750
+water
+
+pin 38
+UN     0.4025
+clad    0.4750
+water
+
+pin 39
+UN     0.4025
+clad    0.4750
+water
+
+pin 40
+UN     0.4025
+clad    0.4750
+water
+
+pin 41
+UN     0.4025
+clad    0.4750
+water
+
+pin 42
+UN     0.4025
+clad    0.4750
+water
+
+pin 43
+UN     0.4025
+clad    0.4750
+water
+
+pin 44
+UN     0.4025
+clad    0.4750
+water
+
+pin 45
+UN     0.4025
+clad    0.4750
+water
+
+% --- Gd-pins:
+
+pin 50
+UNGd   0.4025
+clad    0.4750
+water
+
+pin 51
+UNGd   0.4025
+clad    0.4750
+water
+
+pin 52
+UNGd   0.4025
+clad    0.4750
+water
+
+% --- Guide tube:
+
+pin 90
+water   0.5730
+tube    0.6130
+water
+
+pin 91           % control element rod 
+Bnat4C  1.2385 
+void    1.3435
+clad    1.4930 
+water
+
+pin 92           % control element rod 
+B104C   1.2385 
+void    1.3435
+clad    1.4930 
+water
+
+
+pin 93           % shut-down rod
+WReB2   1.6900
+void    1.7000
+clad    1.8700
+water
+
+% --- Pin lattice:
+
+lat 110  1  0.0 0.0 17 17  1.265
+ 
+45 44 43 42 41 40 39 38 37 38 39 40 41 42 43 44 45 
+44 36 35 34 33 32 31 30 29 30 31 32 33 34 35 36 44 
+43 35 28 27 52 90 26 25 90 25 26 90 52 27 28 35 43 
+42 34 27 90 24 23 22 21 51 21 22 23 24 90 27 34 42 
+41 33 52 24 20 19 18 17 16 17 18 19 20 24 52 33 41 
+40 32 90 23 19 90 15 14 90 14 15 90 19 23 90 32 40 
+39 31 26 22 18 15 50 13 12 13 50 15 18 22 26 31 39 
+38 30 25 21 17 14 13 11 10 11 13 14 17 21 25 30 38 
+37 29 90 51 16 90 12 10 90 10 12 90 16 51 90 29 37 
+38 30 25 21 17 14 13 11 10 11 13 14 17 21 25 30 38 
+39 31 26 22 18 15 50 13 12 13 50 15 18 22 26 31 39 
+40 32 90 23 19 90 15 14 90 14 15 90 19 23 90 32 40 
+41 33 52 24 20 19 18 17 16 17 18 19 20 24 52 33 41 
+42 34 27 90 24 23 22 21 51 21 22 23 24 90 27 34 42 
+43 35 28 27 52 90 26 25 90 25 26 90 52 27 28 35 43 
+44 36 35 34 33 32 31 30 29 30 31 32 33 34 35 36 44 
+45 44 43 42 41 40 39 38 37 38 39 40 41 42 43 44 45 
+
+% --- assembly data:
+
+surf  1000  sqc  0.0 0.0 10.752
+surf  1001  sqc  0.0 0.0 10.806
+
+cell 110  0  fill 110   -1000
+cell 111  0  water       1000 -1001
+cell 112  0  outside     1001
+
+% --- Materials:
+
+mat UN	        -13.680000
+92234.09c	-0.010000
+92235.09c	-0.029670
+92238.09c	-0.896500
+7015.09c	-0.063830
+
+mat UNGd    	-13.22073745	burn 10
+92234.09c  	-9.42134E-05	
+92235.09c  	-0.012336383	
+92238.09c  	-0.450859635	
+64154.09c  	-0.000709148	
+64155.09c  	-0.004563163	
+64156.09c  	-0.006351506	
+64157.09c  	-0.004840691	
+64158.09c  	-0.007646381	
+64160.09c  	-0.006721492	
+ 7015.09c  	-0.463290231	
+8016.06c	-0.046248572			
+	
+mat clad   3.8510E-02
+26000.06c  1.3225E-04
+24000.06c  6.7643E-05
+40000.06c  3.8310E-02
+
+mat tube   4.3206E-02
+26000.06c  1.4838E-04
+24000.06c  7.5891E-05
+40000.06c  4.2982E-02
+
+mat water	-0.837532338	moder lwtr 1001
+1001.06c	-0.67	
+8016.06c	-0.33	
+5010.06c	-0.00005	
+5011.06c	-0.00020	
+
+% Boron Carbide
+
+mat Bnat4C -2.25 % burn 1       % Natural boron carbide, 10% porosity
+5010.09c  0.15
+5011.09c  0.6
+6000.09c  0.250
+
+mat B104C -2.14               % Enriched boron carbide, 10% porosity
+5010.09c  0.960
+5011.09c  0.040
+6000.09c  0.250
+
+mat WReB2 -11.7               % Tungsten-rhenium diboride, 5% porosity
+5010.09c  0.900
+5011.09c  0.100
+74000.09c 0.240
+75000.09c 0.260
+
+
+% Graphite moderator 
+
+mat graphite10 -1.75 
+6000.06c  -1.0000
+
+mat He 2.65e-5
+ 2004.06c 1.0
+
+therm lwtr lwj3.11t
+
+% --- Periodic boundary condition:
+
+set bc 3
+
+% --- Neutron population and criticality cycles:
+
+set pop 600 200 100
+
+% --- Geometry and mesh plots:
+
+plot 3 500 500
+mesh 3 500 500
+
+% --- Decay and fission yield libraries:
+
+set nfylib "/codes/SERPENT/xsdata/sss_jeff311.nfy" % Fission yield
+set declib "/codes/SERPENT/xsdata/sss_jeff311.dec" % Decay yield
+
+% --- Cross section library file path:
+
+set acelib "/codes/SERPENT/xsdata/jeff311.xsdata"
+
+% --- Reduce energy grid size:
+
+set egrid 5E-5 1E-9 15.0
+
+% --- Cut-offs:
+
+set fpcut   1E-6
+set stabcut 1E-12
+
+% --- Options for burnup calculation:
+
+set bumode  2  % CRAM method
+set pcc     1  % Predictor-corrector calculation on
+set xscalc  2  % Cross sections from spectrum
+
+% --- Irradiation cycle:
+
+set power 250
+
+%dep daystep 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30
+%30 30 30 30 30 30 30 30 30 30 30 30
+dep daystep 365 365 365
+% --- Nuclide inventory:
+
+set inventory
+
+ 922340
+ 922350
+ 922360
+ 922370
+ 922380
+ 922390
+ 932360
+ 932370
+ 932380
+ 932390
+ 942360
+ 942380
+ 942390
+ 942400
+ 942410
+ 942420
+ 942430
+ 952410                                       
+ 952420
+ 952430
+ 952440
+ 952421
+ 962420
+ 962430
+ 962440
+ 962450
+ 962460
+ 962470
+ 962480
+ 962490
+ 972490
+ 972500
+ 982490
+ 982500
+ 982510
+ 982520
+ 360830
+ 451030
+ 451050
+ 471090
+ 531350
+ 541310
+ 541350
+ 551330
+ 551340
+ 551350
+ 551370
+ 561400
+ 571400
+ 601430
+ 601450
+ 611470
+ 611480
+ 611490
+ 611481
+ 621470
+ 621490
+ 621500
+ 621510
+ 621520
+ 631530
+ 631540
+ 631550
+ 631560
+ 641520
+ 641540
+ 641550
+ 641560
+ 641570
+ 641600

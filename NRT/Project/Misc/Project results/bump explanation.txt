@@ -1,0 +1,16 @@
+When we examined the flow characteristics for each power level, we noticed that for 150%, 100%, and 50% power,
+there was single phase steam at the very low flow rate percentages. Then in the medium flow rate percentages,
+we noticed that there was 2 phase flow. The transition from single phase steam to 2 phase flow was marked by a
+distinct upward bump where the curve shifts from more steep to less steep ascent. In the high flow rate percentages,
+we noticed that there was single phase water. The transition from 2 phase flow to single phase water was also marked
+by a distinct bump, but this time downward. It occurred where the curve shifted from less steep to more steep ascent.
+
+However, the for 0% power, there were no single phase steam or 2 phase flow. Since there was no power being produced,
+there was no heat energy to heat the water up. Therefore, the flow characteristics for 0% power was a continuous curve
+representing single phase water at all flow percentages.
+
+An interesting thing we noted was that, at the very low flow percentages, the total pressure was higher for 0% power than
+all the other power percentages. This occurred because there was single phase water at those low flow percentages for 0% power
+but single phase steam for the other power percentages. So, the gravity pressure drop and the friction pressure drop at 0%
+power was higher than those at higher power percentages. That is why the total pressure drop was higher for 0% power at the
+lowest flow percentages.

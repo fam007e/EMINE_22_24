@@ -1,0 +1,28 @@
+Task 4 Nodalization and numerical solution]
+
+« forj=2 to nk
+= i(j) =i(-1) + g_cell(j-1) /W (energy balance)
+
+* end for
+
+* while p is not converged
+- p(1) = pin + dplnletOrifice
+
+- forj=2tonk
+« xe(j), xa(j), alpha(j) (void fraction model)
+« dpf_cell(j-1), dpg_cell(j-1), dpa_cell(j-1), dpl_cell(j-1)
+
+« dp_cell(j-1) (pressure drop calculation)
++ p() = p(-1) + dp_cell(-1)
+- end for
+
+« end while p
+0)
+- f(p(j), i(j)) for subcooled water
+
+- Tsat(j) for saturated water
+
+« Inlet orifices pressure loss coefficient (designed for nominal
+condition)
+
++ Flow characteristic of the core (-dp)=f(G) 6

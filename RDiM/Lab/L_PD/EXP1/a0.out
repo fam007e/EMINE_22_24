@@ -1,0 +1,2583 @@
+LAMMPS (11 Nov 2013)
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.755 2.755 2.755
+Created orthogonal box = (0 0 0) to (13.775 13.775 13.775)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.49693 Mbytes
+Step PotEng eatoms 
+       0   -1012.6309   -1012.6309 
+       1   -1012.6309   -1012.6309 
+Loop time of 0.0048449 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1012.63089587     -1012.63089587     -1012.63089587
+  Force two-norm initial, final = 1.09409e-13 1.09409e-13
+  Force max component initial, final = 1.1483e-14 1.1483e-14
+  Final line search alpha, max atom move = 0.5 5.7415e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00437617 (90.3253)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 3.17097e-05 (0.654495)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000437021 (9.02023)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    1479 ave 1479 max 1479 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    8000 ave 8000 max 8000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 8000
+Ave neighs/atom = 32
+Neighbor list builds = 0
+Dangerous builds = 0
+2.7549999999999998934	-4.0505235834604080836
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.76 2.76 2.76
+Created orthogonal box = (0 0 0) to (13.8 13.8 13.8)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.49693 Mbytes
+Step PotEng eatoms 
+       0   -1014.3817   -1014.3817 
+       1   -1014.3817   -1014.3817 
+Loop time of 0.00483394 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1014.38166688     -1014.38166688     -1014.38166688
+  Force two-norm initial, final = 1.44818e-13 1.44818e-13
+  Force max component initial, final = 1.18794e-14 1.18794e-14
+  Final line search alpha, max atom move = 0.5 5.93969e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.0043819 (90.6486)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 3.12328e-05 (0.646116)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000420809 (8.7053)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    1479 ave 1479 max 1479 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    8000 ave 8000 max 8000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 8000
+Ave neighs/atom = 32
+Neighbor list builds = 0
+Dangerous builds = 0
+2.7599999999999997868	-4.0575266675326711052
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.765 2.765 2.765
+Created orthogonal box = (0 0 0) to (13.825 13.825 13.825)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.49693 Mbytes
+Step PotEng eatoms 
+       0   -1016.0395   -1016.0395 
+       1   -1016.0395   -1016.0395 
+Loop time of 0.00485015 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1016.03953738     -1016.03953738     -1016.03953738
+  Force two-norm initial, final = 5.85321e-14 5.85321e-14
+  Force max component initial, final = 5.32907e-15 5.32907e-15
+  Final line search alpha, max atom move = 0.5 2.66454e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.0043807 (90.321)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.98023e-05 (0.614462)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000439644 (9.06454)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    1479 ave 1479 max 1479 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    8000 ave 8000 max 8000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 8000
+Ave neighs/atom = 32
+Neighbor list builds = 0
+Dangerous builds = 0
+2.7650000000000001243	-4.0641581495311820404
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.77 2.77 2.77
+Created orthogonal box = (0 0 0) to (13.85 13.85 13.85)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.49693 Mbytes
+Step PotEng eatoms 
+       0    -1017.606    -1017.606 
+       1    -1017.606    -1017.606 
+Loop time of 0.00482893 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1017.60603998     -1017.60603998     -1017.60603998
+  Force two-norm initial, final = 5.03983e-14 5.03983e-14
+  Force max component initial, final = 6.57547e-15 6.57547e-15
+  Final line search alpha, max atom move = 0.5 3.28773e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00437212 (90.5401)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 3.19481e-05 (0.661598)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000424862 (8.79826)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    1479 ave 1479 max 1479 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    8000 ave 8000 max 8000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 8000
+Ave neighs/atom = 32
+Neighbor list builds = 0
+Dangerous builds = 0
+2.7700000000000000178	-4.0704241599232782178
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.775 2.775 2.775
+Created orthogonal box = (0 0 0) to (13.875 13.875 13.875)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.49693 Mbytes
+Step PotEng eatoms 
+       0   -1019.0826   -1019.0826 
+       1   -1019.0826   -1019.0826 
+Loop time of 0.00483894 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1019.08261059     -1019.08261059     -1019.08261059
+  Force two-norm initial, final = 1.22954e-13 1.22954e-13
+  Force max component initial, final = 9.92956e-15 9.92956e-15
+  Final line search alpha, max atom move = 0.5 4.96478e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.0043788 (90.4907)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 3.19481e-05 (0.660229)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.0004282 (8.84903)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    1479 ave 1479 max 1479 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    8000 ave 8000 max 8000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 8000
+Ave neighs/atom = 32
+Neighbor list builds = 0
+Dangerous builds = 0
+2.7749999999999999112	-4.0763304423783148778
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.78 2.78 2.78
+Created orthogonal box = (0 0 0) to (13.9 13.9 13.9)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.49693 Mbytes
+Step PotEng eatoms 
+       0   -1020.4699   -1020.4699 
+       1   -1020.4699   -1020.4699 
+Loop time of 0.0051012 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1020.46988211     -1020.46988211     -1020.46988211
+  Force two-norm initial, final = 1.15412e-13 1.15412e-13
+  Force max component initial, final = 8.99281e-15 8.99281e-15
+  Final line search alpha, max atom move = 0.5 4.4964e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00464201 (90.9983)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 3.17097e-05 (0.621612)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000427485 (8.38007)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    1479 ave 1479 max 1479 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    8000 ave 8000 max 8000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 8000
+Ave neighs/atom = 32
+Neighbor list builds = 0
+Dangerous builds = 0
+2.7799999999999998046	-4.081879528459894324
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.785 2.785 2.785
+Created orthogonal box = (0 0 0) to (13.925 13.925 13.925)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.49693 Mbytes
+Step PotEng eatoms 
+       0   -1021.7681   -1021.7681 
+       1   -1021.7681   -1021.7681 
+Loop time of 0.00498414 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1021.76806959     -1021.76806959     -1021.76806959
+  Force two-norm initial, final = 3.55866e-15 3.55866e-15
+  Force max component initial, final = 6.66134e-16 6.66134e-16
+  Final line search alpha, max atom move = 0.5 3.33067e-16
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00452805 (90.8491)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 3.21865e-05 (0.645779)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000423908 (8.50514)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    1479 ave 1479 max 1479 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    8000 ave 8000 max 8000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 8000
+Ave neighs/atom = 32
+Neighbor list builds = 0
+Dangerous builds = 0
+2.7850000000000001421	-4.0870722783690514035
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.79 2.79 2.79
+Created orthogonal box = (0 0 0) to (13.95 13.95 13.95)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.49693 Mbytes
+Step PotEng eatoms 
+       0   -1022.9774   -1022.9774 
+       1   -1022.9774   -1022.9774 
+Loop time of 0.00481701 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1022.97738586     -1022.97738586     -1022.97738586
+  Force two-norm initial, final = 1.03575e-13 1.03575e-13
+  Force max component initial, final = 9.38442e-15 9.38442e-15
+  Final line search alpha, max atom move = 0.5 4.69221e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00436997 (90.7197)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.88486e-05 (0.598891)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000418186 (8.68145)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    1479 ave 1479 max 1479 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    8000 ave 8000 max 8000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 8000
+Ave neighs/atom = 32
+Neighbor list builds = 0
+Dangerous builds = 0
+2.7900000000000000355	-4.0919095434381045351
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.795 2.795 2.795
+Created orthogonal box = (0 0 0) to (13.975 13.975 13.975)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.49693 Mbytes
+Step PotEng eatoms 
+       0    -1024.098    -1024.098 
+       1    -1024.098    -1024.098 
+Loop time of 0.00485682 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1024.09804509     -1024.09804509     -1024.09804509
+  Force two-norm initial, final = 1.05428e-13 1.05428e-13
+  Force max component initial, final = 1.00753e-14 1.00753e-14
+  Final line search alpha, max atom move = 0.5 5.03764e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00440097 (90.6141)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 3.00407e-05 (0.618526)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000425816 (8.76737)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    1479 ave 1479 max 1479 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    8000 ave 8000 max 8000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 8000
+Ave neighs/atom = 32
+Neighbor list builds = 0
+Dangerous builds = 0
+2.7949999999999999289	-4.0963921803754832496
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.8 2.8 2.8
+Created orthogonal box = (0 0 0) to (14 14 14)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.49367 Mbytes
+Step PotEng eatoms 
+       0   -1025.1303   -1025.1303 
+       1   -1025.1303   -1025.1303 
+Loop time of 0.00482082 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1025.13026278     -1025.13026278     -1025.13026278
+  Force two-norm initial, final = 9.23941e-14 9.23941e-14
+  Force max component initial, final = 8.7738e-15 8.7738e-15
+  Final line search alpha, max atom move = 0.5 4.3869e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00435328 (90.3017)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.81334e-05 (0.583581)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000439405 (9.11474)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    1208 ave 1208 max 1208 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7775 ave 7775 max 7775 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7775
+Ave neighs/atom = 31.1
+Neighbor list builds = 0
+Dangerous builds = 0
+2.7999999999999998224	-4.1005210511321186218
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.805 2.805 2.805
+Created orthogonal box = (0 0 0) to (14.025 14.025 14.025)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1026.0742   -1026.0742 
+       1   -1026.0742   -1026.0742 
+Loop time of 0.00459003 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1026.07417478     -1026.07417478     -1026.07417478
+  Force two-norm initial, final = 3.28462e-14 3.28462e-14
+  Force max component initial, final = 4.45043e-15 4.45043e-15
+  Final line search alpha, max atom move = 0.5 2.22522e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00415301 (90.4789)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.24113e-05 (0.488261)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.00041461 (9.03283)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8050000000000001599	-4.1042966991199358873
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.81 2.81 2.81
+Created orthogonal box = (0 0 0) to (14.05 14.05 14.05)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1026.9296   -1026.9296 
+       1   -1026.9296   -1026.9296 
+Loop time of 0.00493598 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1026.92959618     -1026.92959618     -1026.92959618
+  Force two-norm initial, final = 1.24476e-13 1.24476e-13
+  Force max component initial, final = 9.28424e-15 9.28424e-15
+  Final line search alpha, max atom move = 0.5 4.64212e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00449085 (90.982)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.38419e-05 (0.483022)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000421286 (8.53499)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8100000000000000533	-4.1077183847286002916
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.815 2.815 2.815
+Created orthogonal box = (0 0 0) to (14.075 14.075 14.075)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1027.6963   -1027.6963 
+       4   -1027.6963   -1027.6963 
+Loop time of 0.00858021 on 1 procs (1 MPI x 1 OpenMP) for 4 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1027.69626225     -1027.69626225     -1027.69626225
+  Force two-norm initial, final = 1.33952e-13 3.40506e-10
+  Force max component initial, final = 1.25455e-14 3.41059e-11
+  Final line search alpha, max atom move = 0.5 1.7053e-11
+  Iterations, force evaluations = 4 5
+
+Pair  time (%) = 0.00805402 (93.8674)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 4.29153e-05 (0.500167)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000483274 (5.63243)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8149999999999999467	-4.1107850490189612458
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.82 2.82 2.82
+Created orthogonal box = (0 0 0) to (14.1 14.1 14.1)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1028.3739   -1028.3739 
+       1   -1028.3739   -1028.3739 
+Loop time of 0.00484395 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1028.37390918     -1028.37390918     -1028.37390918
+  Force two-norm initial, final = 5.38725e-14 5.38725e-14
+  Force max component initial, final = 4.51939e-15 4.51939e-15
+  Final line search alpha, max atom move = 0.5 2.25969e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00440407 (90.9189)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.3365e-05 (0.482355)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000416517 (8.59871)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8199999999999998401	-4.1134956367023916002
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.825 2.825 2.825
+Created orthogonal box = (0 0 0) to (14.125 14.125 14.125)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1028.9623   -1028.9623 
+       1   -1028.9623   -1028.9623 
+Loop time of 0.00458384 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1028.96227389     -1028.96227389     -1028.96227389
+  Force two-norm initial, final = 1.05872e-13 1.05872e-13
+  Force max component initial, final = 8.96071e-15 8.96071e-15
+  Final line search alpha, max atom move = 0.5 4.48036e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00414467 (90.4192)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.36034e-05 (0.514928)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000415564 (9.06585)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8250000000000001776	-4.1158490955547479828
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.83 2.83 2.83
+Created orthogonal box = (0 0 0) to (14.15 14.15 14.15)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1029.4611   -1029.4611 
+       1   -1029.4611   -1029.4611 
+Loop time of 0.00458002 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1029.46109398     -1029.46109398     -1029.46109398
+  Force two-norm initial, final = 1.55081e-13 1.55081e-13
+  Force max component initial, final = 1.50158e-14 1.50158e-14
+  Final line search alpha, max atom move = 0.5 7.50788e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00414371 (90.4737)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.21729e-05 (0.484123)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000414133 (9.04217)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8300000000000000711	-4.1178443759328064999
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.835 2.835 2.835
+Created orthogonal box = (0 0 0) to (14.175 14.175 14.175)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1029.8701   -1029.8701 
+       1   -1029.8701   -1029.8701 
+Loop time of 0.00465012 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1029.87010794     -1029.87010794     -1029.87010794
+  Force two-norm initial, final = 1.19397e-13 1.19397e-13
+  Force max component initial, final = 1.13468e-14 1.13468e-14
+  Final line search alpha, max atom move = 0.5 5.67341e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.0042069 (90.4686)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.19345e-05 (0.471698)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000421286 (9.05968)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8349999999999999645	-4.1194804317411799488
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.84 2.84 2.84
+Created orthogonal box = (0 0 0) to (14.2 14.2 14.2)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1030.1892   -1030.1892 
+       1   -1030.1892   -1030.1892 
+Loop time of 0.00457382 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1030.18917695     -1030.18917695     -1030.18917695
+  Force two-norm initial, final = 2.49016e-15 2.49016e-15
+  Force max component initial, final = 3.88578e-16 3.88578e-16
+  Final line search alpha, max atom move = 0.5 1.94289e-16
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00412202 (90.122)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 3.71933e-05 (0.813178)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.00041461 (9.06485)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8399999999999998579	-4.120756707812483377
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.845 2.845 2.845
+Created orthogonal box = (0 0 0) to (14.225 14.225 14.225)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1030.4185   -1030.4185 
+       1   -1030.4185   -1030.4185 
+Loop time of 0.00462198 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         -1030.4184693      -1030.4184693      -1030.4184693
+  Force two-norm initial, final = 1.50391e-13 1.50391e-13
+  Force max component initial, final = 1.131e-14 1.131e-14
+  Final line search alpha, max atom move = 0.5 5.65498e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.004179 (90.4158)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.14577e-05 (0.464253)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000421524 (9.11998)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8450000000000001954	-4.1216738771937562191
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.85 2.85 2.85
+Created orthogonal box = (0 0 0) to (14.25 14.25 14.25)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1030.5582   -1030.5582 
+       1   -1030.5582   -1030.5582 
+Loop time of 0.00461006 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1030.55820078     -1030.55820078     -1030.55820078
+  Force two-norm initial, final = 1.43794e-13 1.43794e-13
+  Force max component initial, final = 1.15116e-14 1.15116e-14
+  Final line search alpha, max atom move = 0.5 5.75581e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00415277 (90.0807)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.28882e-05 (0.496483)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000434399 (9.42284)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8500000000000000888	-4.122232803123099032
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.855 2.855 2.855
+Created orthogonal box = (0 0 0) to (14.275 14.275 14.275)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1030.6086   -1030.6086 
+       1   -1030.6086   -1030.6086 
+Loop time of 0.00457978 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1030.60858736     -1030.60858736     -1030.60858736
+  Force two-norm initial, final = 4.25076e-14 4.25076e-14
+  Force max component initial, final = 5.70139e-15 5.70139e-15
+  Final line search alpha, max atom move = 0.5 2.85069e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00413609 (90.3118)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.24113e-05 (0.489354)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000421286 (9.19881)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8549999999999999822	-4.1224343494386648246
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.86 2.86 2.86
+Created orthogonal box = (0 0 0) to (14.3 14.3 14.3)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1030.5698   -1030.5698 
+       1   -1030.5698   -1030.5698 
+Loop time of 0.00480509 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1030.56984504     -1030.56984504     -1030.56984504
+  Force two-norm initial, final = 7.56218e-14 7.56218e-14
+  Force max component initial, final = 8.22346e-15 8.22346e-15
+  Final line search alpha, max atom move = 0.5 4.11173e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.004287 (89.218)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.26498e-05 (0.47137)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000495434 (10.3106)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8599999999999998757	-4.1222793801594042051
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.865 2.865 2.865
+Created orthogonal box = (0 0 0) to (14.325 14.325 14.325)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1030.4422   -1030.4422 
+       1   -1030.4422   -1030.4422 
+Loop time of 0.00842595 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1030.44218977     -1030.44218977     -1030.44218977
+  Force two-norm initial, final = 1.52111e-13 1.52111e-13
+  Force max component initial, final = 1.52933e-14 1.52933e-14
+  Final line search alpha, max atom move = 0.5 7.64666e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00793409 (94.1626)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 4.57764e-05 (0.543278)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000446081 (5.29413)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8650000000000002132	-4.1217687590769784833
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.87 2.87 2.87
+Created orthogonal box = (0 0 0) to (14.35 14.35 14.35)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1030.2258   -1030.2258 
+       1   -1030.2258   -1030.2258 
+Loop time of 0.00462604 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1030.22583733     -1030.22583733     -1030.22583733
+  Force two-norm initial, final = 1.29843e-13 1.29843e-13
+  Force max component initial, final = 1.08663e-14 1.08663e-14
+  Final line search alpha, max atom move = 0.5 5.43315e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00418091 (90.3778)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.12193e-05 (0.458692)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000423908 (9.16353)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8700000000000001066	-4.1209033493145161842
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.875 2.875 2.875
+Created orthogonal box = (0 0 0) to (14.375 14.375 14.375)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0    -1029.921    -1029.921 
+       1    -1029.921    -1029.921 
+Loop time of 0.00461698 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1029.92100323     -1029.92100323     -1029.92100323
+  Force two-norm initial, final = 1.7515e-15 1.7515e-15
+  Force max component initial, final = 2.56739e-16 2.56739e-16
+  Final line search alpha, max atom move = 0.5 1.2837e-16
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00415993 (90.1007)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.21729e-05 (0.480248)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000434875 (9.41905)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.875	-4.1196840129006488951
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.88 2.88 2.88
+Created orthogonal box = (0 0 0) to (14.4 14.4 14.4)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1029.5279   -1029.5279 
+       2   -1029.5279   -1029.5279 
+Loop time of 0.00616288 on 1 procs (1 MPI x 1 OpenMP) for 2 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         -1029.5279026      -1029.5279026      -1029.5279026
+  Force two-norm initial, final = 1.3799e-13 1.77791e-12
+  Force max component initial, final = 1.29133e-14 1.80723e-13
+  Final line search alpha, max atom move = 0.5 9.03617e-14
+  Iterations, force evaluations = 2 3
+
+Pair  time (%) = 0.00568008 (92.166)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 3.09944e-05 (0.502921)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000451803 (7.33104)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8799999999999998934	-4.1181116103882828838
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.885 2.885 2.885
+Created orthogonal box = (0 0 0) to (14.425 14.425 14.425)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1029.0468   -1029.0468 
+       1   -1029.0468   -1029.0468 
+Loop time of 0.00457597 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1029.04675009     -1029.04675009     -1029.04675009
+  Force two-norm initial, final = 1.49886e-13 1.49886e-13
+  Force max component initial, final = 1.31978e-14 1.31978e-14
+  Final line search alpha, max atom move = 0.5 6.59889e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00414109 (90.4965)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.3365e-05 (0.510603)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.00041151 (8.99286)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8849999999999997868	-4.1161870003759073455
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.89 2.89 2.89
+Created orthogonal box = (0 0 0) to (14.45 14.45 14.45)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1028.4779   -1028.4779 
+       1   -1028.4779   -1028.4779 
+Loop time of 0.00462699 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1028.47786368     -1028.47786368     -1028.47786368
+  Force two-norm initial, final = 7.82091e-14 7.82091e-14
+  Force max component initial, final = 8.09704e-15 8.09704e-15
+  Final line search alpha, max atom move = 0.5 4.04852e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00418425 (90.4313)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.12193e-05 (0.458597)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000421524 (9.11011)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8900000000000001243	-4.1139114547216939499
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.895 2.895 2.895
+Created orthogonal box = (0 0 0) to (14.475 14.475 14.475)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1027.8228   -1027.8228 
+       1   -1027.8228   -1027.8228 
+Loop time of 0.00483799 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         -1027.8228459      -1027.8228459      -1027.8228459
+  Force two-norm initial, final = 8.56993e-14 8.56993e-14
+  Force max component initial, final = 7.75074e-15 7.75074e-15
+  Final line search alpha, max atom move = 0.5 3.87537e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00440001 (90.9472)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.5034e-05 (0.517445)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000412941 (8.53538)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8950000000000000178	-4.111291383601928473
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.9 2.9 2.9
+Created orthogonal box = (0 0 0) to (14.5 14.5 14.5)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1027.0842   -1027.0842 
+       1   -1027.0842   -1027.0842 
+Loop time of 0.00485778 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1027.08416599     -1027.08416599     -1027.08416599
+  Force two-norm initial, final = 1.50167e-13 1.50167e-13
+  Force max component initial, final = 1.02534e-14 1.02534e-14
+  Final line search alpha, max atom move = 0.5 5.1267e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00439215 (90.4147)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.21729e-05 (0.456442)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000443459 (9.12883)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.8999999999999999112	-4.1083366639554919075
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.905 2.905 2.905
+Created orthogonal box = (0 0 0) to (14.525 14.525 14.525)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1026.2643   -1026.2643 
+       1   -1026.2643   -1026.2643 
+Loop time of 0.00486398 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1026.26430853     -1026.26430853     -1026.26430853
+  Force two-norm initial, final = 1.3923e-13 1.3923e-13
+  Force max component initial, final = 1.04847e-14 1.04847e-14
+  Final line search alpha, max atom move = 0.5 5.24233e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00442195 (90.9122)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.28882e-05 (0.470565)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.00041914 (8.61722)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9049999999999998046	-4.1050572341238193985
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.91 2.91 2.91
+Created orthogonal box = (0 0 0) to (14.55 14.55 14.55)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1025.3658   -1025.3658 
+       2   -1025.3658   -1025.3658 
+Loop time of 0.00622392 on 1 procs (1 MPI x 1 OpenMP) for 2 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1025.36575708     -1025.36575708     -1025.36575708
+  Force two-norm initial, final = 2.58625e-14 2.44192e-13
+  Force max component initial, final = 2.44943e-15 2.36478e-14
+  Final line search alpha, max atom move = 0.5 1.18239e-14
+  Iterations, force evaluations = 2 3
+
+Pair  time (%) = 0.00573993 (92.2237)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 3.09944e-05 (0.497989)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000452995 (7.2783)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9100000000000001421	-4.1014630283175383951
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.915 2.915 2.915
+Created orthogonal box = (0 0 0) to (14.575 14.575 14.575)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0    -1024.391    -1024.391 
+       1    -1024.391    -1024.391 
+Loop time of 0.00485611 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1024.39099403     -1024.39099403     -1024.39099403
+  Force two-norm initial, final = 1.09576e-13 1.09576e-13
+  Force max component initial, final = 1.03181e-14 1.03181e-14
+  Final line search alpha, max atom move = 0.5 5.15907e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00441504 (90.9171)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.28882e-05 (0.471328)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000418186 (8.61155)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9150000000000000355	-4.0975639761210134182
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.92 2.92 2.92
+Created orthogonal box = (0 0 0) to (14.6 14.6 14.6)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1023.3425   -1023.3425 
+       1   -1023.3425   -1023.3425 
+Loop time of 0.00466084 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1023.34250052     -1023.34250052     -1023.34250052
+  Force two-norm initial, final = 1.25248e-13 1.25248e-13
+  Force max component initial, final = 1.1241e-14 1.1241e-14
+  Final line search alpha, max atom move = 0.5 5.6205e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00421906 (90.5213)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.24113e-05 (0.480843)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000419378 (8.9979)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9199999999999999289	-4.0933700020875667391
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.925 2.925 2.925
+Created orthogonal box = (0 0 0) to (14.625 14.625 14.625)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1022.2228   -1022.2228 
+       1   -1022.2228   -1022.2228 
+Loop time of 0.00463295 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         -1022.2227563      -1022.2227563      -1022.2227563
+  Force two-norm initial, final = 1.05481e-13 1.05481e-13
+  Force max component initial, final = 9.86711e-15 9.86711e-15
+  Final line search alpha, max atom move = 0.5 4.93355e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00418687 (90.3716)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.07424e-05 (0.447715)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000425339 (9.18073)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9249999999999998224	-4.0888910251986878563
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.93 2.93 2.93
+Created orthogonal box = (0 0 0) to (14.65 14.65 14.65)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1021.0342   -1021.0342 
+       1   -1021.0342   -1021.0342 
+Loop time of 0.00457382 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1021.03423962     -1021.03423962     -1021.03423962
+  Force two-norm initial, final = 5.50134e-14 5.50134e-14
+  Force max component initial, final = 6.30052e-15 6.30052e-15
+  Final line search alpha, max atom move = 0.5 3.15026e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00413704 (90.4504)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.16961e-05 (0.474354)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000415087 (9.07527)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9300000000000001599	-4.0841369584656765923
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.935 2.935 2.935
+Created orthogonal box = (0 0 0) to (14.675 14.675 14.675)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1019.7794   -1019.7794 
+       1   -1019.7794   -1019.7794 
+Loop time of 0.00461006 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         -1019.7794271      -1019.7794271      -1019.7794271
+  Force two-norm initial, final = 1.31544e-13 1.31544e-13
+  Force max component initial, final = 1.10675e-14 1.10675e-14
+  Final line search alpha, max atom move = 0.5 5.53377e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00415683 (90.1686)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.09808e-05 (0.45511)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000432253 (9.37629)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9350000000000000533	-4.0791177083976020157
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.94 2.94 2.94
+Created orthogonal box = (0 0 0) to (14.7 14.7 14.7)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1018.4608   -1018.4608 
+       1   -1018.4608   -1018.4608 
+Loop time of 0.00459313 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1018.46079363     -1018.46079363     -1018.46079363
+  Force two-norm initial, final = 1.24326e-13 1.24326e-13
+  Force max component initial, final = 1.01447e-14 1.01447e-14
+  Final line search alpha, max atom move = 0.5 5.07233e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00415015 (90.3556)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.3365e-05 (0.508695)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000419617 (9.13574)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9399999999999999467	-4.0738431745377017279
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.945 2.945 2.945
+Created orthogonal box = (0 0 0) to (14.725 14.725 14.725)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1017.0808   -1017.0808 
+       1   -1017.0808   -1017.0808 
+Loop time of 0.00464916 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1017.08081224     -1017.08081224     -1017.08081224
+  Force two-norm initial, final = 5.25834e-14 5.25834e-14
+  Force max component initial, final = 4.51722e-15 4.51722e-15
+  Final line search alpha, max atom move = 0.5 2.25861e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00420523 (90.4513)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.26498e-05 (0.487179)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000421286 (9.06154)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9449999999999998401	-4.0683232489765215334
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.95 2.95 2.95
+Created orthogonal box = (0 0 0) to (14.75 14.75 14.75)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0    -1015.642    -1015.642 
+       1    -1015.642    -1015.642 
+Loop time of 0.00459886 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1015.64195396     -1015.64195396     -1015.64195396
+  Force two-norm initial, final = 8.67149e-14 8.67149e-14
+  Force max component initial, final = 7.57494e-15 7.57494e-15
+  Final line search alpha, max atom move = 0.5 3.78747e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00415874 (90.4298)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.16961e-05 (0.471771)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000418425 (9.09845)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9500000000000001776	-4.0625678158545781571
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.955 2.955 2.955
+Created orthogonal box = (0 0 0) to (14.775 14.775 14.775)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1014.1467   -1014.1467 
+       1   -1014.1467   -1014.1467 
+Loop time of 0.00458097 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1014.14668771     -1014.14668771     -1014.14668771
+  Force two-norm initial, final = 9.80475e-14 9.80475e-14
+  Force max component initial, final = 8.6875e-15 8.6875e-15
+  Final line search alpha, max atom move = 0.5 4.34375e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.0041337 (90.2363)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.21729e-05 (0.484022)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.0004251 (9.27969)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9550000000000000711	-4.0565867508229365157
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.96 2.96 2.96
+Created orthogonal box = (0 0 0) to (14.8 14.8 14.8)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1012.5975   -1012.5975 
+       3   -1012.5975   -1012.5975 
+Loop time of 0.00734901 on 1 procs (1 MPI x 1 OpenMP) for 3 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1012.59748014     -1012.59748014     -1012.59748014
+  Force two-norm initial, final = 8.08311e-14 3.78292e-12
+  Force max component initial, final = 6.76922e-15 3.41889e-13
+  Final line search alpha, max atom move = 0.5 1.70945e-13
+  Iterations, force evaluations = 3 4
+
+Pair  time (%) = 0.00684881 (93.1936)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 3.55244e-05 (0.48339)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000464678 (6.323)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9599999999999999645	-4.0503899205782314397
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.965 2.965 2.965
+Created orthogonal box = (0 0 0) to (14.825 14.825 14.825)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1010.9968   -1010.9968 
+       1   -1010.9968   -1010.9968 
+Loop time of 0.00457096 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1010.99679558     -1010.99679558     -1010.99679558
+  Force two-norm initial, final = 1.43293e-14 1.43293e-14
+  Force max component initial, final = 1.66533e-15 1.66533e-15
+  Final line search alpha, max atom move = 0.5 8.32667e-16
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00413489 (90.46)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.12193e-05 (0.464219)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000414848 (9.07574)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9649999999999998579	-4.0439871823271102969
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.97 2.97 2.97
+Created orthogonal box = (0 0 0) to (14.85 14.85 14.85)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1009.3471   -1009.3471 
+       1   -1009.3471   -1009.3471 
+Loop time of 0.00464106 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1009.34709582     -1009.34709582     -1009.34709582
+  Force two-norm initial, final = 7.5658e-14 7.5658e-14
+  Force max component initial, final = 5.71852e-15 5.71852e-15
+  Final line search alpha, max atom move = 0.5 2.85926e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00419784 (90.45)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.19345e-05 (0.472619)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000421286 (9.07737)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9700000000000001954	-4.0373883832783175052
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.975 2.975 2.975
+Created orthogonal box = (0 0 0) to (14.875 14.875 14.875)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1007.6507   -1007.6507 
+       1   -1007.6507   -1007.6507 
+Loop time of 0.00459194 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         -1007.6507129      -1007.6507129      -1007.6507129
+  Force two-norm initial, final = 7.4571e-14 7.4571e-14
+  Force max component initial, final = 6.09235e-15 6.09235e-15
+  Final line search alpha, max atom move = 0.5 3.04617e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00414896 (90.3531)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.19345e-05 (0.477674)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000421047 (9.16926)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9750000000000000888	-4.0306028515956588976
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.98 2.98 2.98
+Created orthogonal box = (0 0 0) to (14.9 14.9 14.9)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1005.9095   -1005.9095 
+       1   -1005.9095   -1005.9095 
+Loop time of 0.00458789 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1005.90951363     -1005.90951363     -1005.90951363
+  Force two-norm initial, final = 4.04921e-14 4.04921e-14
+  Force max component initial, final = 3.42087e-15 3.42087e-15
+  Final line search alpha, max atom move = 0.5 1.71044e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00414324 (90.3082)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.24113e-05 (0.488489)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000422239 (9.20335)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9799999999999999822	-4.0236380545160290723
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.985 2.985 2.985
+Created orthogonal box = (0 0 0) to (14.925 14.925 14.925)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1004.1253   -1004.1253 
+       1   -1004.1253   -1004.1253 
+Loop time of 0.00457406 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1004.12525989     -1004.12525989     -1004.12525989
+  Force two-norm initial, final = 4.52865e-14 4.52865e-14
+  Force max component initial, final = 3.25434e-15 3.25434e-15
+  Final line search alpha, max atom move = 0.5 1.62717e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00414205 (90.5551)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.12193e-05 (0.463904)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000410795 (8.98097)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9849999999999998757	-4.0165010395516853592
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.99 2.99 2.99
+Created orthogonal box = (0 0 0) to (14.95 14.95 14.95)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1002.2997   -1002.2997 
+       1   -1002.2997   -1002.2997 
+Loop time of 0.00460386 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1002.29971495     -1002.29971495     -1002.29971495
+  Force two-norm initial, final = 7.26529e-14 7.26529e-14
+  Force max component initial, final = 6.6197e-15 6.6197e-15
+  Final line search alpha, max atom move = 0.5 3.30985e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00416279 (90.4195)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.21729e-05 (0.481616)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000418901 (9.09891)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9900000000000002132	-4.0091988597859042898
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 2.995 2.995 2.995
+Created orthogonal box = (0 0 0) to (14.975 14.975 14.975)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -1000.4346   -1000.4346 
+       4   -1000.4346   -1000.4346 
+Loop time of 0.00874186 on 1 procs (1 MPI x 1 OpenMP) for 4 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -1000.43464347     -1000.43464347     -1000.43464347
+  Force two-norm initial, final = 5.86296e-14 4.86414e-12
+  Force max component initial, final = 4.39926e-15 3.61018e-13
+  Final line search alpha, max atom move = 0.5 1.80509e-13
+  Iterations, force evaluations = 4 5
+
+Pair  time (%) = 0.0082252 (94.0899)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 4.22001e-05 (0.482736)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000474453 (5.42737)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+2.9950000000000001066	-4.0017385738613473478
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3 3 3
+Created orthogonal box = (0 0 0) to (15 15 15)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -998.53181   -998.53181 
+       1   -998.53181   -998.53181 
+Loop time of 0.00458813 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -998.531811408     -998.531811408     -998.531811408
+  Force two-norm initial, final = 3.30028e-15 3.30028e-15
+  Force max component initial, final = 4.64906e-16 4.64906e-16
+  Final line search alpha, max atom move = 0.5 2.32453e-16
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.0041461 (90.3658)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.14577e-05 (0.467678)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.00042057 (9.16649)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+3	-3.9941272456315806139
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.005 3.005 3.005
+Created orthogonal box = (0 0 0) to (15.025 15.025 15.025)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -996.59311   -996.59311 
+       1   -996.59311   -996.59311 
+Loop time of 0.00460386 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -996.593108032     -996.593108032     -996.593108032
+  Force two-norm initial, final = 5.62994e-14 5.62994e-14
+  Force max component initial, final = 3.85109e-15 3.85109e-15
+  Final line search alpha, max atom move = 0.5 1.92554e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00416398 (90.4454)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.31266e-05 (0.50233)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000416756 (9.0523)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+3.0049999999999998934	-3.9863724321270468387
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.01 3.01 3.01
+Created orthogonal box = (0 0 0) to (15.05 15.05 15.05)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -994.61975   -994.61975 
+       2   -994.61975   -994.61975 
+Loop time of 0.00660801 on 1 procs (1 MPI x 1 OpenMP) for 2 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -994.619752072     -994.619752072     -994.619752072
+  Force two-norm initial, final = 6.48193e-14 2.69347e-13
+  Force max component initial, final = 5.83561e-15 2.30441e-14
+  Final line search alpha, max atom move = 0.5 1.1522e-14
+  Iterations, force evaluations = 2 3
+
+Pair  time (%) = 0.00611424 (92.5278)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 3.29018e-05 (0.497907)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000460863 (6.97431)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+3.0099999999999997868	-3.9784790082879850637
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.015 3.015 3.015
+Created orthogonal box = (0 0 0) to (15.075 15.075 15.075)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -992.61188   -992.61188 
+       1   -992.61188   -992.61188 
+Loop time of 0.00461507 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -992.611879752     -992.611879752     -992.611879752
+  Force two-norm initial, final = 3.27978e-14 3.27978e-14
+  Force max component initial, final = 2.26902e-15 2.26902e-15
+  Final line search alpha, max atom move = 0.5 1.13451e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00416684 (90.2878)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.21729e-05 (0.480446)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000426054 (9.2318)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+3.0150000000000001243	-3.9704475190078469815
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.02 3.02 3.02
+Created orthogonal box = (0 0 0) to (15.1 15.1 15.1)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -990.56959   -990.56959 
+       5   -990.56959   -990.56959 
+Loop time of 0.00994897 on 1 procs (1 MPI x 1 OpenMP) for 5 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -990.569586112     -990.569586112     -990.569586112
+  Force two-norm initial, final = 3.25929e-14 8.82121e-12
+  Force max component initial, final = 2.42861e-15 9.4217e-13
+  Final line search alpha, max atom move = 0.5 4.71085e-13
+  Iterations, force evaluations = 5 6
+
+Pair  time (%) = 0.00939202 (94.402)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 5.22137e-05 (0.524815)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000504732 (5.07321)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+3.0200000000000000178	-3.9622783444471298964
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.025 3.025 3.025
+Created orthogonal box = (0 0 0) to (15.125 15.125 15.125)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -988.49297   -988.49297 
+       1   -988.49297   -988.49297 
+Loop time of 0.0045979 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -988.492967527     -988.492967527     -988.492967527
+  Force two-norm initial, final = 4.98004e-14 4.98004e-14
+  Force max component initial, final = 3.88166e-15 3.88166e-15
+  Final line search alpha, max atom move = 0.5 1.94083e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00414991 (90.2567)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.14577e-05 (0.466684)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000426531 (9.27664)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+3.0249999999999999112	-3.9539718701096537856
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.03 3.03 3.03
+Created orthogonal box = (0 0 0) to (15.15 15.15 15.15)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -986.38212   -986.38212 
+       1   -986.38212   -986.38212 
+Loop time of 0.00494194 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -986.382121706     -986.382121706     -986.382121706
+  Force two-norm initial, final = 5.09353e-14 5.09353e-14
+  Force max component initial, final = 3.99831e-15 3.99831e-15
+  Final line search alpha, max atom move = 0.5 1.99916e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00449991 (91.0556)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.40803e-05 (0.487264)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000417948 (8.45716)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+3.0300000000000002487	-3.9455284868236910611
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.035 3.035 3.035
+Created orthogonal box = (0 0 0) to (15.175 15.175 15.175)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -984.23715   -984.23715 
+       1   -984.23715   -984.23715 
+Loop time of 0.00459003 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -984.237147674     -984.237147674     -984.237147674
+  Force two-norm initial, final = 1.31767e-14 1.31767e-14
+  Force max component initial, final = 1.51962e-15 1.51962e-15
+  Final line search alpha, max atom move = 0.5 7.59809e-16
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00414371 (90.2763)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.14577e-05 (0.467484)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000424862 (9.25618)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+3.0350000000000001421	-3.9369485906938961328
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.04 3.04 3.04
+Created orthogonal box = (0 0 0) to (15.2 15.2 15.2)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -982.05815   -982.05815 
+       1   -982.05815   -982.05815 
+Loop time of 0.00478411 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         -982.05814577      -982.05814577      -982.05814577
+  Force two-norm initial, final = 5.069e-14 5.069e-14
+  Force max component initial, final = 3.63176e-15 3.63176e-15
+  Final line search alpha, max atom move = 0.5 1.81588e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00434279 (90.7754)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.19345e-05 (0.458487)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000419378 (8.76607)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+3.0400000000000000355	-3.928232583079982021
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.045 3.045 3.045
+Created orthogonal box = (0 0 0) to (15.225 15.225 15.225)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -979.84522   -979.84522 
+       1   -979.84522   -979.84522 
+Loop time of 0.00466895 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -979.845217644     -979.845217644     -979.845217644
+  Force two-norm initial, final = 5.0472e-14 5.0472e-14
+  Force max component initial, final = 4.7938e-15 4.7938e-15
+  Final line search alpha, max atom move = 0.5 2.3969e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00423002 (90.599)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.31266e-05 (0.495328)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000415802 (8.90568)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+3.0449999999999999289	-3.9193808705781800761
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.05 3.05 3.05
+Created orthogonal box = (0 0 0) to (15.25 15.25 15.25)
+  1 by 1 by 1 MPI processor grid
+Created 250 atoms
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:173)
+Setting up minimization ...
+Memory usage per processor = 4.47457 Mbytes
+Step PotEng eatoms 
+       0   -977.59847   -977.59847 
+       1   -977.59847   -977.59847 
+Loop time of 0.00467992 on 1 procs (1 MPI x 1 OpenMP) for 1 steps with 250 atoms
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+        -977.598466249     -977.598466249     -977.598466249
+  Force two-norm initial, final = 4.53586e-14 4.53586e-14
+  Force max component initial, final = 3.8719e-15 3.8719e-15
+  Final line search alpha, max atom move = 0.5 1.93595e-15
+  Iterations, force evaluations = 1 2
+
+Pair  time (%) = 0.00423813 (90.5599)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 2.19345e-05 (0.468694)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.000419855 (8.97142)
+
+Nlocal:    250 ave 250 max 250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    991 ave 991 max 991 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    7250 ave 7250 max 7250 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 7250
+Ave neighs/atom = 29
+Neighbor list builds = 0
+Dangerous builds = 0
+3.0499999999999998224	-3.9103938649969975927
+WARNING: OMP_NUM_THREADS environment is not set. (../comm.cpp:100)
+  using 1 OpenMP thread(s) per MPI task

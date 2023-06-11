@@ -1,0 +1,82 @@
+%%%%%%%%%%%%%%%%%%%%%
+% Grids and sleeves %
+%%%%%%%%%%%%%%%%%%%%%
+
+/************* Grids Universe *****************/
+
+% Square surface with half-width 0.61015 for inconel grid
+
+surf sIGrid     sqc 0 0 0.61015
+
+% Square surface with half-width 0.61049 for zircaloy grid
+
+surf sZGrid     sqc 0 0 0.61049
+
+% Inconel grid pin
+
+cell cIGridIn   pIGrid   waterb          -sIGrid
+cell cIGridOut  pIGrid   inconel         sIGrid
+
+% Zircaloy grid pin
+
+cell cZGridIn   pZGrid   waterb          -sZGrid
+cell cZGridOut  pZGrid   Zircaloy4       sZGrid
+
+
+/***** Vertical layers for grid *****/
+
+cell cGR0   grid    waterb                   -sG1Bot
+cell cGR1   grid    fill pIGrid     sG1Bot   -sG1Top
+cell cGR2   grid    waterb          sG1Top   -sG2Bot
+cell cGR3   grid    fill pZGrid     sG2Bot   -sG2Top
+cell cGR4   grid    waterb          sG2Top   -sG3Bot
+cell cGR5   grid    fill pZGrid     sG3Bot   -sG3Top
+cell cGR6   grid    waterb          sG3Top   -sG4Bot
+cell cGR7   grid    fill pZGrid     sG4Bot   -sG4Top
+cell cGR8   grid    waterb          sG4Top   -sG5Bot
+cell cGR9   grid    fill pIGrid     sG5Bot   -sG5Top
+cell cGR10  grid    waterb          sG5Top   -sG6Bot
+cell cGR11  grid    fill pIGrid     sG6Bot   -sG6Top
+cell cGR12  grid    waterb          sG6Top   -sG7Bot
+cell cGR13  grid    fill pIGrid     sG7Bot   -sG7Top
+cell cGR14  grid    waterb          sG7Top   -sG8Bot
+cell cGR15  grid    fill pIGrid     sG8Bot   -sG8Top
+cell cGR16  grid    waterb          sG8Top   
+
+
+/************* Sleeves Universe *****************/
+
+% Grid sleeve inner and outer surfaces
+
+surf sSleeveIn  sqc 0 0 10.70864
+surf sSleeveOut sqc 0 0 10.74798
+
+% Grid sleeve radial cells
+
+cell cSS0   pSS     waterb                     -sSleeveIn
+cell cSS1   pSS     ssteel         sSleeveIn   -sSleeveOut
+cell cSS2   pSS     waterb         sSleeveOut
+
+cell cZS0   pZS     waterb                     -sSleeveIn
+cell cZS1   pZS     Zircaloy4      sSleeveIn   -sSleeveOut
+cell cZS2   pZS     waterb         sSleeveOut
+
+% Grid sleeve axial cells
+
+cell cS0    sleeve  waterb                 -sG1Bot
+cell cS1    sleeve  fill pSS       sG1Bot  -sG1Top
+cell cS2    sleeve  waterb         sG1Top  -sG2Bot
+cell cS3    sleeve  fill pZS       sG2Bot  -sG2Top
+cell cS4    sleeve  waterb         sG2Top  -sG3Bot
+cell cS5    sleeve  fill pZS       sG3Bot  -sG3Top
+cell cS6    sleeve  waterb         sG3Top  -sG4Bot
+cell cS7    sleeve  fill pZS       sG4Bot  -sG4Top
+cell cS8    sleeve  waterb         sG4Top  -sG5Bot
+cell cS9    sleeve  fill pZS       sG5Bot  -sG5Top
+cell cS10   sleeve  waterb         sG5Top  -sG6Bot
+cell cS11   sleeve  fill pZS       sG6Bot  -sG6Top
+cell cS12   sleeve  waterb         sG6Top  -sG7Bot
+cell cS13   sleeve  fill pZS       sG7Bot  -sG7Top
+cell cS14   sleeve  waterb         sG7Top  -sG8Bot
+cell cS15   sleeve  fill pSS       sG8Bot  -sG8Top
+cell cS16   sleeve  waterb         sG8Top

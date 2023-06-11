@@ -1,0 +1,280 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fuel Assemblies, 3.1% enriched %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% --- No burnable absorber
+
+lat l300s 1 0.0 0.0 17 17  1.25984
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 w
+w   w   w   w   w   w   w   w   g   uF3 uF3 g   uF3 uF3 uF3 w   w
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 g   w   w   w
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 w   w   w   w
+w   w   w   w   w   w   w   w   g   uF3 uF3 g   w   w   w   w   w
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 w   w   w   w   w   w
+w   w   w   w   w   w   w   w   uF3 uF3 w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   I   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+
+% --- 6BA BOTTOM
+
+lat l306B 1 0.0 0.0 17 17 1.25984
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 b   uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 b   uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 g   uF3 uF3 b   uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   I   uF3 uF3 g   uF3 uF3 g   uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 g   uF3 uF3 g   uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 g   uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 g   uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+
+% --- 6BA TOP
+
+lat l306T 1 0.0 0.0 17 17 1.25984
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 b   uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 b   uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 g   uF3 uF3 b   uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   I   uF3 uF3 g   uF3 uF3 g   uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 g   uF3 uF3 g   uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 g   uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 g   uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+
+% --- 6BA LEFT
+
+lat l306L 1 0.0 0.0 17 17 1.25984
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 b   uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 b   uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 g   uF3 uF3 b   uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   I   uF3 uF3 g   uF3 uF3 g   uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 g   uF3 uF3 g   uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 g   uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 g   uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+
+% --- 6BA RIGHT
+
+lat l306R 1 0.0 0.0 17 17 1.25984
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 b   uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 b   uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 g   uF3 uF3 b   uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   I   uF3 uF3 g   uF3 uF3 g   uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 g   uF3 uF3 g   uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 g   uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 g   uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+
+
+% --- 12BA
+
+lat l312s 1 0.0 0.0 17 17 1.25984
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 b   uF3 uF3 uF3 uF3 uF3 
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 b   uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   g   uF3 uF3 g   uF3 uF3 b   uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3  
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3    
+w   w   w   w   w   w   w   w   I   uF3 uF3 g   uF3 uF3 g   uF3 uF3
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+
+
+% --- 15BA SOUTH EAST
+
+lat l315SE 1 0.0 0.0 17 17 1.25984
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 b   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 g   uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 g   uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 b   uF3 uF3 b   uF3 uF3 I   uF3 uF3 b   uF3 uF3 g   uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 g   uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 g   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 g   uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 g   uF3 uF3 g   uF3 uF3 g   uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+
+
+% --- 15BA NORTH EAST
+
+lat l315NE 1 0.0 0.0 17 17 1.25984
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 b   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 g   uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 g   uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 b   uF3 uF3 b   uF3 uF3 I   uF3 uF3 b   uF3 uF3 g   uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 g   uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 g   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 g   uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 g   uF3 uF3 g   uF3 uF3 g   uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+
+
+% --- 15BA SOUTH WEST
+
+lat l315SW 1 0.0 0.0 17 17 1.25984
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 b   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 g   uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 g   uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 b   uF3 uF3 b   uF3 uF3 I   uF3 uF3 b   uF3 uF3 g   uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 g   uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 g   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 g   uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 g   uF3 uF3 g   uF3 uF3 g   uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+
+
+% --- 15BA NORTH WEST
+
+lat l315NW 1 0.0 0.0 17 17 1.25984
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 b   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 g   uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 g   uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 b   uF3 uF3 b   uF3 uF3 I   uF3 uF3 b   uF3 uF3 g   uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 b   uF3 uF3 g   uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 g   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 g   uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 g   uF3 uF3 g   uF3 uF3 g   uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+
+
+% --- 16BA
+
+lat l316s 1 0.0 0.0 17 17 1.25984
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 w
+w   w   w   w   w   w   w   w   b   uF3 uF3 b   uF3 uF3 uF3 w   w
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 b   w   w   w
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 w   w   w   w
+w   w   w   w   w   w   w   w   g   uF3 uF3 g   w   w   w   w   w
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 w   w   w   w   w   w
+w   w   w   w   w   w   w   w   uF3 uF3 w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   I   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+
+
+
+% --- 20BA
+
+lat l320s 1 0.0 0.0 17 17 1.25984
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 uF3 uF3 uF3 w
+w   w   w   w   w   w   w   w   b   uF3 uF3 b   uF3 uF3 uF3 w   w
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 b   w   w   w
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 uF3 uF3 w   w   w   w
+w   w   w   w   w   w   w   w   g   uF3 uF3 b   w   w   w   w   w
+w   w   w   w   w   w   w   w   uF3 uF3 uF3 w   w   w   w   w   w
+w   w   w   w   w   w   w   w   uF3 uF3 w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   I   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+
+% --- Symmetry to the lattices
+%     Symmetry axis is the z-axis (3)
+%     Symmetry boundary condition is reflective (2)
+%     Symmetry axis is located at coordinates (0.0 0.0)
+%     Symmetry covers an angle starting from 270 degrees
+%     and extending for 45 degrees
+
+set usym l300s 3 2 0.0 0.0 270 45
+set usym l306B 3 2 0.0 0.0 270 180
+set usym l306T 3 2 0.0 0.0 270 180
+set usym l306L 3 2 0.0 0.0 270 180
+set usym l306R 3 2 0.0 0.0 270 180
+set usym l312s 3 2 0.0 0.0 270 90
+set usym l316s 3 2 0.0 0.0 270 45
+set usym l320s 3 2 0.0 0.0 270 45
+

@@ -1,0 +1,18 @@
+sim. fuel cycles
+
+Assemblies depleted--nuclide composition changed over a no. of timesteps--excess of reactivity changed at each timesteps
+
+Power dist, excess of reactivity change over a fuel cycle 
+
+estimate ---how long the fuel cycle may last--how long excess of reactivity run the reactor 
+
+Units in SERPENT--- Power in W and Burnup in days
+
+-checkvolumes <N> (est. the material vol. by sampling N random points)---compare this volume with the input value to see if there's been a mistake
+
+
+nohup sss <input file> [<options>] > /dev/null &
+
+nohup sss2 -omp 5 <input file>
+
+Power can't be the output

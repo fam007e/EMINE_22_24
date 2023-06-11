@@ -1,0 +1,19 @@
+The Lambert function is the inverse of the function x(y) = y^e^y, where e is the base of the natural logarithm. In other words, it is the function that satisfies the equation y = x^e^y for a given value of y.
+
+(a) To find the derivative of the Lambert function x(y), we can use the chain rule:
+x'(y) = (x^e^y)' = e^y * x^(e^y-1) * x'(y)
+Solving for x'(y), we get:
+x'(y) = (e^y / (e^y-1)) * x^(1-e^y)
+The derivative x'(y) will be positive in the region where x^(1-e^y) is positive when x is greater than 0. It will be equal to 0 when x is equal to 0 and negative when x is less than 0.
+(b) To find the monotonicity regions of the Lambert function x(y), we can consider the sign of the derivative x'(y). In the region where x'(y) is positive, the function x(y) will be increasing. In the region where x'(y) is negative, the function x(y) will decrease.
+Since the derivative x'(y) is positive when x is greater than 0 and negative when x is less than 0, the function x(y) will increase in the region where x is greater than 0 and decrease in the region where x is less than 0.
+We can label the regions where x(y) increases with non-negative subscripts starting with k = 0 and the regions where x(y) decreases with negative subscripts starting with k = -1. This means that the function x(y) has two branches, one for each monotonicity region.
+
+(c) To find the minimum value and corresponding argument of the Lambert function x(y), we can set the derivative x'(y) equal to 0 and solve for x:
+0 = (e^y / (e^y-1)) * x^(1-e^y)
+x = 0
+The minimum value of the function x(y) is, therefore, x(0) = 0.
+(d) The domain of the Lambert function x(y) is the set of all values of y for which the equation y = x^e^y has a solution. The co-domain is the set of all possible values of x.
+
+One of the branches of the Lambert function, denoted as W0(x), is the principal (primary) branch and is the one that is defined for all values of y in the domain. The other branch, denoted as W1(x), is the complementary branch and is defined as a subset of the domain.
+(e) To plot the function x(y) = y^e^y, we can use a graphing tool or software to plot the function for a range of values of y. The characteristic regions and values of the function will depend on the value of e. For example, if e = 2, the function x(y) will be an upward-facing parabola with a minimum value of 0 at y = 0. If e > 2, the function will have a single local minimum at y = 0 and will increase without bound as y approaches infinity

@@ -1,0 +1,56 @@
+%----------------Asymmetric BWR assembly with Gd pins-------------
+set title "Home Assignment 6“
+
+%------Cube at origin 0 and diameter 5cm--------------------------
+surf 1 cube 0.000 0.000 0.000 250.000
+cell 1 0 UO2 -1 % uranium inside surface 1
+cell 2 0 water 1 % water in the outer surface
+cell 3 0 outside 1 %
+
+%------Fuel consisting of enriched uranium UO2--------------------
+%------Atomic densities given in units of 1/(barn*cm)-------------
+mat UO2 -10.9700
+92235.09c -0.07048
+92238.09c -0.81102
+8016.09c -0.11850
+
+%--------Heavy water----------------------------------------------
+mat water -0.812120 moder lwtr 1001 moder hwtr 1002
+1001.06c -8.96000E-1
+1002.06c -2.01016E-1
+8016.06c -8.96000E-5
+
+%-------Thermal scattering data for light water and heavy water----
+therm lwtr lwj3.11t
+therm hwtr hwj3.11t
+
+%-------Cross section data library file path-----------------------
+set acelib "/codes/SERPENT/xsdata/endfb7.xsdata"
+
+%-------Reflective boundary condition------------------------------
+set bc 2
+set gcu 0
+set sym 4
+set nfg 4 0.625E-6 5.5E-3 0.821
+
+%-------Neutron population and criticality cycles------------------
+set pop 100000 50 50
+
+%-------Geometry and mesh plots------------------------------------
+plot 3 500 500
+mesh 3 500 500
+
+%-------Fast flux in inner moderator channel wall------------------
+det 1
+de 1 % Use energy grid 1.
+dm UO2 % Score in cell 1.
+dv 1 % Volume for normalization.
+
+%-------Fast flux in outer channel wall-----------------------------
+det 2
+de 1 % Use energy grid 1
+dm water % Score in cell 2, which is water
+dv 1 % Volume for normalization
+
+%-------------------------------------------------------------------
+set his 1 %If we want to generate a file with all the values

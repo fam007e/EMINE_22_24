@@ -1,0 +1,187 @@
+@CHARSET "ISO-8859-1";
+
+@external .*;
+
+/* css class for the table cells that contain a button that is not a button
+   for a sutoolbar*/
+.toolbarCell {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color:#ededed;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #d3d3d3;
+	color:#777777;
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:8px 10px;
+	margin-right:3px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+	width: 16px;
+}
+
+.toolbarSubmenuCell {
+	background: url("toolbar/arrow.png")  no-repeat 0 0px;
+	background-position: right bottom;
+}
+
+.toolbarTabLabel {
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #d3d3d3;
+	background-color:#b7b7b7;
+	color:#777777;
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:4px 5px;
+	margin-right:3px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+}
+
+.toolbarTabLabelSelected {
+	background-color:#ebebeb;
+}
+
+.toolbarCell:hover {
+	background-color:#e9e9e9;
+	border:1px solid #b3b3b3;
+}
+		
+@url arrowUrl arrow;
+
+/* css class for the table cells that contain a button that opens a subtoolbar*/
+.toolbarMenuCell {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color:#ededed;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #d3d3d3;
+	color:#777777;
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:8px 10px;
+	margin-right:3px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+	background: arrowUrl  no-repeat 0 0px;
+	background-position: right bottom;
+	width: 16px;
+}
+
+.toolbarMenuCell:hover {
+	background-color:#e9e9e9;
+	border:1px solid #b3b3b3;
+}
+
+/* class for the table containing buttons in the main toolbar */
+.toolbarTable {
+	padding: 2px;
+	margin-top: 2px;
+	margin-bottom: 5px;
+	background-color:#ececec;
+	display: inline-block;
+}
+
+.toolbarSpacer{
+	width: 100%;
+}
+
+/* rule for the table containing buttons in a subtoolbar */
+.toolbarPopup .toolbarTable {
+    position: absolute;
+  	left:-35px;
+	top:5px;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+	border:1px solid #b3b3b3;
+    border-radius: 5px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color:#f3f3f3;
+	-webkit-box-shadow: 0px 3px 16px rgba(58, 50, 50, 0.35);
+	-moz-box-shadow:    0px 3px 16px rgba(58, 50, 50, 0.35);
+	box-shadow:         0px 3px 16px rgba(58, 50, 50, 0.35);
+}
+
+/* the grey arrow above the popup */
+.toolbarPointingArrow {
+	position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #bebebe transparent;
+    top: -21px;
+}
+
+/* rule for the help widget*/
+.toolbarPopup .helpWidget {
+    position: absolute;
+  	left:-100px;
+	top:5px;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+	border:1px solid #b3b3b3;
+    border-radius: 5px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color:#f3f3f3;
+	-webkit-box-shadow: 0px 3px 16px rgba(58, 50, 50, 0.35);
+	-moz-box-shadow:    0px 3px 16px rgba(58, 50, 50, 0.35);
+	box-shadow:         0px 3px 16px rgba(58, 50, 50, 0.35);
+}
+
+/* class for the table cell containing the abritray matrix panel*/
+.arbitraryMatrixCell{
+		
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color:#ededed;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #d3d3d3;
+	color:#777777;
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:8px 12px;
+	margin-right:3px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+}
+
+/* class for the top-level element in the arbitrary matrix panel */
+.arbitraryMatrixPanel {
+	width:100%;
+	margins:auto;
+}
+
+.arbitraryMatrixInsertButton {
+	
+}
+
+
+.toolbarPopup {
+	border-radius: 10px;
+	border:0px solid;
+	border-color:rgb(150,150,150);
+	background-color: #ececec;
+	z-index:9000;
+}
+

@@ -1,0 +1,472 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+
+\title{Neutron Slowing Down Spectrum }
+
+
+\author{Project 1 in Numerical Methods\\
+Vasily Arzhanov, Reactor Physics, $\mathrm{KTH}$}
+\date{}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+Any more or less serious numerical project involves a good portion of analytical work. This numerical project guides the students how to successfully combine analytical thinking, numerical calculations and programming skill. Upon finishing this project, the students will acquire a better physical insight into an important area of nuclear reactor theory - the energy spectrum of the neutron population in a nuclear reactor. The mathematical foundation of this project is an integro-differential equation commonly referred to as the neutron continuity equation in terms of the neutron flux and current which are independent of the angular variable. To close this equation, one needs a certain relationship between the neutron flux and current. Typically this is done assuming the Fick's law. However under certain conditions, this equation converts to a fully integral equation that involves the neutron flux only and thus can be solved directly, for example by Laplace transform. The inversion of Laplace transform is done partly analytically and partly numerically. The numerical inversion of Laplace transform is known to be both ill-conditioned and inefficient. This project recasts the inversion integral into the Fourier cosine representation which is further converted to a (slowly) converging series that in turn is accelerated by the iterated Aitken's process.
+While performing this project, the students are supposed to answer the questions marked with bold face and to submit a written report organized as a scientific manuscript. The layout of the present guidelines may serve as a template for writing the final report.
+\end{abstract}
+
+\section{Introduction}
+The energy spectrum of the neutron population of a nuclear reactor is of paramount importance. If the neutron energy spectrum is known, the total fission rate and thus the total thermal power generation can be computed, for example
+
+$$
+P(t)=\varepsilon_{f} \cdot \int_{V}^{\infty} \int_{0}^{\infty} \Sigma_{f}(\mathbf{r}, E) \phi(\mathbf{r}, E, t) d E d^{3} \mathbf{r}
+$$
+
+Here, $\varepsilon_{f} \approx 200 \mathrm{MeV} /$ fiss. Neutrons in a fission reactor, as the name suggests, are born into the system through nuclear fissions with kinetic energies of a few $\mathrm{MeV}$, then they are slowed to thermal energies (typically in thermal reactors) through successive collisions with the surrounding nuclei. The knowledge of neutron energy spectrum is also crucial in evaluating so called macroscopic group cross-sections, for instance for scattering
+
+$$
+\Sigma_{s, g}(\mathbf{r})=\frac{\int_{\Delta E_{g}} \Sigma_{s}(\mathbf{r}, E) \phi(\mathbf{r}, E) d E}{\int_{\Delta E_{g}} \phi(\mathbf{r}, E) d E}
+$$
+
+The spectrum itself is determined partly by the nuclear reactions which can occur and partly by the geometry and size of the system. It is a good starting point to focus our attention first on the influence of the nuclear phenomena.
+
+Generally, the neutron balance equation reads as
+
+$$
+\frac{1}{v} \frac{\partial \phi}{\partial t}+\nabla \cdot \mathbf{J}(\mathbf{r}, E, t)+\Sigma_{t}(\mathbf{r}, E) \phi(\mathbf{r}, E, t)=\int_{0}^{\infty} \Sigma\left(\mathbf{r}, E^{\prime} \rightarrow E\right) \phi\left(\mathbf{r}, E^{\prime}, t\right) d E^{\prime}+S(\mathbf{r}, E, t)
+$$
+
+This is known also as the neutron continuity equation. Here $S(\mathbf{r}, E, t)$ is an external neutron source. The neutron flux, $\phi(\mathbf{r}, E, t)$, and neutron current, $\mathbf{J}(\mathbf{r}, E, t)$, are defined through the neutron angular density, $n(\mathbf{r}, E, \boldsymbol{\Omega}, t)$, by
+
+$$
+\phi(\mathbf{r}, E, t) \equiv \int_{4 \pi} v n(\mathbf{r}, E, \boldsymbol{\Omega}, t) d \boldsymbol{\Omega}=v n(\mathbf{r}, E, t) \quad \mathbf{J}(\mathbf{r}, E, t) \equiv \int_{4 \pi} \mathbf{v} n(\mathbf{r}, E, \mathbf{\Omega}, t) d \mathbf{\Omega}
+$$
+
+The differential cross section is of the form
+
+$$
+\Sigma\left(\mathbf{r}, E^{\prime} \rightarrow E\right)=\Sigma_{t}\left(\mathbf{r}, E^{\prime}\right) \cdot f\left(\mathbf{r}, E^{\prime} \rightarrow E\right)
+$$
+
+Here, the differential transfer probability function, $f\left(\mathbf{r}, E^{\prime} \rightarrow E\right)$, is normalized as
+
+$$
+\int_{0}^{\infty} f\left(\mathbf{r}, E^{\prime} \rightarrow E\right) d E=c\left(\mathbf{r}, E^{\prime}\right)
+$$
+
+The right side of the above equation, and hence also the integral on the left, is clearly the mean number of neutrons emerging per collision at $\mathbf{r}$ of neutrons of energy $E^{\prime}$. This quantity has been represented by the symbol $c\left(\mathbf{r}, E^{\prime}\right)$. For pure capture collisions, e.g. $(n, \gamma)$ and $(n, \alpha)$, in which no neutrons are produced, $c=0$, for scattering collisions $c=1$, and for fission $c=v$.
+
+\section{Neutron slowing down in an infinite medium}
+The objective of this numerical project is the calculation of the energy dependence of the neutron flux in the fast energy range, let's say above $1 \mathrm{eV}$, in which upscattering is negligible. To simplify this calculation, we will first consider neutron slowing down from time independent sources uniformly distributed throughout an infinite, uniform medium. In this case, all spatial dependence disappears, and the neutron continuity equation reduces to an equation for the neutron energy spectrum, $\phi(\mathbf{r}, E, t) \rightarrow \phi(E)$, of the form
+
+$$
+\Sigma_{t}(E) \phi(E)=\int_{0}^{\infty} \Sigma\left(E^{\prime} \rightarrow E\right) \phi\left(E^{\prime}\right) d E^{\prime}+S(E)
+$$
+
+That is, the neutron continuity (transport) equation simplifies dramatically to an integral equation in the single variable $E$, which we will refer to as the infinite-medium spectrum equation. To justify the neglect of all spatial dependence, we remark that in all large reactors, leakage is a relatively minor effect in comparison to neutron energy variation.
+
+To proceed further we will assume that the scattering nuclei are initially at rest and free to recoil. That is, we will consider only fast neutron energies much greater than the thermal energy of the nuclei, $E \gg k T$ so that upscattering in collisions can be ignored. The scattering and absorption reactions together determine the detailed shape of the spectrum. The largest influence is due to the scattering interactions which establish the over-all shape of the spectrum. The effects of the absorptions are somewhat secondary, and in most reactor situations these tend primarily to distort the spectrum produced by the scatterings. Thus in the present project, we will assume no absorption (and hence no fission).
+
+The neutron continuity equation now reduces to
+
+$$
+\Sigma_{s}(E) \phi(E)=\int_{0}^{\infty} \Sigma_{s}\left(E^{\prime} \rightarrow E\right) \phi\left(E^{\prime}\right) d E^{\prime}+S(E)
+$$
+
+The differential scattering cross section is of the form
+
+$$
+\Sigma_{s}\left(E^{\prime} \rightarrow E\right)=\Sigma_{s}\left(E^{\prime}\right) \cdot f_{s}\left(E^{\prime} \rightarrow E\right)
+$$
+
+As was mentioned earlier, the normalization condition reads now as
+
+$$
+\int_{0}^{\infty} f_{s}\left(E^{\prime} \rightarrow E\right) d E=1
+$$
+
+Both elastic and inelastic scattering reactions have a significant effect upon the neutron energy distribution. The inelastic collisions are important when the neutron kinetic energy is in the $\mathrm{KeV}$ range or above. Below the $\mathrm{KeV}$ range, the elastic collisions are the primary mechanism of energy degradation. We will assume only one kind of scattering species with the atomic mass $A$ and will restrict our attention by considering only the process of elastic scattering, which is isotropic in the center of mass system. In this case, our earlier study of two-body collision kinematics has indicated that the differential scattering probability density is given by the equal probability law
+
+$$
+f_{s}\left(E^{\prime} \rightarrow E\right) d E= \begin{cases}\frac{d E}{(1-\alpha) E^{\prime}} & E \leq E^{\prime} \leq E / \alpha \\ 0 & \text { otherwise }\end{cases}
+$$
+
+Here, the scattering parameter $\alpha=\left(\frac{A-1}{A+1}\right)^{2}$.
+
+Assignment 1: Check this normalization condition.
+
+We will begin by determining the neutron energy spectrum $\phi(E)$ resulting from a monoenergetic source of strength $S_{0}$ emitting neutrons of energy $E_{0}$. The neutron continuity equation takes now the form
+
+$$
+\Sigma_{s}(E) \phi(E)=\int_{0}^{\infty} \Sigma_{s}\left(E^{\prime}\right) f_{s}\left(E^{\prime} \rightarrow E\right) \phi\left(E^{\prime}\right) d E^{\prime}+S_{0} \delta\left(E-E_{0}\right)
+$$
+
+\section{Collision rate density}
+It proves convenient to introduce a change of dependent variable in Eq. (2) by identifying the collision rate density
+
+$$
+F(E) \equiv \Sigma_{s}(E) \phi(E)
+$$
+
+Hence we can rewrite the slowing down equation (2) in a slightly simpler form as
+
+$$
+F(E)=\int_{0}^{\infty} f_{s}\left(E^{\prime} \rightarrow E\right) F\left(E^{\prime}\right) d E^{\prime}+S_{0} \delta\left(E-E_{0}\right)
+$$
+
+We could solve this equation by restricting our attention to energies $E<E_{0}$ and using the source as a boundary condition as $E \rightarrow E_{0}$. However, it is more instructive in this case to solve it directly. First note that because of the singular source, the solution $F(E)$ must contain a term proportional to $\delta\left(E-E_{0}\right)$. Hence we seek a solution of the form
+
+$$
+F(E)=F_{c}(E)+C \delta\left(E-E_{0}\right)
+$$
+
+where $C$ is an undetermined constant and $F_{c}(E)$ is the nonsingular (collided) component of $F(E)$. Substituting this form into Eq. (3), one finds
+
+$$
+F_{c}(E)+C \delta\left(E-E_{0}\right)=\int_{0}^{\infty} f_{s}\left(E^{\prime} \rightarrow E\right) F_{c}\left(E^{\prime}\right) d E^{\prime}+C f_{s}\left(E_{0} \rightarrow E\right)+S_{0} \delta\left(E-E_{0}\right)
+$$
+
+Assignment 2: Derive this equation in detail.
+
+However, the singular contributions must be equal. Hence we require $C=S_{0}$. Then we find that $F_{c}(E)$ obeys the remaining nonsingular equation
+
+$$
+F_{c}(E)=\int_{0}^{\infty} f_{s}\left(E^{\prime} \rightarrow E\right) F_{c}\left(E^{\prime}\right) d E^{\prime}+S_{0} f_{s}\left(E_{0} \rightarrow E\right)
+$$
+
+Thus $F_{c}(E)$ may be interpreted as the collision density due to neutrons that have suffered at least one collision (hence the subscript $c$ ).
+
+\section{Neutron energy spectrum in the first collision interval}
+Upon the first collision, the source neutrons can lose the kinetic energy at most down to $\alpha E_{0}$. We thus define the first collision interval as $\alpha E_{0}<E \leq E_{0}$. More generally, collision intervals are introduced as follows
+
+$$
+E^{(n)} \equiv\left(\alpha^{n} E_{0}<E \leq \alpha^{n-1} E_{0}\right]= \begin{cases}\alpha E_{0}<E \leq E_{0} & (n=1) \\ \alpha^{n} E_{0}<E \leq \alpha^{n-1} E_{0} & (n=2,3, \ldots)\end{cases}
+$$
+
+Recall that in case of elastic scattering, the scattering probability density is given by
+
+$$
+f_{s}\left(E^{\prime} \rightarrow E\right)= \begin{cases}\frac{1}{(1-\alpha) E^{\prime}} & E \leq E^{\prime} \leq E / \alpha \\ 0 & \text { otherwise }\end{cases}
+$$
+
+Clearly, Eq. (4) in the first collision interval, $\alpha E_{0}<E \leq E_{0}$, becomes
+
+$$
+F_{c}(E)=\int_{E}^{E_{0}} \frac{F_{c}\left(E^{\prime}\right) d E^{\prime}}{(1-\alpha) E^{\prime}}+\frac{S_{0}}{(1-\alpha) E_{0}}
+$$
+
+Assignment 3: Solve this equation in detail by converting it to an ordinary differential equation.
+
+\section{Neutron lethargy}
+The energy range spanned by neutron slowing down is extremely large, ranging from $10^{7} \mathrm{eV}$ down to $1 \mathrm{eV}$. Furthermore, we have found in elastic scattering the neutron tends to lose a fraction of its incident energy rather than a fixed amount of energy. These considerations suggest that it would be more convenient to use as an independent variable, the logarithm of the neutron energy $E$. To this end, we define the neutron lethargy
+
+$$
+u \equiv \ln \frac{E_{0}}{E} \longleftrightarrow E=E_{0} e^{-u}
+$$
+
+Here, the energy $E_{0}$ is chosen to be the maximum energy that neutrons can achieve in the problem. It is usually set either at the source energy for a monoenergetic source problem, or chosen as $10 \mathrm{MeV}$ for a reactor calculation.
+
+For convenience and future reference, we define the number $q$ as
+
+$$
+q \equiv \ln \frac{1}{\alpha}=\Delta u_{\max }
+$$
+
+This quantity $q$ has a meaning of maximal possible change in lethargy per one scattering collision. We note here two immediate (and obvious) identities
+
+$$
+e^{q}=\frac{1}{\alpha} \quad e^{-q}=\alpha
+$$
+
+The neutron lethargy is such a convenient variable that it is customary to perform fast spectrum calculations in terms of $u$ rather than $E$. Hence we must convert all our equations over to this new independent variable. To accomplish this, we first establish the relationship between differentials
+
+$$
+d u=-\frac{d E}{E} \longleftrightarrow d E=-E_{0} e^{-u} d u
+$$
+
+The change of variables for any physical quantity defined per unit range of its argument runs according the identity
+
+$$
+F(u) d u=-F(E) d E
+$$
+
+Here we have used the collision rate density $F$ as an example. The choice of plus or minus sign is done individually in every specific case depending on the relationship between the new and old independent variables. Any other physical quantity is expressed through the new variable; let's say $u$, as usual
+
+$$
+\Sigma(u)=\Sigma(E(u))
+$$
+
+Assignment 4: Show the identities
+
+$$
+F(u)=E F(E) \quad F(E)=\frac{1}{E_{0}} e^{u} F(u)
+$$
+
+Assignment 5: Find $f_{s}\left(u^{\prime} \rightarrow u\right)$ using $f_{s}\left(u^{\prime} \rightarrow u\right) d u=-f_{s}\left(E^{\prime} \rightarrow E\right) d E$ and Eq. (6).
+
+Similarly, the slowing down equation (3) in the lethargy variable is expressed as
+
+$$
+F(u)=\int_{-\infty}^{\infty} f_{s}\left(u^{\prime} \rightarrow u\right) F\left(u^{\prime}\right) d u^{\prime}+S_{0} \delta(u)
+$$
+
+Assignment 6: Give a detailed derivation.
+
+Taking into account the specific form of $f_{s}\left(u^{\prime} \rightarrow u\right)$, Eq.(7) becomes
+
+$$
+F(u)=\left\{\begin{array}{lr}
+\int_{0}^{u} \frac{e^{-\left(u-u^{\prime}\right)}}{1-\alpha} F\left(u^{\prime}\right) d u^{\prime}+S_{0} \delta(u) & 0 \leq u<q \\
+\int_{u-q}^{u} \frac{e^{-\left(u-u^{\prime}\right)}}{1-\alpha} F\left(u^{\prime}\right) d u^{\prime} & u \geq q
+\end{array}\right.
+$$
+
+Eq. (8) can be rewritten in a compact form as
+
+$$
+F(u)=\int_{\max \{0, u-q\}}^{u} \frac{e^{-\left(u-u^{\prime}\right)}}{1-\alpha} F\left(u^{\prime}\right) d u^{\prime}+S_{0} \delta(u)
+$$
+
+In what follows, we are going to solve Eq.(8) by finding analytic Laplace transform of this equation and then numerically inverting it.
+
+\section{Laplace transform}
+It is useful to define first
+
+\begin{itemize}
+  \item Heaviside or unit step function, $H(u) \equiv \begin{cases}0 & u<0 \\ 1 & u \geq 0\end{cases}$
+
+  \item Dirac delta function, $H^{\prime}(u)=\delta(u)=\left\{\begin{array}{ll}\infty & u=0 \\ 0 & u \neq 0\end{array} \quad \int_{-\infty}^{\infty} \delta(u) d u=1\right.$
+
+  \item Convolution of two functions, $\left(F^{*} G\right)(u) \equiv \int_{0}^{u} F(u-v) G(v) d v=\int_{0}^{u} F(v) G(u-v) d v$
+
+\end{itemize}
+
+The Laplace transform of a function $F(u)$, given for all real numbers $u \geq 0$, is the function $F^{\wedge}(p)$ defined by
+
+$$
+F^{\wedge}(p) \equiv \mathcal{L}[F(u)] \equiv \int_{-0}^{\infty} e^{-p u} F(u) d u
+$$
+
+provided this integral exists. The lower limit, $-0$, is a short notation to mean
+
+$$
+\int_{-0}^{\infty} e^{-p u} F(u) d u=\lim _{\varepsilon \rightarrow+0} \int_{-\varepsilon}^{\infty} e^{-p u} F(u) d u
+$$
+
+thus ensuring the inclusion of the entire Dirac delta function $\delta(u)$ in case such an impulse does exist in $F(u)$ at $u=0$. The parameter $p$ is in general complex, $p=\gamma+i \omega$. This integral transform has a number of properties that makes it useful for analyzing linear dynamical systems. The most significant advantage is that differentiation and integration become multiplication and division respectively with $p$.
+
+The inverse Laplace transform of a function $F^{\wedge}(p)$ is the piecewise-continuous and exponentially-restricted real function $F(u)$ such that its Laplace transform is equal to the original function $F^{\wedge}(p)$. It is commonly denoted as
+
+$$
+F(u) \equiv \mathcal{L}^{-1}\left[F^{\wedge}(p)\right]
+$$
+
+The Lerch's theorem states that if an inverse Laplace transform exists then it is essentially unique. Several formulas were proven to represent the inverse Laplace transform; the most frequently cited formula is given by the Bromwich integral, which is a complex integral defined as
+
+$$
+F(u)=\mathcal{L}^{-1}\left[F^{\wedge}(p)\right]=\frac{1}{2 \pi i} \int_{\gamma-i \cdot \infty}^{\gamma+i \cdot \infty} e^{p u} F^{\wedge}(p) d p
+$$
+
+where $\gamma$ is a real number so that the contour path of integration is in the region of convergence of $F^{\wedge}(p)$ normally requiring $\gamma>\operatorname{Re}\left(p_{n}\right)$ for every pole $p_{n}$ in $F^{\wedge}(p)$ i.e. $\gamma$ is a vertical contour in the complex plane chosen so that all singularities of $F^{\wedge}(p)$ are to the left of it. The most important properties of the Laplace transform are
+
+\begin{itemize}
+  \item Linearity $\mathcal{L}[\alpha F(u)+\beta G(u)]=\alpha \mathcal{L}[F(u)]+\beta \mathcal{L}[G(u)]$
+
+  \item Homogeneity $\mathcal{L}[F(\alpha u)]=\frac{1}{\alpha} F^{\wedge}\left(\frac{p}{\alpha}\right)$
+
+  \item Transform of delay $\mathcal{L}[F(u-a) H(u-a)]=e^{-a p} F^{\wedge}(p)$
+
+  \item Delay of transform $\mathcal{L}\left[e^{a u} F(u)\right]=F^{\wedge}(p-a)$
+
+  \item Differentiation $\mathcal{L}\left[F^{\prime}(u)\right]=p F^{\wedge}(p)-F(0) ; \mathcal{L}\left[F^{\prime \prime}(u)\right]=p^{2} F^{\wedge}(p)-p F(0)-F^{\prime}(0)$ etc. [there is no impulse at 0 in $F(u)$ ]
+
+  \item Derivative of $\operatorname{transform} \mathcal{L}[u F(u)]=-\frac{d}{d p} F^{\wedge}(p) ; \quad \mathcal{L}\left[u^{n} F(u)\right]=(-1)^{n} \frac{d^{n}}{d p^{n}} F^{\wedge}(p)$
+
+  \item Integration $\mathcal{L}\left[\int_{0}^{u} F(v) d v\right]=\frac{1}{p} F^{\wedge}(p)$
+
+  \item Convolution $\mathcal{L}\left[F^{*} G\right]=\mathcal{L}[F(u)] \cdot \mathcal{L}[G(u)]=F^{\wedge}(p) G^{\wedge}(p)$
+
+\end{itemize}
+
+Examples of some special transforms are given below.
+
+० $\mathcal{L}[\delta(u)]=1 \longleftrightarrow \mathcal{L}^{-1}[1]=\delta(u) \quad \mathcal{L}[\delta(u-q)]=e^{-q p}$
+
+० $\quad \mathcal{L}[H(u)]=\frac{1}{p} \quad \mathcal{L}[H(u-q)]=\frac{1}{p} e^{-q p}$
+
+$\circ \quad \mathcal{L}[u H(u)]=\frac{1}{p^{2}} \quad \mathcal{L}\left[u^{n} H(u)\right]=\frac{n !}{p^{n+1}}$
+
+$\circ \quad \mathcal{L}\left[e^{-a u} H(u)\right]=\frac{1}{p+a} \quad \mathcal{L}\left[u^{n} e^{-a u} H(u)\right]=\frac{n !}{(p+a)^{n+1}}$
+
+Now we are ready to find the solution to the slowing down equation (8) in the first collision interval namely when $0 \leq u<q$. The equation reads as
+
+$$
+F(u)=\frac{1}{1-\alpha} \int_{0}^{u} e^{-\left(u-u^{\prime}\right)} F\left(u^{\prime}\right) d u^{\prime}+S_{0} \delta(u)
+$$
+
+Assignment 7: Solve this equation by Laplace transform and check the solution against the previously found one.
+
+\section{Numerical inversion of Laplace transform}
+Laplace transform methods are an active area of research. Numerical methods of approximately inverting Laplace transform will increase in popularity as computing capability grows. Unfortunately, there is no single robust method that inverts a complicated $\bar{F}(p)$ numerically. Instead, there are many particular algorithms tailored to appropriate situations. The basic reason for so many approaches is that any entirely numerical algorithm is ill-conditioned. For the slowing down problem in question, it was found advantageous to recast the Bromwich integral (10) to the Fourier cosine integral representation
+
+$$
+F(u)=\frac{2 e^{\gamma u}}{\pi u} \int_{0}^{\infty} \operatorname{Re}[\bar{F}(\gamma+i \omega / u)] \cos \omega d \omega
+$$
+
+Here, $\gamma$ is the coordinate on the real axis of the Bromwich contour chosen to be greater than the largest real part of any singularity of the image function $\bar{F}(p)$. This rarely mentioned in literature representation (12) turns out to be a good starting point for numerical inversion of the Laplace transform. We will further convert the above representation (12) to an infinite series
+
+$$
+F(u)=\frac{2 e^{\gamma u}}{\pi u} \int_{0}^{\infty}(\cdot) d \omega=\frac{2 e^{\gamma u}}{\pi u}\left[\int_{0}^{\pi / 2}(\cdot) d \omega+\int_{\pi / 2}^{3 \pi / 2}(\cdot) d \omega+\ldots\right]
+$$
+
+Next, by suitable change of variables, we translate the integration limits $\left[k \frac{\pi}{2},(k+1) \frac{\pi}{2}\right]$ to a standard interval $[-\pi / 2, \pi / 2]$ that brings us to the series
+
+$$
+\begin{aligned}
+& F(u)=\frac{2 e^{\gamma u}}{\pi u}\left[\int_{0}^{\pi / 2} \operatorname{Re}[\bar{F}(\gamma+i \omega / u)] \cos \omega d \omega+\right. \\
+& \left.+\sum_{k=1}^{\infty}(-1)^{k} \int_{-\pi / 2}^{\pi / 2} \operatorname{Re}[\bar{F}(\gamma+i(\omega+k \pi) / u)] \cos \omega d \omega\right]
+\end{aligned}
+$$
+
+Any integral in this series is suggested to evaluate numerically by an efficient integration algorithm such as Romberg or Gauss-Kronrod, either is found in Matlab. This series is not expected to converge with a high rate so further acceleration is recommended for example by the iterated Aitken's method.
+
+Assignment 8: Write a computer code for numerical inversion of the Laplace transform using above formulas. Do not forget about the parameter $\gamma$ to specify the Bromwich contour. Demonstrate the efficiency of your code using known Laplace pairs: $\mathcal{L}[\sin u]=\frac{1}{1+p^{2}} ; \mathcal{L}[H(u)]=\frac{1}{p} ; \mathcal{L}\left[\frac{\cos (2 \sqrt{u})}{\sqrt{\pi u}}\right]=\frac{e^{-1 / p}}{\sqrt{p}} ;$ $\mathcal{L}[\ln u]=-\frac{\ln p+\gamma}{p}$ with $\gamma$ being Euler's constant; $\mathcal{L}[H(u-1)-H(u-2)]=\frac{e^{-p}-e^{-2 p}}{p} ; \mathcal{L}\left[J_{0}(u)\right]=\frac{1}{\sqrt{1+p^{2}}}$. In either case, make your educated choice for the Bromwich contour. Plot your numerical inversion together with the known underlying function. Organize your graphs as a 3 by 2 subplot. Be aware that Eq. (13) fails when $u=0$.
+
+\section{Numerical solution for neutron spectrum}
+We recall first the slowing down equation (8)
+
+$$
+F(u)=\frac{1}{1-\alpha} \int_{\max \{0, u-q\}}^{u} e^{-\left(u-u^{\prime}\right)} F\left(u^{\prime}\right) d u^{\prime}+S_{0} \delta(u)
+$$
+
+Next, we apply the Laplace transform to the above equation with
+
+$$
+F^{\wedge}(p)=\int_{0-}^{\infty} e^{-p u} F(u) d u \quad S^{\wedge}(p)=\int_{0-}^{\infty} e^{-p u} S_{0} \delta(u) d u=S_{0}
+$$
+
+It is not that difficult to find that
+
+$$
+\mathcal{L}\left[\int_{\max \{0, u-q\}}^{u} e^{-\left(u-u^{\prime}\right)} F\left(u^{\prime}\right) d u^{\prime}\right]=\frac{1-e^{-q(p+1)}}{p+1} F^{\wedge}(p)
+$$
+
+Thus the integral equation (14) in $u$-Domain reduces to an algebraic equation in $p$-Domain
+
+$$
+F^{\wedge}(p)=\frac{1}{1-\alpha} \frac{1-e^{-q(p+1)}}{p+1} F^{\wedge}(p)+S_{0}
+$$
+
+Hence the Laplace-image $F^{\wedge}(p)$ is easily found as
+
+$$
+F^{\wedge}(p)=S_{0} \frac{1}{1-\frac{1}{1-\alpha} \frac{1-e^{-q(p+1)}}{p+1}}=S_{0} \frac{1}{1-Q^{\wedge}(p+1)}
+$$
+
+Here we have just introduced an auxiliary function
+
+$$
+Q^{\wedge}(p) \equiv \frac{1}{1-\alpha} \frac{1-e^{-q p}}{p}
+$$
+
+A slight simplification of the above expression may be achieved by the delay of the transform property
+
+$$
+\mathcal{L}\left[e^{a u} G(u)\right]=G^{\wedge}(p-a) \longrightarrow \mathcal{L}^{-1}\left[G^{\wedge}(p+1)\right]=e^{-u} G(u)
+$$
+
+As applied to our case, it gives
+
+$$
+F(u)=S_{0} \mathcal{L}^{-1}\left[\frac{1}{1-Q^{\wedge}(p+1)}\right]=S_{0} e^{-u} \mathcal{L}^{-1}\left[\frac{1}{1-Q^{\wedge}(p)}\right]
+$$
+
+Assignment 9: Check that $Q^{\wedge}(1)=1$; draw a conclusion regarding how to choose the Bromwich contour when inverting Eq. (15).
+
+From now on, we focus our attention on numerical inversion of the above expression. To simplify notation, let
+
+$$
+x \equiv \frac{1}{1-\alpha} \frac{1-e^{-q p}}{p}=Q^{\wedge}(p)
+$$
+
+It converts Eq. (15) to the form
+
+$$
+F(u)=S_{0} e^{-u} \mathcal{L}^{-1}\left[\frac{1}{1-x}\right]=S_{0} e^{-u} \mathcal{L}^{-1}\left[1+x+x^{2}+\ldots\right]
+$$
+
+Obviously,
+
+$$
+\mathcal{L}^{-1}\left[1+x+x^{2}+\ldots\right]=\mathcal{L}^{-1}[1]+\mathcal{L}^{-1}\left[x+x^{2}+\ldots\right]=\delta(u)+\mathcal{L}^{-1}\left[x+x^{2}+\ldots\right]
+$$
+
+Now it becomes clear - a straightforward numerical inversion of $\mathcal{L}^{-1}[1 /(1-x)]$ runs into a severe problem of finding the Dirac delta $\delta(u)$ numerically. Physically, the very first term
+
+$$
+S_{0} e^{-u} \mathcal{L}^{-1}[1]=S_{0} e^{-u} \delta(u)=S_{0} \delta(u)
+$$
+
+is nothing else but the uncollided contribution to the collision density, $F(u)$. Analogously, the next term
+
+$$
+F_{1}(u) \equiv S_{0} e^{-u} \mathcal{L}^{-1}[x]
+$$
+
+may be interpreted as the collision density due to neutrons having suffered exactly one collision and so on what regards the terms
+
+$$
+F_{n}(u) \equiv S_{0} e^{-u} \mathcal{L}^{-1}\left[x^{n}\right]
+$$
+
+Clearly, the representation
+
+$$
+\mathcal{L}^{-1}\left[1+x+x^{2}+\ldots\right]=\mathcal{L}^{-1}[1]+\mathcal{L}^{-1}[x]+\mathcal{L}^{-1}\left[x^{2}\right]+\ldots
+$$
+
+becomes an expansion of the total collision density $F(u)$ into a series of separate collision densities $F_{n}(u)$ for neutrons having had exactly $n$ collisions
+
+$$
+F(u)=F_{0}(u)+F_{1}(u)+\ldots+F_{n}(u)+\ldots
+$$
+
+In conclusion, our strategy for inverting Eq. (15) or equivalently (16) is to perform the inversion for several first terms analytically. From experience, it is numerically advantageous to separate collision densities for neutrons coming directly from the source and having suffered at most 2 collisions from those with more than 2 collisions
+
+$$
+\mathcal{L}^{-1}\left[\frac{1}{1-x}\right]=\mathcal{L}^{-1}[1]+\mathcal{L}^{-1}[x]+\mathcal{L}^{-1}\left[x^{2}\right]+\mathcal{L}^{-1}\left[\frac{1}{1-x}-1-x-x^{2}\right]
+$$
+
+Finally, our inversion algorithm is proposed to run in three steps
+
+\begin{enumerate}
+  \item Analytical inversion of $F_{0}(u)=\mathcal{L}^{-1}[1], F_{1}(u)=\mathcal{L}^{-1}[x]$ and $F_{2}(u)=\mathcal{L}^{-1}\left[x^{2}\right]$
+
+  \item Numerical inversion of the rest $\tilde{F}_{3}(u)=\mathcal{L}^{-1}\left[\frac{1}{1-x}-1-x-x^{2}\right]=\mathcal{L}^{-1}\left[\frac{x^{3}}{1-x}\right]$
+
+  \item Evaluating the non-singular component of the solution, $F_{c}(u)=F_{1}(u)+F_{2}(u)+\tilde{F}_{3}(u)$
+
+\end{enumerate}
+
+Assignment 10: Evaluate analytically $\mathcal{L}^{-1}[x]=\frac{1}{1-\alpha} \mathcal{L}^{-1}\left[\frac{1-e^{-q p}}{p}\right]$ that is easily found from tables in Chapter 5 and $\mathcal{L}^{-1}\left[x^{2}\right]=\frac{1}{(1-\alpha)^{2}} \mathcal{L}^{-1}\left[\left(\frac{1-e^{-q p}}{p}\right)^{2}\right]$ that is also easily found using the integration property in the same chapter.
+
+Assignment 11: Write a computer code based on above ideas for solving the slowing down equation by the inverse Laplace transform. Evaluate the neutron slowing down density in iron, $A=56$. In doing so, you will need the parameter $\gamma$ to specify the Bromwich contour. To this end, try several values for $\gamma$ in the region $\gamma>0$ until you obtain stable and reasonable results. Keep in mind Assignment 9:. Plot your function $F(u)$ using four collision intervals. To stress the discontinuity jump, it is recommended to plot $F(u)$ in different collision intervals independently. Scale the lethargy axis in such a way that integer numbers naturally label collision intervals.
+
+\section{References}
+[1] Ganapol, B.D., Analytical Benchmarks for Nuclear Engineering Applications, OECD/NEA (2008).
+
+[2] Greenberg, M.D., Advanced Engineering Mathematics, Prentice Hall, New Jersey (1998).
+
+[3] Lewis, E.E., Miller, W.F., Computational Methods of Neutron Transport, ANS La Grange Park, IL (1993).
+
+
+\end{document}

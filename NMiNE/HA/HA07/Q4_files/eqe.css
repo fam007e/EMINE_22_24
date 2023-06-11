@@ -1,0 +1,147 @@
+@CHARSET "UTF-8";
+
+.mathEditor, .mathEditor *
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	text-decoration: none;
+	width: auto;
+	height: auto;
+	vertical-align: baseline;
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	position: static;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	transition: none;
+	border-collapse: separate;
+	font: normal normal normal 12px Arial,Helvetica,Tahoma,Verdana,Sans-Serif;
+	font-size: inherit;
+	color: inherit;
+	text-align: left;
+	white-space: nowrap;
+	cursor: auto;
+	float: none;
+}
+
+.mathEditor>.unselectable{
+	width: 100%;
+}
+
+.mathEditorArea{
+	background: #ececec;
+    border-radius: 2px;
+    padding: 2px 3px 3px 3px;
+}
+
+td.cke_dialog_contents_body{
+	overflow: visible;	
+}
+
+table.toolbarTable{
+	box-sizing: border-box;
+	margin-bottom: 0;
+}
+
+.toolbarCell, .toolbarMenuCell{
+	font-size: 12px !important;
+	vertical-align: middle;
+	text-align: center;
+}
+
+div.mwEquationEditor{
+	font-size: 16px;
+	border: 1px solid #DDDDDD;
+	width: 100% !important;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.arbitraryMatrixPanel *{
+	text-align: center;
+}
+
+.arbitraryMatrixPanel input[type='text']{
+	background: white;
+	border: 1px inset rgb(238, 238, 238);
+}
+
+.arbitraryMatrixInsertButton{
+	border: 1px solid #AAA;
+    border-radius: 5px;
+    padding: 2px 5px;
+    background: #F9F9F9;
+} 
+
+.helpWidget *{
+	white-space: normal;
+	vertical-align: middle;	
+}
+
+.helpWidget .gwt-TabPanelBottom:first-child>div>div>table{
+	margin: 0;
+    width: 100%;
+}
+
+.helpWidget [class$='style-body'], .helpWidget [class$='style-body2'], .helpWidget [class$='style-body3'], .helpWidget [class$='style-legal'] {
+    font-size: 11px;
+    color: #333;
+}
+
+.helpWidget [class$='style-body2'] {
+    font-size: 12px;
+    color: #069;
+}
+
+.helpWidget [class$='style-body3'] {
+    font-size: 16px;
+    color: #069;
+}
+
+.helpWidget [class$='style-legal'] {
+    font-size: 9px;
+    color: #999;
+}
+
+.helpWidget hr{
+	display: block;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.helpWidget hr[class$='style-dothr']{
+	border-style: none;
+    border-top: 1px dotted #ccc;
+    height: 1px;
+}
+
+.helpWidget .gwt-TabBarItem-wrapper{
+	display: inline-block;
+}
+
+.helpWidget .gwt-TabBarItem-wrapper:hover, .helpWidget .gwt-TabBarItem-wrapper:hover *{
+	cursor: pointer;
+}
+
+.helpWidget strong{
+	font-weight: 700;
+}
+
+.helpWidget table{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.helpWidget [class$='style-body'] *{
+	vertical-align: baseline;
+}
+
+.eqeMathEditorArea {
+	width: 524px;
+}

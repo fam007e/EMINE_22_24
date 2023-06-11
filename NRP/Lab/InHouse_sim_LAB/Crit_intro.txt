@@ -1,0 +1,22 @@
+To achieve reactor core criticality, the control rods must be withdrawn after the safety rods have been completely removed from the core, such that a rise in core reactivity ensures the critical condition of this system.
+
+When the neutron flux in the reactor is very low at the start of a nuclear reactor's operation, the indications of the exterior neutron detectors are prone to stochastic fluctuations. To avoid these statistical fluctuations, an additional neutron source is added to the system to increase the initial neutron flux and therefore provide safe average values. Despite its low intensity, this source directs the neutron flux distribution at the start of a new operation cycle. As a result, while the reactor is subcritical and distant from criticality, neutrons from an external source have a greater influence than when the reactor is close to criticality.
+
+The neutron population in a critical reactor with no neutron sources other than induced fission remains constant from generation to generation. In other words, neutron losses due to absorption and leakage precisely account for the excess neutrons produced by fission that are not required to sustain the chain reaction. Now consider a neutron source emitting so many neutrons in each neutron generation time to be inserted into the reactor, and let this reactor be subcritical with a value of k slightly less than 1.
+
+Since that is how many neutrons are emitted in that time, the number of neutrons present at the end of the first generation will be S_o. At the end of the second generation, these S_o neutrons will have become S_o.k neutrons, and the source will have added another S_o neutron, giving us a total of S_o + S_o.k. These S_o + S_o.k neutrons will have become (S_o + S_o.k).k neutrons by the conclusion of the third generation, and the source will have added another S_o neutron to give us a grand total of S_o + S_o.k + S_o.k^2.
+
+If we pursue this type of argument endlessly, we will notice that we will eventually arrive at a final neutron population, "S oo," which is supplied by this.
+
+We can see that expression appears to be fairly sensible, because if "Sco" is our end population, it will become "Sook" after one more generation. If k is less than one, it indicates that "Sco-:ook" neutrons have been replaced by "So" new ones.
+
+The factor "(A)" can be called the subcriitical multiplication factor.
+
+
+####
+eq 1 S_oo = S_o / (1-k)
+eq 2 S_oo = -S_o / del_k
+
+Equations (1) and (2) do not apply when the reactor is critical because they are based on the assumption that the sequence 1 + k + k^2 + k^3 + k^4 --- has a finite total. When and S_o new ones are added every generation, the neutron population will simply increase indefinitely and at a constant rate of S_o neutrons each generation. This rate of rise is minimal if the reactor power is more than ~10^-2% and is often disguised by the reactor's automatic regulation. Any effects of the sources can be ignored in a supercritical reactor.
+
+When positive reactivity is added to a subcritical reactor, the power increases to a new equilibrium value. The size of the rise, as well as the time required for power to stabilize, are determined by the value of k. The closer k is to one, the greater the rise in power for a given increase in reactivity and the longer it takes for power to stabilize.

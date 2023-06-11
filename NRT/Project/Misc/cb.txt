@@ -1,0 +1,180 @@
+\documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage[version=3]{mhchem}
+%\usepackage{multicol}
+\usepackage{subcaption}
+\usepackage{mathrsfs, mathtools, amsmath}
+\setcitestyle{square}
+%\usepackage{natbib}
+%\usepackage{biblatex}
+%\addbibresource{refs.bib}
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Optimisation of free parameters for burnup calculations of a full-core PWR}
+
+\author[]{Paul Toris}
+\author[]{Faisal Ahmed Moshiur}
+\affiliation[]{organization={KTH}, Department= {EMINE}}
+
+\begin{abstract}
+    In this study, we demonstrate that the efficiency of Monte Carlo burnup simulations relies on various free parameters, including time step length and coupling scheme used for depletion calculations. To enhance efficiency, we propose optimizing these parameters. We implemented a model of a full core PWR to test combinations of free parameters and showed that reducing the time step length increases simulation efficiency when paired with a stable coupling scheme. 
+
+\end{abstract}
+
+\begin{keyword}
+Monte Carlo burnup \sep Optimization \sep Time step length \sep Efficiency \sep Statistics
+\end{keyword}
+
+\end{frontmatter}
+
+
+\section{Introduction}
+The use of Monte Carlo simulations in nuclear engineering has become increasingly common over the past few decades, thanks to their ability to predict complex nuclear systems' behavior accurately. Monte Carlo burnup calculations, in particular, are used to determine how a nuclear fuel's isotopic composition evolves due to nuclear reactions and radioactive decay. However, the accuracy and efficiency of these calculations depend heavily on the choice of various free parameters, such as the number and length of burnup steps, the type of burnup scheme used, the method of defining symmetry, and the method of defining depletion zones. Therefore, it is essential to investigate the effect of changing these parameters to optimize Monte Carlo burnup simulations for full-core pressurized water reactors (PWRs).
+
+In this project, we aim to perform Monte Carlo burnup calculations on a full-core PWR and systematically study the effect of changing the aforementioned free parameters on the accuracy and efficiency of the calculations. We will use a variety of burnup schemes, including predictor-corrector, Euler explicit, and Euler implicit, and compare the results to determine the optimal scheme for full-core PWRs. Additionally, we will explore different ways to define symmetry and depletion zones to optimize the accuracy of the simulations while minimizing the computational cost. Ultimately, the results of this project will provide valuable insights into the optimal settings for Monte Carlo burnup simulations of full-core PWRs, which can be used to improve the safety and efficiency of nuclear power plants.
+
+\section{Geometry}
+The geometry model used in this project is a full-core Pressurized Water Reactor (PWR) based on the BEAVRS benchmark \cite{Horelik2018}, which consists of 193 fuel assemblies arranged in a 17x17 lattice. Each fuel assembly comprises 264 fuel rods of uranium dioxide with three enrichment levels: 1.6, 2.4, and 3.1 weight percent $^{235} \mathrm{U}$. The fuel cladding is made of Zircaloy 4, while 1266 burnable poison rods of borosilicate glass with 12.5 weight percent $\mathrm{B_2O_3}$ are included in the core. Borated water is used as the coolant and moderator in the core.
+
+The core geometry is shown in Fig. \ref{fig:2.1a}, where red, yellow, and blue assemblies represent the 1.6, 2.4, and 3.1 weight percent $^{235} \mathrm{U}$ fuel rods, respectively. Burnable poison rods are plotted in green. To provide a more detailed view of the fuel assembly, Fig. \ref{fig:2.1b} shows the radial cross-section of several fuel assemblies. Finally, the axial cross-section of the core is illustrated in Fig. \ref{fig:2.2}. The geometry model plays a crucial role in Monte Carlo burnup calculations as it defines the physical layout of the core and influences the distribution of neutron flux and depletion in the fuel assemblies.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.2\textwidth}
+\centering
+\includegraphics[width = \textwidth]{images/rcross1.jpg}
+\caption{Radial cross-section of the core.}
+\label{fig:2.1a}
+\end{subfigure}
+\begin{subfigure}{0.2\textwidth}
+\centering
+\includegraphics[width = \textwidth]{images/rcrosssev.jpg}
+\caption{Over-moderated part of the core}
+\label{fig:2.1b}
+\end{subfigure}
+\caption{Radial cross-section of several fuel assemblies.}
+\label{fig:2.1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.2\textwidth]{images/across.jpg}
+\caption{Axial cross-section of the core.}
+\label{fig:2.2}
+\end{figure}
+
+\section{Simulation}
+We needed to run a reference simulation with many neutrons and time steps to compare our results. We simulated $N = 1.24\times10^9$ neutron histories through 100 burnup steps using the stochastic implicit Euler-based scheme (SIE). The core assembly was modeled using a 1/8 symmetry and reflective boundary conditions to reduce memory demands. Each fuel assembly was treated as a separate depletion zone. Fuel rods containing burnable poison were also divided into ten equal-volume rings. The material volumes were statistically estimated by sampling $1 \times 10^{10}$ random points in the geometry. The total depletion value was set to $40$ $\mathrm{MWd/kgU}$. We kept the total number of simulated neutron histories constant $(N = 1.5 \times 10^8)$ by setting a unique number of neutrons per cycle for each simulation. The burnup steps used for each simulation are shown in Tab. \ref{tab:1}. The first two steps were set to 0.1 and 0.5 \si{MWd/kgU} in each simulation to capture the important changes in reactivity occurring at the beginning of a fuel cycle. 
+
+\begin{table}[h]
+\caption{Simulation burnup steps.}
+\centering
+\label{tab:1}
+\begin{tabular*}{\columnwidth}{l c c}
+\hline
+Sim. number & BU step (MWd/kgU) & Number of steps \\ \hline
+1                 & 0.8               & 52         \\ \hline
+2                 & 1.25              & 34          \\ \hline
+3                 & 2                 & 22           \\ \hline
+4                 & 4                 & 12            \\ \hline
+5                 & 10                & 6              \\ \hline
+\end{tabular*}
+\end{table}
+
+\section{Analysis}
+Based on the methodology presented in \cite{Dufek2021}, we analyzed the computing efficiency of each simulation in terms of the figure of merit (FOM),
+$$FOM = \frac{1}{\epsilon^2 c \Delta t}$$
+where $c \Delta t$ is the total CPU time of the simulation and $\epsilon$ is the error of the Monte Carlo simulation.
+
+The error is defined as the difference in $^{239} \mathrm{Pu}$ atomic densities at each time step,
+
+$$\epsilon = \frac{1}{N_s} \sum\limits_{i=1}^{N_s} \frac{n_i - n_{i_{\mathrm{ref}}}}{n_{i_{\mathrm{ref}}}}$$
+where $N_s$ is the number of burnup steps, $n_i$ is the total atomic density of $^{239} \mathrm{Pu}$ at step $i$ and $n_{i_{\mathrm{ref}}}$ is the reference atomic density of $^{239} \mathrm{Pu}$ at the $i$-th step.
+
+Although the reference simulation will have many burnup steps, those steps will not always coincide perfectly with other simulations. We interpolate the reference density evolution to compare the densities at each step, as shown in Fig.  \ref{fig:4.1}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{plots/interp_tot.pdf}
+\caption{Interpolation of the reference $^{239}\mathrm{Pu}$ density evolution.}
+\label{fig:4.1}
+\end{figure}
+
+\section{Results}
+The burnup schemes used were predictor-corrector (PCC), with linear extrapolation and linear interpolation, ten steps each, and stochastic implicit Euler (SIE), with ten internal iterations.
+Each simulation's core power was set to $3411$ $\mathrm{MW_{th}}$. Fig. \ref{fig:kpcc} and Fig. \ref{fig:ksie} show the evolution of $k_{eff}$ for PCC and SIE schemes, respectively, while Fig. \ref{fig:dpcc} and Fig. \ref{fig:dsie} depict the $^{239}\mathrm{Pu}$ density evolution for PCC and SIE schemes, respectively.
+
+% This section presents the evolution of $k_{eff}$ and $^{239}\mathrm{Pu}$ density. In each simulation, the core power was set to $3411$ $\mathrm{MW_{th}}$, and the burnup schemes used were predictor-corrector (PCC), with linear extrapolation and linear interpolation, ten steps each, and stochastic implicit Euler (SIE), with ten internal iterations. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{plots/dens_pcc.pdf}
+\caption{Evolution of the total $^{239}\mathrm{Pu}$ densities with PCC scheme.}
+\label{fig:dpcc}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{plots/dens_sie.pdf}
+\caption{Evolution of the total $^{239}\mathrm{Pu}$ densities with SIE scheme.}
+\label{fig:dsie}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{plots/kpcc.pdf}
+\caption{Evolution of the $k_{eff}$ with PCC scheme.}
+\label{fig:kpcc}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{plots/ksie.pdf}
+\caption{Evolution of the $k_{eff}$ with SIE scheme.}
+\label{fig:ksie}
+\end{figure}
+
+Moreover, we computed the figure of merit (FOM) for both coupling schemes, as shown in Fig. \ref{fig:5.3}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{plots/fom_both.pdf}
+\caption{FOM vs the number of burnup steps.}
+\label{fig:5.3}
+\end{figure}
+
+\section{Discussion and conclusions}
+The evolution of \ce{^{239}_{\phantom{0}}Pu} density and the $k_{eff}$ is similar in all simulations, regardless of the coupling scheme. First, the multiplication factor decreases sharply after the first step of the simulation because of the production of neutron-absorbing fission products. Then the multiplication factor increases due to the consumption of the burnable absorber material in poison rods. When the neutron absorbers are entirely consumed, the multiplication factor decreases due to the burnup of \ce{^{235}_{\phantom{0}}U}.
+
+We see that the FOM increases with the number of burnup steps for the SIE scheme while it remains relatively constant for the PCC scheme. The SIE scheme is more efficient than the PCC scheme for any number of burnup steps. The poor performance of the PCC scheme may be because our system is very large and symmetrical. While we used symmetries to define the core geometry to reduce the dominance ratio of the system, numerical instabilities likely developed and altered the results. Nevertheless, we felt those results were still worth including, as the PCC scheme is Serpent's default burnup coupling scheme. 
+
+The SIE scheme efficiency benefits from smaller burnup steps but other parameters, such as the number of depletion zones, might also affect the results. This number can be affected by using symmetries to define the core geometry and further axial, radial, and angular divisions for fuel assembly and rods. This report did not study those effects due to computer memory constraints, but they could be explored in future research.
+
+
+%Incomplete because the following further works need to be done:
+%\begin{itemize}
+ %   \item Investigate the effect of the burnup scheme used (especially %since some mesh plots indicate xenon oscillations in the system with the %PCC coupling scheme).
+ %   \item Investigate the effect of finer depletion zone division (a lot of %RAM needed).
+  %  \item Investigate the effect of using 1/8, 1/4, and 1/2 symmetries at %core level (currently in progress).
+%\end{itemize}
+
+
+
+\bibliographystyle{plain} % We choose the "plainnat" reference style
+\bibliography{refs} 
+
+% \begin{enumerate}
+%     \item Jan Dufek and Ignas Mickus. "Optimization of Monte Carlo burnup simulations." 
+%     (EPJ Web of Conferences, 247:04016, 2021)
+%     \item Nicholas Horelik, Bryan Herman, Matthew Ellis, Shikhar Kumar, Jingang Liang, Benoit Forget, and Kord Smith.
+%     "Benchmark for evaluation and validation of reactor simulations release rev. 2.0.2. 2018."
+% \end{enumerate}
+%\printbibliography
+
+\end{document}

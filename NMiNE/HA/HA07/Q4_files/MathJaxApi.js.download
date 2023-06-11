@@ -1,0 +1,142 @@
+function securedCallback (callback) {
+	return function () {
+		try {
+			if (typeof callback === "function") {
+				callback();
+			}
+		} catch (err) {
+			if (MapleCloud.Log && MapleCloud.Log.error) {
+				var errmsg = "";
+				if (err.message) {
+					errmsg += err.message;
+				}
+				if (err.stack) {
+					errmsg += ' | stack: ' + err.stack;
+				}
+				MapleCloud.Log.error(errmsg);
+			}
+		}
+	};
+}
+
+// These methods are required by the maplecloud package to
+// enable communication with MathJax due to a bug in MathJax.
+//
+// Layout the entire page.
+window.layoutMath = function() {
+	var x = ["setRenderer",MathJax.Hub,"HTML-CSS"];
+	var y = ["Typeset",MathJax.Hub];
+	MathJax.Hub.Queue(x,y);
+}
+
+window.layoutMath = function(callback) {
+	var x = ["setRenderer",MathJax.Hub,"HTML-CSS"];
+	var y = ["Typeset",MathJax.Hub];
+	callback = securedCallback(callback);
+	var z = [callback];
+	MathJax.Hub.Queue(x,y,z);
+}
+
+// Layout a given element.
+window.layoutMathElement = function(element) {
+	var x = ["setRenderer",MathJax.Hub,"HTML-CSS"];
+	var y = ["Typeset",MathJax.Hub,element];
+	MathJax.Hub.Queue(x,y);
+}
+
+//Layout the toolbar, then clear the width and display attributes on the toolbar buttons.
+window.layoutMathElement = function(element, callback) {
+	var x = ["setRenderer",MathJax.Hub,"HTML-CSS"];
+	var y = ["Typeset",MathJax.Hub,element];
+	callback = securedCallback(callback);
+	var z = [callback];
+	MathJax.Hub.Queue(x,y,z);
+}
+
+window.reprocessMathElement = function(element) {
+	var math = MathJax.Hub.getAllJax(element)[0];
+	var x = ["setRenderer",MathJax.Hub,"HTML-CSS"];
+	var y = ["Reprocess", math];
+	MathJax.Hub.Queue(x, y);
+}
+
+//Queue a function to occur after all currently queued mathjax functions are done
+window.queueMathJaxCallback = function(callback) {
+	callback = securedCallback(callback);
+	var x = [callback];
+	MathJax.Hub.Queue(x);
+}
+
+//Queue a function to occur after all currently queued mathjax functions are done
+// - for HTML-CSS rendered items only
+window.queueMathJaxCallbackAsHTML = function(callback) {
+	var x = ["setRenderer",MathJax.Hub,"HTML-CSS"];
+	callback = securedCallback(callback);
+	var y = [callback];
+	MathJax.Hub.Queue(x,y);
+}
+
+//Layout a given element as SVG.
+window.layoutMathElementAsSVG = function(element) {
+	var x = ["setRenderer",MathJax.Hub,"SVG"];
+	var y = ["Typeset",MathJax.Hub,element];
+	var z = ["Rerender",MathJax.Hub,element];
+	MathJax.Hub.Queue(x,y,z);
+}
+
+//Layout a given element as HTML.
+window.layoutMathElementAsHTML = function(element) {
+	var x = ["setRenderer",MathJax.Hub,"HTML-CSS"];
+	var y = ["Typeset",MathJax.Hub,element];
+	MathJax.Hub.Queue(x,y);
+}
+
+window.layoutMathUpdateWidth = function(element, callback) {
+	var x = ["setRenderer",MathJax.Hub,"HTML-CSS"];
+	var y = ["Typeset",MathJax.Hub,element];
+	var z = ["Rerender",MathJax.Hub,element];
+	callback = securedCallback(callback);
+	var w = [callback];
+	MathJax.Hub.Queue(x,y,z,w);
+}
+
+// Register a general MathJax Message Hook:
+//   msgName     - is message of interest e.g. "New Math"
+//   msgCallback - function of form msgCallback = function(message) {...}
+//
+window.registerMathJaxMessageHook = function( msgName, msgCallback) {
+	if(msgName!=null && msgCallback != null) {
+	   MathJax.Hub.Register.MessageHook(msgName, function(message) {
+          var script = MathJax.Hub.getJaxFor(message[1]).SourceElement();
+          var tmp;
+          if(script != null) {
+			  tmp = "MathJax " + message.join(" ") + ": '" + script.text + "'";
+		  }else{
+			  tmp = "MathJax " + message.join(" ") + ": '(null)'";
+		  }
+          msgCallback(tmp);
+	   });
+   }
+}
+
+// Register an interest in Hub events:
+//   callback - function of form callback = function(message) {...}
+//
+window.registerMathJaxHubInterestSignal = function( callback ) {
+   if(callback != null) {
+       MathJax.Hub.signal.Interest( function(message) {
+          callback("MathJax Hub: " + message);
+       });
+   }
+}
+
+// Register an interest in Startup events:
+//   callback - function of form callback = function(message) {...}
+//
+window.registerMathJaxStartupInterestSignal = function( callback ) {
+	if(callback != null)
+	   MathJax.Hub.Startup.signal.Interest(function(message) {
+		   callback("MathJax Startup: " + message);
+	   });
+}
+

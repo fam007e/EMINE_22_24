@@ -1,0 +1,60 @@
+import "Apros/Legacy"
+
+dbName = "DBN_EX"
+ioName = "OUTPUT_EX"
+extName = "EXT01"
+fileName = "EX_output.dat"
+dbList = [
+["REACTOR_AVE", "NR1_POWER", "Reactor relative power"],
+["211UP100_NO1", "NO6_PRESSURE", "Reactor pressure"],
+["211-FLOWMEXQ02", "ANALOG_VALUE", "Recirculation_flow"],
+["211-LEV-AD17XJ01", "ANALOG_VALUE", "Reactor pressure vessel coarse collapsed level"],
+["REACTOR_AVE", "NR1_POWER_TO_COOLANT", "Reactor power to coolant"],
+["312FLOWAD1XJ01", "ANALOG_VALUE", "Feed water flow"],
+["311FLOWAD1XJ01", "ANALOG_VALUE", "Steam flow"],
+["211-LEV-AD15BXJ01", "ANALOG_VALUE", "RPV fine level measurement"],
+["211-LEV-AD17XJ01", "ANALOG_VALUE", "RPV coarse level measurement"],
+["314VFLW.BC6", "BC_FUNC_VALUE", "Relief system flow"],
+["323TOTFLW.BC1", "BC_FUNC_VALUE", "Core spray flow"],
+["327TOTFLW.BC1", "BC_FUNC_VALUE", "Aux feed water flow"],
+["311BRKVLV1", "VA13_MIX_MASS_FLOW", "Steam line break valve 1 mass flow"],
+["311BRKVLV2", "VA13_MIX_MASS_FLOW", "Steam line break valve 2 mass flow"],
+["445-BRKVLV2", "VA13_MIX_MASS_FLOW", "Feed water line break valve 2 mass flow"],
+["DW", "CN1_PRESSURE", "Containment dry well pressure"],
+["WW", "CN1_PRESSURE", "Containment wet well pressure"],
+["311V1", "VA13_POSITION", "Steam line 1 isolation valve position"],
+["311V2", "VA13_POSITION", "Steam line 2 isolation valve position"],
+["311V3", "VA13_POSITION", "Steam line 3 isolation valve position"],
+["311V4", "VA13_POSITION", "Steam line 4 isolation valve position"],
+["CORE_CLA.BC1", "BC_FUNC_VALUE", "Maximum cladding temperature"],
+["312BCA-1-1-PO115", "PO11_TEMPERATURE", "Feed water temperature in line 1"],
+["312BCA-1-3-PO215", "PO11_TEMPERATURE", "Feed water temperature in line 2"],
+["312BCA-2-3-PO215", "PO11_TEMPERATURE", "Feed water temperature in line 3"],
+["312BCA-2-1-PO115", "PO11_TEMPERATURE", "Feed water temperature in line 4"],
+["311BAA-1-2-PO115", "PO11_TEMPERATURE", "Mixture temperature steam line 1"],
+["311BAA-2-2-PO220", "PO11_TEMPERATURE", "Mixture temperature steam line 2"],
+["311BAA-3-2-PO320", "PO11_TEMPERATURE", "Mixture temperature steam line 3"],
+["311BAA-4-2-PO415", "PO11_TEMPERATURE", "Mixture temperature steam line 4"],
+["DW", "CN1_TEMPERATURE", "Containment dry well temperature"],
+["WW", "CN1_TEMPERATURE", "Containment wet well temperature"]
+]
+
+aaddNonvisual "DB_NAMES" dbName
+aaddNonvisual "IO_SET" ioName
+aaddNonvisual "EXT_NAMES" extName
+
+amodi ioName "IO_FILE_NAME" fileName
+amodi ioName "IO_DB_NAMES(1)" dbName
+amodi ioName "IO_EXT_NAMES(1)" extName
+
+for [0..length dbList-1] (\i -> do
+   attributeNameDB = "DB_NAME(\(i+1))"
+   attributeNameEXT = "EXT_NAME(\(i+1))"
+   row = dbList!i
+   objectNameQuartetDB = "\(row!0) \(row!1) 1 1"
+   objectNameEXT = row!2
+   amodi dbName attributeNameDB objectNameQuartetDB
+   amodi extName attributeNameEXT objectNameEXT 
+)
+
+print "Script completed!"

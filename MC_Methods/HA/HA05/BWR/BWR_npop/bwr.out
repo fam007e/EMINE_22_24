@@ -1,0 +1,862 @@
+
+==========================================================================================================================================
+
+Serpent continuous-energy Monte Carlo code version 1.1.18
+
+Input file:   bwr
+Date:         Thu Jan 19 11:16:28 2023
+Title:        BWR+Gd
+
+Random seed:  1674123388
+
+Memory allocated for DATA array:     224356544 bytes (213.96 Mb)
+Memory allocated for RESULTS array:     406056 bytes (396.54 kb)
+Memory allocated for ASCII array:       371935 bytes (363.22 kb)
+Total allocated memory:              225134535 bytes (214.71 Mb)
+
+==========================================================================================================================================
+
+XS data (19 isotopes)
+
+==========================================================================================================================================
+
+Columns: 1 - Pointer in DATA array
+         2 - Nuclide alias
+         3 - Nuclide name in ace file
+         4 - Nuclide ZAI
+         5 - Atomic weight ratio
+         6 - Temperature (K)
+         7 - Options
+         8 - File path
+
+  1/ 19    15292   8016.06c   8016.06c  80160  15.99  600 8209 /codes/SERPENT/xsdata/jeff311/8016JEF311.ace
+  2/ 19    15384   8016.09c   8016.09c  80160  15.99  900 8209 /codes/SERPENT/xsdata/jeff311/8016JEF311.ace
+  3/ 19    40684  24000.06c  24000.06c 240000  52.00  600 8209 /codes/SERPENT/xsdata/jeff311/24000JNDL32.ace
+  4/ 19    43996  26000.06c  26000.06c 260000  55.85  600 8209 /codes/SERPENT/xsdata/jeff311/26000JNDL32.ace
+  5/ 19    48412  28000.06c  28000.06c 280000  58.69  600 8209 /codes/SERPENT/xsdata/jeff311/28000JNDL32.ace
+  6/ 19    76564  40000.06c  40000.06c 400000  91.22  600 8209 /codes/SERPENT/xsdata/jeff311/40000ENDF68.ace
+  7/ 19   108580  50000.06c  50000.06c 500000 118.34  600 8209 /codes/SERPENT/xsdata/jeff311/50000CNDL21.ace
+  8/ 19   168840  64152.09c  64152.09c 641520 151.92  900 8209 /codes/SERPENT/xsdata/jeff311/64152JEF311.ace
+  9/ 19   169944  64154.09c  64154.09c 641540 153.92  900 8193 /codes/SERPENT/xsdata/jeff311/64154JEF311.ace
+ 10/ 19   170496  64155.09c  64155.09c 641550 154.92  900 8193 /codes/SERPENT/xsdata/jeff311/64155JEF311.ace
+ 11/ 19   171048  64156.09c  64156.09c 641560 155.92  900 8209 /codes/SERPENT/xsdata/jeff311/64156JEF311.ace
+ 12/ 19   171600  64157.09c  64157.09c 641570 156.92  900 8193 /codes/SERPENT/xsdata/jeff311/64157JEF311.ace
+ 13/ 19   172152  64158.09c  64158.09c 641580 157.92  900 8193 /codes/SERPENT/xsdata/jeff311/64158JEF311.ace
+ 14/ 19   172704  64160.09c  64160.09c 641600 159.93  900 8193 /codes/SERPENT/xsdata/jeff311/64160JEF311.ace
+ 15/ 19   216312  92235.09c  92235.09c 922350 235.04  900 8217 /codes/SERPENT/xsdata/jeff311/92235JEF311.ace
+ 16/ 19   217968  92238.09c  92238.09c 922380 238.05  900 8217 /codes/SERPENT/xsdata/jeff311/92238JF311.ace
+ 17/ 19   249570   lwj3.11t   lwj3.11t  10010   1.01  574 8197 /codes/SERPENT/xsdata/jeff311/sssth1
+ 18/ 19   249800   1001.06c   1001.06c  10010   1.01  600 8193 /codes/SERPENT/xsdata/jeff311/1001JEF311.ace (  lwj3.11t)
+ 19/ 19   249846   1001.06c   1001.06c  10010   1.01  600 8193 /codes/SERPENT/xsdata/jeff311/1001JEF311.ace (  lwj3.11t)
+
+==========================================================================================================================================
+
+Material data (11 materials)
+
+==========================================================================================================================================
+
+Material "fuel1":
+
+-------------------------------------------------------------------
+            a. weight   temp      m. frac      a. frac      a. dens
+-------------------------------------------------------------------
+ 92235.09c  235.04415  900.0  1.58670E-02  6.07486E-03  4.23765E-04
+ 92238.09c  238.05078  900.0  8.65633E-01  3.27230E-01  2.28267E-02
+  8016.09c   15.99492  900.0  1.18500E-01  6.66695E-01  4.65068E-02
+       sum                    1.00000E+00  1.00000E+00  6.97572E-02
+------------------------------------------------------
+densities:                    1.04240E+01  6.97572E-02
+------------------------------------------------------
+
+Material "fuel2":
+
+-------------------------------------------------------------------
+            a. weight   temp      m. frac      a. frac      a. dens
+-------------------------------------------------------------------
+ 92235.09c  235.04415  900.0  1.85120E-02  7.08742E-03  4.94403E-04
+ 92238.09c  238.05078  900.0  8.62988E-01  3.26227E-01  2.27569E-02
+  8016.09c   15.99492  900.0  1.18500E-01  6.66685E-01  4.65065E-02
+       sum                    1.00000E+00  1.00000E+00  6.97578E-02
+------------------------------------------------------
+densities:                    1.04240E+01  6.97578E-02
+------------------------------------------------------
+
+Material "fuel3":
+
+-------------------------------------------------------------------
+            a. weight   temp      m. frac      a. frac      a. dens
+-------------------------------------------------------------------
+ 92235.09c  235.04415  900.0  2.29190E-02  8.77449E-03  6.12104E-04
+ 92238.09c  238.05078  900.0  8.58581E-01  3.24554E-01  2.26407E-02
+  8016.09c   15.99492  900.0  1.18500E-01  6.66672E-01  4.65067E-02
+       sum                    1.00000E+00  1.00000E+00  6.97595E-02
+------------------------------------------------------
+densities:                    1.04240E+01  6.97595E-02
+------------------------------------------------------
+
+Material "fuel4":
+
+-------------------------------------------------------------------
+            a. weight   temp      m. frac      a. frac      a. dens
+-------------------------------------------------------------------
+ 92235.09c  235.04415  900.0  2.64451E-02  1.01243E-02  7.06276E-04
+ 92238.09c  238.05078  900.0  8.55054E-01  3.23214E-01  2.25477E-02
+  8016.09c   15.99492  900.0  1.18501E-01  6.66661E-01  4.65068E-02
+       sum                    1.00000E+00  1.00000E+00  6.97608E-02
+------------------------------------------------------
+densities:                    1.04240E+01  6.97608E-02
+------------------------------------------------------
+
+Material "fuel5":
+
+-------------------------------------------------------------------
+            a. weight   temp      m. frac      a. frac      a. dens
+-------------------------------------------------------------------
+ 92235.09c  235.04415  900.0  2.99710E-02  1.14739E-02  8.00442E-04
+ 92238.09c  238.05078  900.0  8.51529E-01  3.21878E-01  2.24547E-02
+  8016.09c   15.99492  900.0  1.18500E-01  6.66648E-01  4.65066E-02
+       sum                    1.00000E+00  1.00000E+00  6.97618E-02
+------------------------------------------------------
+densities:                    1.04240E+01  6.97618E-02
+------------------------------------------------------
+
+Material "fuel6":
+
+-------------------------------------------------------------------
+            a. weight   temp      m. frac      a. frac      a. dens
+-------------------------------------------------------------------
+ 92235.09c  235.04415  900.0  3.26152E-02  1.24860E-02  8.71061E-04
+ 92238.09c  238.05078  900.0  8.48884E-01  3.20873E-01  2.23850E-02
+  8016.09c   15.99492  900.0  1.18501E-01  6.66641E-01  4.65068E-02
+       sum                    1.00000E+00  1.00000E+00  6.97629E-02
+------------------------------------------------------
+densities:                    1.04240E+01  6.97629E-02
+------------------------------------------------------
+
+Material "fuel7":
+
+-------------------------------------------------------------------
+            a. weight   temp      m. frac      a. frac      a. dens
+-------------------------------------------------------------------
+ 92235.09c  235.04415  900.0  3.13109E-02  1.18722E-02  8.25558E-04
+ 92238.09c  238.05078  900.0  8.14929E-01  3.05094E-01  2.12154E-02
+ 64152.09c  151.92008  900.0  6.70544E-05  3.93365E-05  2.73535E-06
+ 64154.09c  153.92126  900.0  7.13344E-04  4.13032E-04  2.87212E-05
+ 64155.09c  154.92287  900.0  5.06012E-03  2.91091E-03  2.02417E-04
+ 64156.09c  155.92205  900.0  7.08860E-03  4.05169E-03  2.81744E-04
+ 64157.09c  156.92407  900.0  5.43718E-03  3.08793E-03  2.14727E-04
+ 64158.09c  157.92465  900.0  8.64341E-03  4.87774E-03  3.39185E-04
+ 64160.09c  159.92685  900.0  7.69426E-03  4.28775E-03  2.98158E-04
+  8016.09c   15.99492  900.0  1.19056E-01  6.63365E-01  4.61287E-02
+       sum                    1.00000E+00  1.00000E+00  6.95373E-02
+------------------------------------------------------
+densities:                    1.02910E+01  6.95373E-02
+------------------------------------------------------
+
+Material "clad":
+
+-------------------------------------------------------------------
+            a. weight   temp      m. frac      a. frac      a. dens
+-------------------------------------------------------------------
+ 40000.06c   91.21962  600.0  9.81350E-01  9.76982E-01  4.24347E-02
+ 24000.06c   51.99587  600.0  1.00000E-03  1.74655E-03  7.58606E-05
+ 26000.06c   55.84675  600.0  1.35000E-03  2.19526E-03  9.53501E-05
+ 28000.06c   58.68796  600.0  5.50000E-04  8.51069E-04  3.69657E-05
+ 50000.06c  118.33657  600.0  1.45000E-02  1.11276E-02  4.83319E-04
+  8016.06c   15.99492  600.0  1.25000E-03  7.09707E-03  3.08257E-04
+       sum                    1.00000E+00  1.00000E+00  4.34344E-02
+------------------------------------------------------
+densities:                    6.55000E+00  4.34344E-02
+------------------------------------------------------
+
+Material "box":
+
+-------------------------------------------------------------------
+            a. weight   temp      m. frac      a. frac      a. dens
+-------------------------------------------------------------------
+ 40000.06c   91.21962  600.0  9.81350E-01  9.76982E-01  4.24347E-02
+ 24000.06c   51.99587  600.0  1.00000E-03  1.74655E-03  7.58606E-05
+ 26000.06c   55.84675  600.0  1.35000E-03  2.19526E-03  9.53501E-05
+ 28000.06c   58.68796  600.0  5.50000E-04  8.51069E-04  3.69657E-05
+ 50000.06c  118.33657  600.0  1.45000E-02  1.11276E-02  4.83319E-04
+  8016.06c   15.99492  600.0  1.25000E-03  7.09707E-03  3.08257E-04
+       sum                    1.00000E+00  1.00000E+00  4.34344E-02
+------------------------------------------------------
+densities:                    6.55000E+00  4.34344E-02
+------------------------------------------------------
+
+Material "cool":
+
+-------------------------------------------------------------------
+            a. weight   temp      m. frac      a. frac      a. dens
+-------------------------------------------------------------------
+  1001.06c    1.00783  600.0  1.11917E-01  6.66670E-01  2.96757E-02  (b)
+  8016.06c   15.99492  600.0  8.88083E-01  3.33330E-01  1.48376E-02
+       sum                    1.00000E+00  1.00000E+00  4.45133E-02
+
+Associated S(a,b) libraries:
+
+  lwj3.11t    1.00783    N/A  6.66670E-01  1.11917E-01
+------------------------------------------------------
+densities:                    4.43760E-01  4.45133E-02
+------------------------------------------------------
+
+Material "moder":
+
+-------------------------------------------------------------------
+            a. weight   temp      m. frac      a. frac      a. dens
+-------------------------------------------------------------------
+  1001.06c    1.00783  600.0  1.11915E-01  6.66667E-01  4.94592E-02  (b)
+  8016.06c   15.99492  600.0  8.88085E-01  3.33333E-01  2.47295E-02
+       sum                    1.00000E+00  1.00000E+00  7.41887E-02
+
+Associated S(a,b) libraries:
+
+  lwj3.11t    1.00783    N/A  6.66667E-01  1.11915E-01
+------------------------------------------------------
+densities:                    7.39605E-01  7.41887E-02
+------------------------------------------------------
+
+==========================================================================================================================================
+
+Reaction mode fractions by nuclide
+
+==========================================================================================================================================
+
+Fission (total 1085822 reactions):
+
+ 92235.09c  922350 1016564 0.93622
+ 92238.09c  922380  69258 0.06378
+
+==========================================================================================================================================
+
+Cell data (37 cells)
+
+==========================================================================================================================================
+
+----- Cell "1": --------------------
+
+Universe : 0
+Level    : 0
+Material : "moder"
+
+Inside surface 4 (type  6 / sqc):
+
+Parameters      :  6.47500E-01  6.47500E-01  1.67420E+00 
+Neighbour cells :  1 2 
+
+----- Cell "2": --------------------
+
+Universe : 0
+Level    : 0
+Material : "box"
+
+Outside surface 4 (type  6 / sqc):
+
+Parameters      :  6.47500E-01  6.47500E-01  1.67420E+00 
+Neighbour cells :  2 1 
+
+Inside surface 5 (type  6 / sqc):
+
+Parameters      :  6.47500E-01  6.47500E-01  1.74450E+00 
+Neighbour cells :  2 3 
+
+----- Cell "3": --------------------
+
+Universe : 0
+Level    : 0
+Material : ---
+
+Inside surface 1 (type  6 / sqc):
+
+Parameters      :  0.00000E+00  0.00000E+00  6.70000E+00 
+Neighbour cells :  3 4 
+
+Outside surface 5 (type  6 / sqc):
+
+Parameters      :  6.47500E-01  6.47500E-01  1.74450E+00 
+Neighbour cells :  3 2 
+
+----- Cell "4": --------------------
+
+Universe : 0
+Level    : 0
+Material : "box"
+
+Outside surface 1 (type  6 / sqc):
+
+Parameters      :  0.00000E+00  0.00000E+00  6.70000E+00 
+Neighbour cells :  4 3 
+
+Inside surface 2 (type  6 / sqc):
+
+Parameters      :  0.00000E+00  0.00000E+00  6.93000E+00 
+Neighbour cells :  4 5 
+
+----- Cell "5": --------------------
+
+Universe : 0
+Level    : 0
+Material : "moder"
+
+Outside surface 2 (type  6 / sqc):
+
+Parameters      :  0.00000E+00  0.00000E+00  6.93000E+00 
+Neighbour cells :  5 4 
+
+Inside surface 3 (type  6 / sqc):
+
+Parameters      : -2.33000E-01 -2.33000E-01  7.68750E+00 
+Neighbour cells :  5 99 
+
+----- Cell "99": --------------------
+
+Universe : 0
+Level    : 0
+Material : ---
+
+Outside surface 3 (type  6 / sqc):
+
+Parameters      : -2.33000E-01 -2.33000E-01  7.68750E+00 
+Neighbour cells :  99 5 
+
+----- Cell "nst1c1": --------------------
+
+Universe : 1
+Level    : 2
+Material : "fuel1"
+
+Inside surface nst1s1 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.33500E-01 
+Neighbour cells :  nst1c1 nst1c2 
+
+----- Cell "nst1c2": --------------------
+
+Universe : 1
+Level    : 2
+Material : ---
+
+Inside surface nst1s2 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.42000E-01 
+Neighbour cells :  nst1c2 nst1c3 
+
+Outside surface nst1s1 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.33500E-01 
+Neighbour cells :  nst1c2 nst1c1 
+
+----- Cell "nst1c3": --------------------
+
+Universe : 1
+Level    : 2
+Material : "clad"
+
+Inside surface nst1s3 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  5.02500E-01 
+Neighbour cells :  nst1c3 nst1c4 
+
+Outside surface nst1s2 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.42000E-01 
+Neighbour cells :  nst1c3 nst1c2 
+
+----- Cell "nst1c4": --------------------
+
+Universe : 1
+Level    : 2
+Material : "cool"
+
+Outside surface nst1s3 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  5.02500E-01 
+Neighbour cells :  nst1c4 nst1c3 
+
+----- Cell "nst2c1": --------------------
+
+Universe : 2
+Level    : 2
+Material : "fuel2"
+
+Inside surface nst2s1 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.33500E-01 
+Neighbour cells :  nst2c1 nst2c2 
+
+----- Cell "nst2c2": --------------------
+
+Universe : 2
+Level    : 2
+Material : ---
+
+Inside surface nst2s2 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.42000E-01 
+Neighbour cells :  nst2c2 nst2c3 
+
+Outside surface nst2s1 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.33500E-01 
+Neighbour cells :  nst2c2 nst2c1 
+
+----- Cell "nst2c3": --------------------
+
+Universe : 2
+Level    : 2
+Material : "clad"
+
+Inside surface nst2s3 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  5.02500E-01 
+Neighbour cells :  nst2c3 nst2c4 
+
+Outside surface nst2s2 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.42000E-01 
+Neighbour cells :  nst2c3 nst2c2 
+
+----- Cell "nst2c4": --------------------
+
+Universe : 2
+Level    : 2
+Material : "cool"
+
+Outside surface nst2s3 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  5.02500E-01 
+Neighbour cells :  nst2c4 nst2c3 
+
+----- Cell "nst3c1": --------------------
+
+Universe : 3
+Level    : 2
+Material : "fuel3"
+
+Inside surface nst3s1 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.33500E-01 
+Neighbour cells :  nst3c1 nst3c2 
+
+----- Cell "nst3c2": --------------------
+
+Universe : 3
+Level    : 2
+Material : ---
+
+Inside surface nst3s2 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.42000E-01 
+Neighbour cells :  nst3c2 nst3c3 
+
+Outside surface nst3s1 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.33500E-01 
+Neighbour cells :  nst3c2 nst3c1 
+
+----- Cell "nst3c3": --------------------
+
+Universe : 3
+Level    : 2
+Material : "clad"
+
+Inside surface nst3s3 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  5.02500E-01 
+Neighbour cells :  nst3c3 nst3c4 
+
+Outside surface nst3s2 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.42000E-01 
+Neighbour cells :  nst3c3 nst3c2 
+
+----- Cell "nst3c4": --------------------
+
+Universe : 3
+Level    : 2
+Material : "cool"
+
+Outside surface nst3s3 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  5.02500E-01 
+Neighbour cells :  nst3c4 nst3c3 
+
+----- Cell "nst4c1": --------------------
+
+Universe : 4
+Level    : 2
+Material : "fuel4"
+
+Inside surface nst4s1 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.33500E-01 
+Neighbour cells :  nst4c1 nst4c2 
+
+----- Cell "nst4c2": --------------------
+
+Universe : 4
+Level    : 2
+Material : ---
+
+Inside surface nst4s2 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.42000E-01 
+Neighbour cells :  nst4c2 nst4c3 
+
+Outside surface nst4s1 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.33500E-01 
+Neighbour cells :  nst4c2 nst4c1 
+
+----- Cell "nst4c3": --------------------
+
+Universe : 4
+Level    : 2
+Material : "clad"
+
+Inside surface nst4s3 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  5.02500E-01 
+Neighbour cells :  nst4c3 nst4c4 
+
+Outside surface nst4s2 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.42000E-01 
+Neighbour cells :  nst4c3 nst4c2 
+
+----- Cell "nst4c4": --------------------
+
+Universe : 4
+Level    : 2
+Material : "cool"
+
+Outside surface nst4s3 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  5.02500E-01 
+Neighbour cells :  nst4c4 nst4c3 
+
+----- Cell "nst5c1": --------------------
+
+Universe : 5
+Level    : 2
+Material : "fuel5"
+
+Inside surface nst5s1 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.33500E-01 
+Neighbour cells :  nst5c1 nst5c2 
+
+----- Cell "nst5c2": --------------------
+
+Universe : 5
+Level    : 2
+Material : ---
+
+Inside surface nst5s2 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.42000E-01 
+Neighbour cells :  nst5c2 nst5c3 
+
+Outside surface nst5s1 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.33500E-01 
+Neighbour cells :  nst5c2 nst5c1 
+
+----- Cell "nst5c3": --------------------
+
+Universe : 5
+Level    : 2
+Material : "clad"
+
+Inside surface nst5s3 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  5.02500E-01 
+Neighbour cells :  nst5c3 nst5c4 
+
+Outside surface nst5s2 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.42000E-01 
+Neighbour cells :  nst5c3 nst5c2 
+
+----- Cell "nst5c4": --------------------
+
+Universe : 5
+Level    : 2
+Material : "cool"
+
+Outside surface nst5s3 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  5.02500E-01 
+Neighbour cells :  nst5c4 nst5c3 
+
+----- Cell "nst6c1": --------------------
+
+Universe : 6
+Level    : 2
+Material : "fuel6"
+
+Inside surface nst6s1 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.33500E-01 
+Neighbour cells :  nst6c1 nst6c2 
+
+----- Cell "nst6c2": --------------------
+
+Universe : 6
+Level    : 2
+Material : ---
+
+Inside surface nst6s2 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.42000E-01 
+Neighbour cells :  nst6c2 nst6c3 
+
+Outside surface nst6s1 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.33500E-01 
+Neighbour cells :  nst6c2 nst6c1 
+
+----- Cell "nst6c3": --------------------
+
+Universe : 6
+Level    : 2
+Material : "clad"
+
+Inside surface nst6s3 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  5.02500E-01 
+Neighbour cells :  nst6c3 nst6c4 
+
+Outside surface nst6s2 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.42000E-01 
+Neighbour cells :  nst6c3 nst6c2 
+
+----- Cell "nst6c4": --------------------
+
+Universe : 6
+Level    : 2
+Material : "cool"
+
+Outside surface nst6s3 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  5.02500E-01 
+Neighbour cells :  nst6c4 nst6c3 
+
+----- Cell "nst7c1": --------------------
+
+Universe : 7
+Level    : 2
+Material : "fuel7"
+
+Inside surface nst7s1 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.33500E-01 
+Neighbour cells :  nst7c1 nst7c2 
+
+----- Cell "nst7c2": --------------------
+
+Universe : 7
+Level    : 2
+Material : ---
+
+Inside surface nst7s2 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.42000E-01 
+Neighbour cells :  nst7c2 nst7c3 
+
+Outside surface nst7s1 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.33500E-01 
+Neighbour cells :  nst7c2 nst7c1 
+
+----- Cell "nst7c3": --------------------
+
+Universe : 7
+Level    : 2
+Material : "clad"
+
+Inside surface nst7s3 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  5.02500E-01 
+Neighbour cells :  nst7c3 nst7c4 
+
+Outside surface nst7s2 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  4.42000E-01 
+Neighbour cells :  nst7c3 nst7c2 
+
+----- Cell "nst7c4": --------------------
+
+Universe : 7
+Level    : 2
+Material : "cool"
+
+Outside surface nst7s3 (type  1 / cyl):
+
+Parameters      :  0.00000E+00  0.00000E+00  5.02500E-01 
+Neighbour cells :  nst7c4 nst7c3 
+
+----- Cell "nst9c1": --------------------
+
+Universe : 9
+Level    : 2
+Material : "cool"
+
+Inside surface nst9s1 (type  5 / inf):
+
+Parameters      : 
+Neighbour cells :  nst9c1 
+
+----- Cell "lat10c1": --------------------
+
+Universe : 10
+Level    : 1
+Material : ---
+
+Inside surface lat10s1 (type  6 / sqc):
+
+Parameters      :  0.00000E+00  0.00000E+00  6.47500E-01 
+Neighbour cells :  lat10c1 lat10c2 
+
+----- Cell "lat10c2": --------------------
+
+Universe : 10
+Level    : 1
+Material : ---
+
+Outside surface lat10s1 (type  6 / sqc):
+
+Parameters      :  0.00000E+00  0.00000E+00  6.47500E-01 
+Neighbour cells :  lat10c2 lat10c1 
+
+==========================================================================================================================================
+
+Summary of geometry data
+
+==========================================================================================================================================
+
+List of surfaces (28):
+
+------------------------------------------------------------------------------
+ Surface |  Type | Parameters
+------------------------------------------------------------------------------
+       1 |   sqc |  0.0000E+00  0.0000E+00  6.7000E+00 
+       2 |   sqc |  0.0000E+00  0.0000E+00  6.9300E+00 
+       3 |   sqc | -2.3300E-01 -2.3300E-01  7.6875E+00 
+       4 |   sqc |  6.4750E-01  6.4750E-01  1.6742E+00 
+       5 |   sqc |  6.4750E-01  6.4750E-01  1.7445E+00 
+  nst1s1 |   cyl |  0.0000E+00  0.0000E+00  4.3350E-01 
+  nst1s2 |   cyl |  0.0000E+00  0.0000E+00  4.4200E-01 
+  nst1s3 |   cyl |  0.0000E+00  0.0000E+00  5.0250E-01 
+  nst2s1 |   cyl |  0.0000E+00  0.0000E+00  4.3350E-01 
+  nst2s2 |   cyl |  0.0000E+00  0.0000E+00  4.4200E-01 
+  nst2s3 |   cyl |  0.0000E+00  0.0000E+00  5.0250E-01 
+  nst3s1 |   cyl |  0.0000E+00  0.0000E+00  4.3350E-01 
+  nst3s2 |   cyl |  0.0000E+00  0.0000E+00  4.4200E-01 
+  nst3s3 |   cyl |  0.0000E+00  0.0000E+00  5.0250E-01 
+  nst4s1 |   cyl |  0.0000E+00  0.0000E+00  4.3350E-01 
+  nst4s2 |   cyl |  0.0000E+00  0.0000E+00  4.4200E-01 
+  nst4s3 |   cyl |  0.0000E+00  0.0000E+00  5.0250E-01 
+  nst5s1 |   cyl |  0.0000E+00  0.0000E+00  4.3350E-01 
+  nst5s2 |   cyl |  0.0000E+00  0.0000E+00  4.4200E-01 
+  nst5s3 |   cyl |  0.0000E+00  0.0000E+00  5.0250E-01 
+  nst6s1 |   cyl |  0.0000E+00  0.0000E+00  4.3350E-01 
+  nst6s2 |   cyl |  0.0000E+00  0.0000E+00  4.4200E-01 
+  nst6s3 |   cyl |  0.0000E+00  0.0000E+00  5.0250E-01 
+  nst7s1 |   cyl |  0.0000E+00  0.0000E+00  4.3350E-01 
+  nst7s2 |   cyl |  0.0000E+00  0.0000E+00  4.4200E-01 
+  nst7s3 |   cyl |  0.0000E+00  0.0000E+00  5.0250E-01 
+ lat10s1 |   sqc |  0.0000E+00  0.0000E+00  6.4750E-01 
+------------------------------------------------------------------------------
+
+Geometry has 28 surfaces in 37 cells at 10 universes at 3 levels:
+
+------------------------------------------------------------------------------
+Level | Universe |     Cell | Surfaces
+------------------------------------------------------------------------------
+    0 |        0 |        3 | -1  5 
+    0 |        0 |        5 |  2 -3 
+    0 |        0 |       99 |  3 
+    0 |        0 |        1 | -4 
+    0 |        0 |        4 |  1 -2 
+    0 |        0 |        2 |  4 -5 
+    1 |       10 |  lat10c1 | -lat10s1 
+    1 |       10 |  lat10c2 |  lat10s1 
+    2 |        9 |   nst9c1 | -nst9s1 
+    2 |        1 |   nst1c1 | -nst1s1 
+    2 |        1 |   nst1c2 | -nst1s2  nst1s1 
+    2 |        1 |   nst1c3 | -nst1s3  nst1s2 
+    2 |        1 |   nst1c4 |  nst1s3 
+    2 |        2 |   nst2c1 | -nst2s1 
+    2 |        2 |   nst2c2 | -nst2s2  nst2s1 
+    2 |        2 |   nst2c3 | -nst2s3  nst2s2 
+    2 |        2 |   nst2c4 |  nst2s3 
+    2 |        3 |   nst3c1 | -nst3s1 
+    2 |        3 |   nst3c2 | -nst3s2  nst3s1 
+    2 |        3 |   nst3c3 | -nst3s3  nst3s2 
+    2 |        3 |   nst3c4 |  nst3s3 
+    2 |        5 |   nst5c1 | -nst5s1 
+    2 |        5 |   nst5c2 | -nst5s2  nst5s1 
+    2 |        5 |   nst5c3 | -nst5s3  nst5s2 
+    2 |        5 |   nst5c4 |  nst5s3 
+    2 |        6 |   nst6c1 | -nst6s1 
+    2 |        6 |   nst6c2 | -nst6s2  nst6s1 
+    2 |        6 |   nst6c3 | -nst6s3  nst6s2 
+    2 |        6 |   nst6c4 |  nst6s3 
+    2 |        7 |   nst7c1 | -nst7s1 
+    2 |        7 |   nst7c2 | -nst7s2  nst7s1 
+    2 |        7 |   nst7c3 | -nst7s3  nst7s2 
+    2 |        7 |   nst7c4 |  nst7s3 
+    2 |        4 |   nst4c1 | -nst4s1 
+    2 |        4 |   nst4c2 | -nst4s2  nst4s1 
+    2 |        4 |   nst4c3 | -nst4s3  nst4s2 
+    2 |        4 |   nst4c4 |  nst4s3 
+------------------------------------------------------------------------------
+
+List of cell neighbours:
+
+------------------------------------------------------------------------------
+Cell    | Neighbour cells 
+------------------------------------------------------------------------------
+1       | 1 2 
+2       | 2 1 2 3 
+3       | 3 4 3 2 
+4       | 4 3 4 5 
+5       | 5 4 5 99 
+99      | 99 5 
+nst1c1  | nst1c1 nst1c2 
+nst1c2  | nst1c2 nst1c3 nst1c2 nst1c1 
+nst1c3  | nst1c3 nst1c4 nst1c3 nst1c2 
+nst1c4  | nst1c4 nst1c3 
+nst2c1  | nst2c1 nst2c2 
+nst2c2  | nst2c2 nst2c3 nst2c2 nst2c1 
+nst2c3  | nst2c3 nst2c4 nst2c3 nst2c2 
+nst2c4  | nst2c4 nst2c3 
+nst3c1  | nst3c1 nst3c2 
+nst3c2  | nst3c2 nst3c3 nst3c2 nst3c1 
+nst3c3  | nst3c3 nst3c4 nst3c3 nst3c2 
+nst3c4  | nst3c4 nst3c3 
+nst4c1  | nst4c1 nst4c2 
+nst4c2  | nst4c2 nst4c3 nst4c2 nst4c1 
+nst4c3  | nst4c3 nst4c4 nst4c3 nst4c2 
+nst4c4  | nst4c4 nst4c3 
+nst5c1  | nst5c1 nst5c2 
+nst5c2  | nst5c2 nst5c3 nst5c2 nst5c1 
+nst5c3  | nst5c3 nst5c4 nst5c3 nst5c2 
+nst5c4  | nst5c4 nst5c3 
+nst6c1  | nst6c1 nst6c2 
+nst6c2  | nst6c2 nst6c3 nst6c2 nst6c1 
+nst6c3  | nst6c3 nst6c4 nst6c3 nst6c2 
+nst6c4  | nst6c4 nst6c3 
+nst7c1  | nst7c1 nst7c2 
+nst7c2  | nst7c2 nst7c3 nst7c2 nst7c1 
+nst7c3  | nst7c3 nst7c4 nst7c3 nst7c2 
+nst7c4  | nst7c4 nst7c3 
+nst9c1  | nst9c1 
+lat10c1 | lat10c1 lat10c2 
+lat10c2 | lat10c2 lat10c1 
+------------------------------------------------------------------------------
+
+==========================================================================================================================================

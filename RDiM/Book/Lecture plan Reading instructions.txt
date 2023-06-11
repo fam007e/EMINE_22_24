@@ -1,0 +1,12 @@
+Lecture plan / Reading instructions
+The following chapters in Was should be read and will be treated in the lectures:
+
+Thermodynamics of defects (4.1, 4.2)
+The damage event, cross sections (1.1, 1.2, 1.3)
+The displacement of atoms (2.1, 2.2, 2.3, 2.4)
+Molecular Dynamics intro (3.4.2)
+Diffusion (4.3)
+Mechanical properties of crystals (Roesler)
+Rate theory (5.1, 5.2)
+Dislocations (7.1)
+Void growth (8.1, 8.2, 8.3)

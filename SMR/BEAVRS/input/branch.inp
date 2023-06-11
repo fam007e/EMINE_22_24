@@ -1,0 +1,282 @@
+
+% ----- Control rod branches:
+
+branch CR0
+var CR 0
+
+branch CR1 
+repu GTU ROD
+var CR 1
+
+% --- BOR 0 TFU 900.0 TMO 575.0 VOI 0.000
+
+branch BRA00
+
+var BOR 0
+var TFU 900.0
+var TMO 575.0
+var VOI 0.000
+repm cool cool_0B  
+repm coolc coolc_0B  
+stp fuel sum 900.0
+stp water -0.72269 575.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 500 TFU 900.0 TMO 575.0 VOI 0.000
+
+branch BRA01
+
+var BOR 500
+var TFU 900.0
+var TMO 575.0
+var VOI 0.000
+repm cool cool_midB
+repm coolc coolc_midB
+stp fuel sum 900.0
+stp water -0.72269 575.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 1000 TFU 900.0 TMO 575.0 VOI 0.000
+
+branch BRA02
+
+var BOR 1000
+var TFU 900.0
+var TMO 575.0
+var VOI 0.000
+repm cool cool_hiB 
+repm coolc coolc_hiB 
+stp fuel sum 900.0
+stp water -0.72269 575.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 0 TFU 600.0 TMO 575.0 VOI 0.000
+
+branch BRA03
+
+var BOR 0
+var TFU 600.0
+var TMO 575.0
+var VOI 0.000
+repm cool cool_0B  
+repm coolc coolc_0B  
+stp fuel sum 600.0
+stp water -0.72269 575.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 500 TFU 600.0 TMO 575.0 VOI 0.000
+
+branch BRA04
+
+var BOR 500
+var TFU 600.0
+var TMO 575.0
+var VOI 0.000
+repm cool cool_midB
+repm coolc coolc_midB
+stp fuel sum 600.0
+stp water -0.72269 575.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 1000 TFU 600.0 TMO 575.0 VOI 0.000
+
+branch BRA05
+
+var BOR 1000
+var TFU 600.0
+var TMO 575.0
+var VOI 0.000
+repm cool cool_hiB 
+repm coolc coolc_hiB 
+stp fuel sum 600.0
+stp water -0.72269 575.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 0 TFU 1200.0 TMO 575.0 VOI 0.000
+
+branch BRA06
+
+var BOR 0
+var TFU 1200.0
+var TMO 575.0
+var VOI 0.000
+repm cool cool_0B  
+repm coolc coolc_0B  
+stp fuel sum 1200.0
+stp water -0.72269 575.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 0 TFU 900.0 TMO 550.0 VOI 0.000
+
+branch BRA07
+
+var BOR 0
+var TFU 900.0
+var TMO 550.0
+var VOI 0.000
+repm cool cool_0B  
+repm coolc coolc_0B  
+stp fuel sum 900.0
+stp water -0.76973 550.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 500 TFU 900.0 TMO 550.0 VOI 0.000
+
+branch BRA08
+
+var BOR 500
+var TFU 900.0
+var TMO 550.0
+var VOI 0.000
+repm cool cool_midB
+repm coolc coolc_midB
+stp fuel sum 900.0
+stp water -0.76973 550.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 1000 TFU 900.0 TMO 550.0 VOI 0.000
+
+branch BRA09
+
+var BOR 1000
+var TFU 900.0
+var TMO 550.0
+var VOI 0.000
+repm cool cool_hiB 
+repm coolc coolc_hiB 
+stp fuel sum 900.0
+stp water -0.76973 550.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 0 TFU 900.0 TMO 600.0 VOI 0.000
+
+branch BRA10
+
+var BOR 0
+var TFU 900.0
+var TMO 600.0
+var VOI 0.000
+repm cool cool_0B  
+repm coolc coolc_0B  
+stp fuel sum 900.0
+stp water -0.66118 600.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 500 TFU 900.0 TMO 600.0 VOI 0.000
+
+branch BRA11
+
+var BOR 500
+var TFU 900.0
+var TMO 600.0
+var VOI 0.000
+repm cool cool_midB
+repm coolc coolc_midB
+stp fuel sum 900.0
+stp water -0.66118 600.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 1000 TFU 900.0 TMO 600.0 VOI 0.000
+
+branch BRA12
+
+var BOR 1000
+var TFU 900.0
+var TMO 600.0
+var VOI 0.000
+repm cool cool_hiB 
+repm coolc coolc_hiB 
+stp fuel sum 900.0
+stp water -0.66118 600.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 0 TFU 1200.0 TMO 600.0 VOI 0.000
+
+branch BRA13
+
+var BOR 0
+var TFU 1200.0
+var TMO 600.0
+var VOI 0.000
+repm cool cool_0B  
+repm coolc coolc_0B  
+stp fuel sum 1200.0
+stp water -0.66118 600.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 0 TFU 900.0 TMO 575.0 VOI 0.075
+
+branch BRA14
+
+var BOR 0
+var TFU 900.0
+var TMO 575.0
+var VOI 0.075
+repm cool cool_0B  
+repm coolc coolc_0B  
+stp fuel sum 900.0
+stp water -0.66849 575.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 500 TFU 900.0 TMO 575.0 VOI 0.075
+
+branch BRA15
+
+var BOR 500
+var TFU 900.0
+var TMO 575.0
+var VOI 0.075
+repm cool cool_midB
+repm coolc coolc_midB
+stp fuel sum 900.0
+stp water -0.66849 575.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 0 TFU 900.0 TMO 575.0 VOI 0.150
+
+branch BRA16
+
+var BOR 0
+var TFU 900.0
+var TMO 575.0
+var VOI 0.150
+repm cool cool_0B  
+repm coolc coolc_0B  
+stp fuel sum 900.0
+stp water -0.61429 575.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 1000 TFU 900.0 TMO 575.0 VOI 0.150
+
+branch BRA17
+
+var BOR 1000
+var TFU 900.0
+var TMO 575.0
+var VOI 0.150
+repm cool cool_hiB 
+repm coolc coolc_hiB 
+stp fuel sum 900.0
+stp water -0.61429 575.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 0 TFU 1200.0 TMO 575.0 VOI 0.150
+
+branch BRA18
+
+var BOR 0
+var TFU 1200.0
+var TMO 575.0
+var VOI 0.150
+repm cool cool_0B  
+repm coolc coolc_0B  
+stp fuel sum 1200.0
+stp water -0.61429 575.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 0 TFU 900.0 TMO 550.0 VOI 0.075
+
+branch BRA19
+
+var BOR 0
+var TFU 900.0
+var TMO 550.0
+var VOI 0.075
+repm cool cool_0B  
+repm coolc coolc_0B  
+stp fuel sum 900.0
+stp water -0.71200 550.0 lwtr lwe7.10t lwe7.12t
+
+% --- BOR 0 TFU 900.0 TMO 600.0 VOI 0.150
+
+branch BRA20
+
+var BOR 0
+var TFU 900.0
+var TMO 600.0
+var VOI 0.150
+repm cool cool_0B  
+repm coolc coolc_0B  
+stp fuel sum 900.0
+stp water -0.56200 600.0 lwtr lwe7.10t lwe7.12t

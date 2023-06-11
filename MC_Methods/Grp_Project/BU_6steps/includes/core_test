@@ -1,0 +1,24 @@
+%%%%%%%%%%%%%%%%%
+% Core universe %
+%%%%%%%%%%%%%%%%%
+
+/******* Core lattice *******/
+
+lat ucore 1 0.0 0.0 17 17 21.50364
+ w     w     w     w     w     w     w     w     w     w     w     w     w     w     w     w     w
+ w     w     w     w     w     300s  306T  300s  306T  300s  306T  300s  w     w     w     w     w
+ w     w     w     300s  300s  316s  100s  320s  100s  320s  100s  316s  300s  300s  w     w     w
+ w     w     300s  315NW 216s  100s  216s  100s  216s  100s  216s  100s  216s  315NE 300s  w     w
+ w     w     300s  216s  200s  216s  100s  212s  100s  212s  100s  216s  200s  216s  300s  w     w
+ w     300s  316s  100s  216s  100s  212s  100s  212s  100s  212s  100s  216s  100s  316s  300s  w 
+ w     306L  100s  216s  100s  212s  100s  212s  100s  212s  100s  212s  100s  216s  100s  306R  w
+ w     300s  320s  100s  212s  100s  212s  100s  216s  100s  212s  100s  212s  100s  320s  300s  w
+ w     306L  100s  216s  100s  212s  100s  216s  100s  216s  100s  212s  100s  216s  100s  306R  w
+ w     300s  320s  100s  212s  100s  212s  100s  216s  100s  212s  100s  212s  100s  320s  300s  w
+ w     306L  100s  216s  100s  212s  100s  212s  100s  212s  100s  212s  100s  216s  100s  306R  w
+ w     300s  316s  100s  216s  100s  212s  100s  212s  100s  212s  100s  216s  100s  316s  300s  w
+ w     w     300s  216s  200s  216s  100s  212s  100s  212s  100s  216s  200s  216s  300s  w     w
+ w     w     300s  315SW 216s  100s  216s  100s  216s  100s  216s  100s  216s  315SE 300s  w     w
+ w     w     w     300s  300s  316s  100s  320s  100s  320s  100s  316s  300s  300s  w     w     w
+ w     w     w     w     w     300s  306B  300s  306B  300s  306B  300s  w     w     w     w     w
+ w     w     w     w     w     w     w     w     w     w     w     w     w     w     w     w     w

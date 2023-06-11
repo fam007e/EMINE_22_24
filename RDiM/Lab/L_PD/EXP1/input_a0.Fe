@@ -1,0 +1,59 @@
+# This input file is used to calculate the lattice constant of bcc Fe
+# E. Mansouri
+# KTH, Nuclear Engineering 
+# ebrman@kth.se
+
+# ------------------ Initial parameter defenition --------------------
+
+units           metal
+boundary        p p p
+atom_style      atomic
+
+# ----------------- variable setting -----------------------------------
+
+variable        k loop 60               # define the number of loop
+variable        a equal 2.75+0.005*$k   # define the various lattice constant “a”
+
+# ----------------- Bcc Fe supercell setting --------------------------- 
+
+lattice         bcc $a
+region          box block 0 5 0 5 0 5
+create_box      1 box
+create_atoms    1 box
+ 
+# ----------------- Define Interatomic Potential --------------------- 
+
+pair_style hybrid/overlay eam/alloy eam/fs
+pair_coeff * * eam/alloy ../potentials/FeCr_d.eam.alloy Fe
+pair_coeff * * eam/fs ../potentials/FeCr_s.eam.fs Fe
+
+neighbor 0.3 bin
+neigh_modify  delay 1
+
+# ------------------- Calculated properties setting---------------------------
+
+compute peratom all pe/atom
+compute eatoms all reduce sum c_peratom
+compute csym all centro/atom bcc
+
+# ------------------- Thermal properties output ------------------------------
+
+timestep        0.001
+thermo 10
+thermo_style custom step pe c_eatoms
+dump 1 all custom 200 dump.bcc.Fe id type xs ys zs c_peratom
+
+# ------------------- Minimize the total energy ------------------------------
+
+min_style  cg
+minimize   1.0e-20 1.0e-20 5000 5000
+variable   E equal "c_eatoms"
+variable   N equal count(all)
+variable   E_cohesive equal ${E}/${N}
+print "${a}	${E_cohesive}" append lat_param.dat
+
+# ------------------- Loop:   ----------------------------------
+
+clear
+next            k
+jump            input_a0.Fe

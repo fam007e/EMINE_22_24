@@ -1,0 +1,173 @@
+% Material compositions (created 13/02/18, Rev 1.0, 13/02/13)
+
+% NOTES: - O-18 missing from cross section libraries (taken out)
+%        - C-13 missing from cross section libraries (C-12 and C-13 converted to C-nat)
+
+% --- Table 7 — Air, Density (g/cc) 0.000616
+
+mat air     sum  tmp 566.5  rgb 255 255 255
+% C-12.03c  6.7565e-09
+% C-13.03c  7.3076e-11
+ C-nat.03c  6.8296e-09
+  O-16.03c  5.2864e-06
+  O-17.03c  2.0137e-09
+% O-18.03c  1.0863e-08
+  N-14.03c  1.9681e-05
+  N-15.03c  7.1900e-08
+ Ar-36.03c  7.9414e-10
+ Ar-38.03c  1.4915e-10
+ Ar-40.03c  2.3506e-07
+
+% --- Air in instrumentation tube (used to score detectors)
+
+mat itube   sum  tmp 566.5  rgb 255 200 200
+% C-12.03c  6.7565e-09
+% C-13.03c  7.3076e-11
+ C-nat.03c  6.8296e-09
+  O-16.03c  5.2864e-06
+  O-17.03c  2.0137e-09
+% O-18.03c  1.0863e-08
+  N-14.03c  1.9681e-05
+  N-15.03c  7.1900e-08
+ Ar-36.03c  7.9414e-10
+ Ar-38.03c  1.4915e-10
+ Ar-40.03c  2.3506e-07
+
+% ----- Table 9 — Ag-In-Cd Control Rods, Density (g/cc) 10.160000
+
+mat AIC     sum  tmp 566.5  rgb 200 50 200
+Ag-107.03c  2.3523e-02
+Ag-109.03c  2.1854e-02
+In-113.03c  3.4291e-04
+In-115.03c  7.6504e-03
+Cd-106.03c  3.4019e-05
+Cd-108.03c  2.4221e-05
+Cd-110.03c  3.3991e-04
+Cd-111.03c  3.4835e-04
+Cd-112.03c  6.5669e-04
+Cd-113.03c  3.3257e-04
+Cd-114.03c  7.8188e-04
+Cd-116.03c  2.0384e-04
+
+% ----- Table 10 — Helium, Density (g/cc) 0.001598
+
+mat helium  sum  tmp 566.5  rgb 200 200 20
+  He-4.03c  2.4044e-04
+
+% ----- Table 11 — Inconel 718, Density (g/cc) 8.2000
+
+mat inc718  sum  tmp 566.5  rgb 150 150 150
+ Si-28.03c  5.6753e-04
+ Si-29.03c  2.8831e-05
+ Si-30.03c  1.9028e-05
+ Cr-50.03c  7.8239e-04
+ Cr-52.03c  1.5088e-02
+ Cr-53.03c  1.7108e-03
+ Cr-54.03c  4.2586e-04
+ Mn-55.03c  7.8201e-04
+ Fe-54.03c  1.4797e-03
+ Fe-56.03c  2.3229e-02
+ Fe-57.03c  5.3645e-04
+ Fe-58.03c  7.1392e-05
+ Ni-58.03c  2.9320e-02
+ Ni-60.03c  1.1294e-02
+ Ni-61.03c  4.9094e-04
+ Ni-62.03c  1.5653e-03
+ Ni-64.03c  3.9864e-04
+
+% ----- Table 13 — Zircaloy 4, Density (g/cc) 6.55
+
+mat zirc4   sum  tmp 566.5  rgb 200 200 200
+  O-16.03c  3.0743e-04
+  O-17.03c  1.1711e-07
+% O-18.03c  6.3176e-07
+ Cr-50.03c  3.2962e-06
+ Cr-52.03c  6.3564e-05
+ Cr-53.03c  7.2076e-06
+ Cr-54.03c  1.7941e-06
+ Fe-54.03c  8.6699e-06
+ Fe-56.03c  1.3610e-04
+ Fe-57.03c  3.1431e-06
+ Fe-58.03c  4.1829e-07
+ Zr-90.03c  2.1827e-02
+ Zr-91.03c  4.7600e-03
+ Zr-92.03c  7.2758e-03
+ Zr-94.03c  7.3734e-03
+ Zr-96.03c  1.1879e-03
+Sn-112.03c  4.6735e-06
+Sn-114.03c  3.1799e-06
+Sn-115.03c  1.6381e-06
+Sn-116.03c  7.0055e-05
+Sn-117.03c  3.7003e-05
+Sn-118.03c  1.1669e-04
+Sn-119.03c  4.1387e-05
+Sn-120.03c  1.5697e-04
+Sn-122.03c  2.2308e-05
+Sn-124.03c  2.7897e-05
+
+% --- Unheated water:
+
+mat waterc  sum  tmp 566.5 moder lwtrc 1001
+  1001.03c  4.9457e-02
+  1002.03c  7.4196e-06
+  8016.03c  2.4672e-02
+  8017.03c  9.3982e-06
+
+therm lwtrc 566.5 lwe7.10t lwe7.12t
+
+% ----- Boron concentrations for branches:
+
+mat boron   1.0  tmp 566.5
+  B-10.03c  0.1990
+  B-11.03c  0.8010
+
+mix cool_0B  rgb 100 150 250  
+water -1.0
+boron -0.0
+
+mix cool_midB  rgb 100 150 250  
+water -0.9995
+boron -500E-6
+
+mix cool_hiB  rgb 100 150 250  
+water -0.9990
+boron -1000E-6
+
+mix coolc_0B  rgb 100 150 250  
+waterc -1.0
+boron -0.0
+
+mix coolc_midB  rgb 100 150 250  
+waterc -0.9995
+boron -500E-6
+
+mix coolc_hiB  rgb 100 150 250  
+waterc -0.9990
+boron -1000E-6
+
+% ----- Table 15 — Carbon Steel, Density (g/cc) 7.800
+
+mat steel   sum  tmp 566.5  rgb 100 100 100
+% C-12.03c  9.6726e-04
+% C-13.03c  1.0462e-05
+ C-nat.03c  9.7772e-04
+ Si-28.03c  4.2417e-04
+ Si-29.03c  2.1548e-05
+ Si-30.03c  1.4221e-05
+ Mn-55.03c  1.1329e-03
+  P-31.03c  3.7913e-05
+ Mo-92.03c  3.7965e-05
+ Mo-94.03c  2.3725e-05
+ Mo-96.03c  4.2875e-05
+ Mo-97.03c  2.4573e-05
+ Mo-98.03c  6.2179e-05
+Mo-100.03c  2.4856e-05
+ Fe-54.03c  4.7714e-03
+ Fe-56.03c  7.4900e-02
+ Fe-57.03c  1.7298e-03
+ Fe-58.03c  2.3020e-04
+ Ni-58.03c  2.9965e-04
+ Ni-60.03c  1.1543e-04
+ Ni-61.03c  5.0175e-06
+ Ni-62.03c  1.5998e-05
+ Ni-64.03c  4.0742e-06

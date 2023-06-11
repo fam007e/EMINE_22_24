@@ -1,0 +1,70 @@
+
+.visually-hidden {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.hidden-accessible-text {
+    display: none;
+}
+.toggletip-container {
+  position: relative;
+  display: inline-block;
+}
+.toggletip-container button {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  width: 90%;
+  height: 90%;
+}
+.glyphicon-comment {
+    font-size: 20px;
+}
+.toggletip-container button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem skyBlue;
+}
+.dropdown-toggle:focus {
+  outline:2px solid #333;     
+}
+.toggletip-bubble {
+  z-index: 3;
+  background: #F5F5F5;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-color: rgb(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: rgb(0, 0, 0, 0.2) 0px 5px 10px 0px;;
+  box-sizing: border-box;
+  color: #000;
+  display: inline-block;
+  left: 90%;
+  margin-left: 1.0rem;
+  max-width: 300px;
+  position: absolute;
+  padding: 1.0rem;
+  width: 40vh;
+  text-align:left;
+  font-weight:200;
+}
+.radio-group {
+  display: table;
+}
+.radio-description {
+  display:table-cell;
+  vertical-align: middle;
+}
+@media only screen and (max-width: 400px) {
+  
+  .toggletip-bubble {
+    width: 20vh;
+  }
+}

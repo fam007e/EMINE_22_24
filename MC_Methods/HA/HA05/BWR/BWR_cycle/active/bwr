@@ -1,0 +1,234 @@
+% --- Asymmetric BWR assembly with Gd-pins -------------------
+
+set title "BWR+Gd"
+
+% --- Fuel Pin definitions:
+
+pin 1
+fuel1  4.33500E-01
+void   4.42000E-01
+clad   5.02500E-01
+cool   
+
+pin 2
+fuel2  4.33500E-01
+void   4.42000E-01
+clad   5.02500E-01
+cool   
+
+pin 3
+fuel3  4.33500E-01
+void   4.42000E-01
+clad   5.02500E-01
+cool   
+
+pin 4
+fuel4  4.33500E-01
+void   4.42000E-01
+clad   5.02500E-01
+cool   
+
+pin 5
+fuel5  4.33500E-01
+void   4.42000E-01
+clad   5.02500E-01
+cool   
+
+pin 6
+fuel6  4.33500E-01
+void   4.42000E-01
+clad   5.02500E-01
+cool   
+
+pin 7
+fuel7  4.33500E-01
+void   4.42000E-01
+clad   5.02500E-01
+cool   
+
+% --- Empty lattice position:
+
+pin 9
+cool   
+
+% --- Lattice (type = 1, pin pitch = 1.295):
+
+lat 10  1  0.0 0.0 12 12 1.295
+9 9 9 9 9 9 9 9 9 9 9 9 
+9 1 2 3 5 5 5 5 5 3 2 9
+9 2 3 5 6 6 6 6 7 5 4 9
+9 3 5 7 6 7 6 6 6 6 5 9
+9 5 6 6 6 6 6 6 7 6 6 9
+9 5 6 7 6 9 9 9 6 7 6 9
+9 5 6 6 6 9 9 9 6 6 6 9
+9 5 6 6 6 9 9 9 6 6 6 9
+9 5 7 6 7 6 6 6 7 6 5 9
+9 3 5 6 6 7 6 6 6 6 5 9
+9 2 4 5 6 6 6 6 5 5 3 9
+9 9 9 9 9 9 9 9 9 9 9 9
+
+% --- Outer channel (assembly pitch = 15.375):
+
+surf 1  sqc   0.0     0.0     6.70000
+surf 2  sqc   0.0     0.0     6.93000
+surf 3  sqc  -0.233  -0.233   7.68750
+
+% --- Channel inside assembly:
+
+surf 4  sqc   0.6475  0.6475  1.6742  
+surf 5  sqc   0.6475  0.6475  1.7445
+
+% --- Cell definitions:
+
+cell  1  0  moder    -4     % Water inside moderator channel
+cell  2  0  box       4 -5  % Moderator channel walls
+cell  3  0  fill 10  -1  5  % Pin lattice
+cell  4  0  box       1 -2  % Channel box wall
+cell  5  0  moder     2 -3  % Water outside channel box
+cell 99  0  outside   3     % Outside world
+
+% --- Fuel materials:
+
+mat fuel1   -10.424
+ 92235.09c   -0.015867
+ 92238.09c   -0.86563
+  8016.09c   -0.1185
+
+mat fuel2   -10.424
+ 92235.09c   -0.018512
+ 92238.09c   -0.86299
+  8016.09c   -0.1185
+
+mat fuel3   -10.424
+ 92235.09c   -0.022919
+ 92238.09c   -0.85858
+  8016.09c   -0.1185
+
+mat fuel4   -10.424
+ 92235.09c   -0.026445
+ 92238.09c   -0.85505
+  8016.09c   -0.1185
+
+mat fuel5   -10.424
+ 92235.09c   -0.029971
+ 92238.09c   -0.85153
+  8016.09c   -0.1185
+
+mat fuel6   -10.424
+ 92235.09c   -0.032615
+ 92238.09c   -0.84888
+  8016.09c   -0.1185
+
+% --- Fuel with Gd:
+
+mat fuel7   -10.291  
+ 92235.09c   -3.13109E-02 
+ 92238.09c   -8.14929E-01 
+ 64152.09c   -6.70544E-05
+ 64154.09c   -7.13344E-04
+ 64155.09c   -5.06012E-03
+ 64156.09c   -7.08860E-03
+ 64157.09c   -5.43718E-03
+ 64158.09c   -8.64341E-03
+ 64160.09c   -7.69426E-03
+  8016.09c   -1.19056E-01  
+
+% --- Cladding and channel box wall:
+
+mat clad     -6.55
+ 40000.06c   -0.98135
+ 24000.06c   -0.00100
+ 26000.06c   -0.00135
+ 28000.06c   -0.00055
+ 50000.06c   -0.01450
+  8016.06c   -0.00125
+
+mat box      -6.55
+ 40000.06c   -0.98135
+ 24000.06c   -0.00100
+ 26000.06c   -0.00135
+ 28000.06c   -0.00055
+ 50000.06c   -0.01450
+  8016.06c   -0.00125
+
+% --- Coolant (40% void fraction):
+
+mat cool     -0.443760  moder lwtr 1001
+ 1001.06c     0.66667
+ 8016.06c     0.33333
+
+% --- Moderator:
+
+mat moder -0.739605  moder lwtr 1001
+ 1001.06c     0.666667
+ 8016.06c     0.333333
+
+% --- Thermal scattering data for light water:
+
+therm lwtr lwj3.11t
+
+% --- Cross section data library file path:
+
+set acelib "/codes/SERPENT/xsdata/jeff311.xsdata"
+
+% --- Reflective boundary condition:
+
+set bc 2
+
+% --- group constant generation:
+
+% universe = 0 (homogenization over all space)
+% symmetry = 4
+% 4-group structure (3 group boundaries)
+
+set gcu  0 
+set sym  4
+set nfg  4  0.625E-6  5.5E-3  0.821
+
+% --- Neutron population and criticality cycles:
+
+set pop 2000 600 20
+
+% --- Geometry and mesh plots:
+
+plot 3 500 500
+mesh 3 500 500
+
+% --- Total power for normalization:
+
+set power 1.96329E+04  
+
+% --- Detector energy grid (1 bin, E > 1.0 MeV):
+
+ene 1 1 1.0 20
+
+% --- Average fast flux in cladding:
+
+det 1  
+de 1        %  Use energy grid 1
+dm clad     %  Score in material "clad"
+dv 16.3361  %  Volume for normalization
+
+% --- Pin-wise fast flux in cladding:
+
+det 2
+de 1        %  Use energy grid 1
+dm clad     %  Score in material "clad"
+dl 10       %  Lattice bins in lat 10
+dv 0.17952  %  Volume for normalization
+
+% --- Fast flux in inner moderator channel wall:
+
+det 3
+de 1        %  Use energy grid 1
+dc 2        %  Score in cell 2
+dv 0.96134  %  Volume for normalization
+
+% --- Fast flux in outer channel wall:
+
+det 4
+de 1        %  Use energy grid 1
+dc 4        %  Score in cell 4
+dv 12.5396  %  Volume for normalization
+
+% ------------------------------------------------------------

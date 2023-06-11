@@ -1,0 +1,53 @@
+#global, #pageHeader, #assignmentDetails #clockMessage, #assignmentDetails #currentGrade, #top .shadow{
+	display: none;
+}
+#assignmentDetails .container, #popupHeaderDetails .container{
+	margin: 10px;
+}
+#top, .popupWindow #top{
+	display: none;
+}
+.popupWindow #main #inner{
+	top: initial;
+}
+#instructionModuleMenu{
+	position: relative;
+	top: -25px;
+	display: none;
+}
+#holder.assignmentHolder .sectionName, #instructionModuleMenu li.question, #instructionModuleMenu li.group{
+	display: none;
+}
+#instructionModuleMenu li.question.current.runtime{
+	display: block;
+	border: none;
+}
+#holder.assignmentHolder #pageContainer{
+	margin: 10px;
+}
+#holder.assignmentHolder .questionstyle{
+	padding-top: 5px;
+}
+.slideshow.expanded, .slideshow.expanded .videoContainer{
+	height: auto !important;
+}
+.slideshow .startscreen, .slideshow .header{
+	display: none;
+}
+.expanded .slides{
+	height: auto;
+	width: auto;
+}
+.expanded .slide{
+	page-break-inside: avoid;
+	transform: scale(0.8, 0.80);
+	transform-origin: center top 0;
+	margin-bottom: -100px;
+	margin-top: -5px;
+}
+.slideNote{
+	page-break-inside: avoid;
+}
+.questionButtons, #assignmentButtons, .actions-float{
+	display: none;
+}

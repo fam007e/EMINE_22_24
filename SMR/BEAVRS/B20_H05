@@ -1,0 +1,165 @@
+% -----------------------------------------------------------------------------
+
+% ----- Geometry --------------------------------------------------------------
+
+% --- Fuel pin with 3.1 w-% U-235: 
+
+pin FUE
+fuel        0.36309
+fuel        0.39218
+helium      0.40005
+zirc4       0.45720
+cool
+
+% ----- Burnable absorber pin:
+
+pin BPO
+air         0.21400
+steel       0.23051
+air         0.24130
+BP          0.42672
+air         0.43688
+steel       0.48387
+coolc       0.56134
+zirc4       0.60198
+cool
+
+% --- Empty guide tube:
+
+pin GTU
+coolc       0.56134
+zirc4       0.60198
+cool
+
+% --- Bare instrumentation tube:
+
+pin ITU
+coolc       0.56134
+zirc4       0.60198
+cool
+
+% --- Empty lattice cell:
+
+pin XXX
+void
+
+% --- Assembly cell boundary:
+
+surf A01 sqc 0.0 0.0 10.70864
+
+% --- Fuel assembly with 20 BA pins:
+
+cell A01 ASS fill LAT1  -A01
+cell A02 ASS cool A01
+
+lat LAT1 1 5.0394 5.0394 9 9 1.25984
+
+ ITU XXX XXX XXX XXX XXX XXX XXX XXX
+ FUE FUE XXX XXX XXX XXX XXX XXX XXX
+ FUE FUE FUE XXX XXX XXX XXX XXX XXX
+ GTU FUE FUE BPO XXX XXX XXX XXX XXX
+ FUE FUE FUE FUE FUE XXX XXX XXX XXX
+ FUE FUE FUE FUE FUE BPO XXX XXX XXX
+ BPO FUE FUE BPO FUE FUE FUE XXX XXX
+ FUE FUE FUE FUE FUE FUE FUE FUE XXX
+ FUE FUE FUE FUE FUE FUE FUE FUE FUE
+
+% --- Geometry:
+
+surf 1 sqc 0.0 0.0  10.75182
+
+cell 1 0 fill ASS  -1
+cell 2 0 outside    1
+
+% --- Boundary condition:
+
+set bc 2  
+
+% --- Material subdivision and symmetry:
+
+div fuel sep 1
+div BP   sep 1 subr 5 0.24130 0.42672
+
+set usym LAT1 z 2 0.0 0.0 45 45
+
+% -----------------------------------------------------------------------------
+
+% ----- Materials -------------------------------------------------------------
+
+% ----- Fuel 3.1% 
+
+mat fuel  sum  burn 1 
+ 92234.09c  5.7988e-06
+ 92235.09c  7.2176e-04
+ 92238.09c  2.2254e-02
+  8016.09c  4.5851e-02
+  8017.09c  1.7466e-05
+
+% ----- Borosilicate Glass
+
+mat BP      sum  burn 1  tmp 566.5 
+  5010.03c  9.6506e-04
+  5011.03c  3.9189e-03
+  8016.03c  4.6511e-02
+  8017.03c  1.7717e-05
+ 13027.03c  1.7352e-03
+ 14028.03c  1.6924e-02
+ 14029.03c  8.5977e-04
+ 14030.03c  5.6743e-04
+
+% --- Water 
+
+mat water  -0.70513 tmp 583  moder lwtr 1001
+  1001.03c  4.9457e-02
+  1002.03c  7.4196e-06
+  8016.03c  2.4672e-02
+  8017.03c  9.3982e-06
+
+therm lwtr 583 lwe7.10t lwe7.12t
+
+% --- Coolant
+
+mix cool   rgb 100 150 250  
+water  -9.99650E-01
+boron  -350E-6
+
+% --- Unheated coolant
+
+mix coolc  rgb  80 130 250  
+waterc -9.99650E-01
+boron  -350E-6
+
+% -----------------------------------------------------------------------------
+
+% ----- Group constant generation ---------------------------------------------
+
+surf ADF sqc 0.0 0.0  10.75182
+
+set adf 0 ADF full 
+set ppw 0 LAT1
+set poi 1 0.27587
+set fum defaultmg 2
+
+% ----- Branch used to set history variables:
+
+branch HIS
+var VHI 583
+var BHI 350
+
+% -----------------------------------------------------------------------------
+
+% ----- Misc. stuff -----------------------------------------------------------
+
+% --- Read additional input files:
+
+include "input/B20.vol"
+include "input/materials.inp"
+include "input/common.inp"
+include "input/burn_ba.inp"
+include "input/branch.inp"
+include "input/coef_nom.inp"
+include "input/para_b1.inp"
+
+set pop 100000 100 10
+
+% -----------------------------------------------------------------------------

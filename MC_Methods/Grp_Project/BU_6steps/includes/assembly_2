@@ -1,0 +1,214 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fuel Assemblies, 2.4% enriched %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% --- No burnable absorber
+
+lat l200s 1 0.0 0.0 17 17  1.25984
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 w
+w   w   w   w   w   w   w   w   g   uF2 uF2 g   uF2 uF2 uF2 w   w
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 g   w   w   w
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 w   w   w   w
+w   w   w   w   w   w   w   w   g   uF2 uF2 g   w   w   w   w   w
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 w   w   w   w   w   w
+w   w   w   w   w   w   w   w   uF2 uF2 w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   I   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+
+% --- 6BA BOTTOM
+
+lat l206B 1 0.0 0.0 17 17 1.25984
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 b   uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 b   uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 g   uF2 uF2 b   uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   I   uF2 uF2 g   uF2 uF2 g   uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 g   uF2 uF2 g   uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 g   uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 g   uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+
+% --- 6BA TOP
+
+lat l206T 1 0.0 0.0 17 17 1.25984
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 b   uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 b   uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 g   uF2 uF2 b   uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   I   uF2 uF2 g   uF2 uF2 g   uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 g   uF2 uF2 g   uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 g   uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 g   uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+
+% --- 6BA LEFT
+
+lat l206L 1 0.0 0.0 17 17 1.25984
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 b   uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 b   uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 g   uF2 uF2 b   uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   I   uF2 uF2 g   uF2 uF2 g   uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 g   uF2 uF2 g   uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 g   uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 g   uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+
+% --- 6BA RIGHT
+
+lat l206R 1 0.0 0.0 17 17 1.25984
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 b   uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 b   uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 g   uF2 uF2 b   uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   I   uF2 uF2 g   uF2 uF2 g   uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 g   uF2 uF2 g   uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 g   uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 g   uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+
+
+% --- 12BA
+
+lat l212s 1 0.0 0.0 17 17 1.25984
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 b   uF2 uF2 uF2 uF2 uF2 
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 b   uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   g   uF2 uF2 g   uF2 uF2 b   uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2  
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2    
+w   w   w   w   w   w   w   w   I   uF2 uF2 g   uF2 uF2 g   uF2 uF2
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+
+
+% --- 15BA
+
+lat l215s 1 0.0 0.0 17 17 1.25984
+uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+uF2 uF2 uF2 uF2 uF2 b   uF2 uF2 b   uF2 uF2 b   uF2 uF2 uF2 uF2 uF2
+uF2 uF2 uF2 b   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 g   uF2 uF2 uF2
+uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+uF2 uF2 b   uF2 uF2 b   uF2 uF2 b   uF2 uF2 b   uF2 uF2 g   uF2 uF2
+uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+uF2 uF2 b   uF2 uF2 b   uF2 uF2 I   uF2 uF2 b   uF2 uF2 g   uF2 uF2
+uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+uF2 uF2 b   uF2 uF2 b   uF2 uF2 b   uF2 uF2 b   uF2 uF2 g   uF2 uF2
+uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+uF2 uF2 uF2 g   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 g   uF2 uF2 uF2
+uF2 uF2 uF2 uF2 uF2 g   uF2 uF2 g   uF2 uF2 g   uF2 uF2 uF2 uF2 uF2
+uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+
+
+% --- 16BA
+
+lat l216s 1 0.0 0.0 17 17 1.25984
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 w
+w   w   w   w   w   w   w   w   b   uF2 uF2 b   uF2 uF2 uF2 w   w
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 b   w   w   w
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 w   w   w   w
+w   w   w   w   w   w   w   w   g   uF2 uF2 g   w   w   w   w   w
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 w   w   w   w   w   w
+w   w   w   w   w   w   w   w   uF2 uF2 w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   I   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+
+
+
+% --- 20BA
+
+lat l220s 1 0.0 0.0 17 17 1.25984
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 uF2 uF2 uF2 w
+w   w   w   w   w   w   w   w   b   uF2 uF2 b   uF2 uF2 uF2 w   w
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 b   w   w   w
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 uF2 uF2 w   w   w   w
+w   w   w   w   w   w   w   w   g   uF2 uF2 b   w   w   w   w   w
+w   w   w   w   w   w   w   w   uF2 uF2 uF2 w   w   w   w   w   w
+w   w   w   w   w   w   w   w   uF2 uF2 w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   I   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w   w
+
+% --- Symmetry to the lattices
+%     Symmetry axis is the z-axis (3)
+%     Symmetry boundary condition is reflective (2)
+%     Symmetry axis is located at coordinates (0.0 0.0)
+%     Symmetry covers an angle starting from 270 degrees
+%     and extending for 45 degrees
+
+set usym l200s 3 2 0.0 0.0 270 45
+set usym l206B 3 2 0.0 0.0 270 180
+set usym l206T 3 2 0.0 0.0 270 180
+set usym l206L 3 2 0.0 0.0 270 180
+set usym l206R 3 2 0.0 0.0 270 180
+set usym l212s 3 2 0.0 0.0 270 90
+set usym l216s 3 2 0.0 0.0 270 45
+set usym l220s 3 2 0.0 0.0 270 45
+

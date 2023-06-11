@@ -1,0 +1,197 @@
+%%%%%%%%%%%%%%%%%%%%%%%
+% Assemblies geometry %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+/****** Pin definitions ******/
+
+pin w
+waterb
+
+pin pFuel1
+fuel1       0.39218
+helium      0.40005
+Zircaloy4   0.45720
+fill grid
+
+pin pFuel2
+fuel2       0.39218
+helium      0.40005
+Zircaloy4   0.45720
+fill grid
+
+pin pFuel3
+fuel3       0.39218
+helium      0.40005
+Zircaloy4   0.45720
+fill grid
+
+pin pFuel4
+fuel4       0.39218
+helium      0.40005
+Zircaloy4   0.45720
+fill grid
+
+pin pFuel5
+fuel5       0.39218
+helium      0.40005
+Zircaloy4   0.45720
+fill grid
+
+% --- Upper Fuel Pin Plenum
+pin pUpperFuel
+inconel     0.06459
+helium      0.40005
+Zircaloy4   0.45720
+fill grid
+
+% --- Empty Guide Tube above Dashpot
+pin pEGTabD
+waterb      0.56134
+Zircaloy4   0.60198
+fill grid
+
+% --- Empty Guide Tube at Dashpot
+pin pEGTatD
+waterb      0.56134
+Zircaloy4   0.60198
+fill grid
+
+% --- Instrument Tube Pin
+pin pInst
+air         0.43688
+Zircaloy4   0.48387
+waterb      0.56134
+Zircaloy4   0.60198
+fill grid
+
+% --- Bare Instrument Thimble Pin
+pin pBInst
+air         0.43688
+Zircaloy4   0.48387
+fill grid
+
+% --- Burnable Poison above Dashpot
+pin pBPabD
+air         0.21400
+ssteel      0.23051
+helium      0.24130
+bglass      0.42672
+helium      0.43688
+ssteel      0.48387
+waterb      0.56134
+Zircaloy4   0.60198
+fill grid
+
+% --- Burnable Poison Plenum
+pin pBPP
+air         0.21400
+ssteel      0.23051
+helium      0.43688
+ssteel      0.48387
+waterb      0.50419
+Zircaloy4   0.54610
+fill grid
+
+% Zircaloy4 Pin
+
+pin pZircaloy
+Zircaloy4   0.45720
+fill grid
+
+% --- Support Plate stainless steel pin
+pin pSPssteel
+SPssteel    0.45720
+waterb
+
+% --- Stainless Steel pin in Guide Tube at Dashpot
+pin pSSGTD
+ssteel      0.48387
+waterb      0.56134
+Zircaloy4   0.60198
+fill grid
+
+% --- Stainless Steel pin in Guide Tube above Dashpot
+pin pSSGTaD
+ssteel      0.48387
+waterb      0.56134
+Zircaloy4   0.60198
+fill grid
+
+% --- Stainless Steel pin Top of BA
+pin pSSTBA
+ssteel      0.48387
+fill grid
+
+/********** Vertical layers for fuel rods ***************/
+
+% --- Inactive part of fuel rods
+
+cell cFX0 uFX waterb                       -sSPBot
+cell cFX1 uFX fill pSPssteel   sSPBot      -sRodBot
+cell cFX2 uFX fill pZircaloy   sRodBot     -sFuelTop
+cell cFX3 uFX fill pUpperFuel  sFuelTop    -sPlTop
+cell cFX4 uFX fill pZircaloy   sPlTop      -sRodTop
+cell cFX5 uFX fill grid        sRodTop     -sNozBot
+cell cFX6 uFX fill pSPssteel   sNozBot     -sNozTop
+cell cFX7 uFX waterb           sNozTop
+
+% --- Fuel 1: 1.6% 
+
+cell cF1bot uF1 fill uFX                   -sFuelBot
+cell cF1mid uF1 fill pFuel1     sFuelBot   -sFuelTop
+cell cF1top uF1 fill uFX        sFuelTop
+
+% --- Fuel 2: 2.4% 
+
+cell cF2bot uF2 fill uFX                   -sFuelBot
+cell cF2mid uF2 fill pFuel2     sFuelBot   -sFuelTop
+cell cF2top uF2 fill uFX        sFuelTop
+
+% --- Fuel 3: 3.1% 
+
+cell cF3bot uF3 fill uFX                   -sFuelBot
+cell cF3mid uF3 fill pFuel3     sFuelBot   -sFuelTop
+cell cF3top uF3 fill uFX        sFuelTop
+
+% --- Fuel 4: 3.2% 
+
+cell cF4bot uF4 fill uFX                   -sFuelBot
+cell cF4mid uF4 fill pFuel4     sFuelBot   -sFuelTop
+cell cF4top uF4 fill uFX        sFuelTop
+
+% --- Fuel 5: 3.4%  
+
+cell cF5bot uF5 fill uFX                   -sFuelBot
+cell cF5mid uF5 fill pFuel5     sFuelBot   -sFuelTop
+cell cF5top uF5 fill uFX        sFuelTop
+
+
+/********** Vertical layers for burnable absorber rods ***************/
+
+cell cBA0 b waterb                       -sSPBot
+cell cBA1 b waterb           sSPBot      -sRodBot
+cell cBA2 b fill pEGTatD     sRodBot     -sBABot
+cell cBA3 b fill pSSGTD      sBABot      -sCR0
+cell cBA4 b fill pSSGTaD     sCR0        -sBActBot
+cell cBA5 b fill pBPabD      sBActBot    -sBActTop
+cell cBA6 b fill pBPP        sBActTop    -sBATop
+cell cBA7 b fill pSSGTaD     sBATop      -sNozBot
+cell cBA8 b fill pSSTBA      sNozBot     -sNozTop
+cell cBA9 b waterb           sNozTop
+
+/********** Vertical layers for guide tubes ***************/
+
+cell cGT0 g waterb                       -sSPBot
+cell cGT1 g waterb           sSPBot      -sRodBot
+cell cGT3 g fill pEGTatD     sRodBot     -sCR0
+cell cGT4 g fill pEGTabD     sCR0        -sNozBot
+cell cGT5 g waterb           sNozBot     -sNozTop
+cell cGT6 g waterb           sNozTop    
+
+/********** Vertical layers for instrument tubes ***************/
+
+cell cIT0 I waterb                       -sSPBot
+cell cIT1 I fill pBInst      sSPBot      -sRodBot
+cell cIT3 I fill pInst       sRodBot     -sNozBot
+cell cIT4 I waterb           sNozBot    
+

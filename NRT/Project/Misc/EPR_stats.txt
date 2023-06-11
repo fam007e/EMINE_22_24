@@ -1,0 +1,107 @@
+Thermal and hydraulic design parameters:
+Reactor core heat output (100 %) (MWth)=4500
+Number of loops=4
+The heat generated in fuel (%)=97.4
+Nominal system pressure (bar)=155
+DNB predictor=FC-CHF Correlation
+Minimum DNBR under nominal operating conditions (FΔH = 1.61 - cos 1.45)
+
+Coolant flow:
+Thermal design flowrate/loop (m³/h)=27195
+Core bypass flowrate (%)=5.5
+Core flow area for heat transfer (m²)=5.9
+Average velocity along fuel rods (m/s)=4.8
+Core average mass velocity (g/cm².s)=356
+
+Coolant temperature:
+Nominal inlet (°C)=295.7
+The average rise in the vessel (°C)=34.2
+The average rise in core (°C)=36.0
+Average in core (°C)=313.7
+Average in the vessel (°C)=312.8 
+
+Heat transfer:
+Heat transfer surface area (m²)=8005
+Average core heat flux (W/cm²)=54.7
+Maximum core heat flux (nominal operation) (W/cm²)=157.3
+Average linear power density (based on cold dimensions) (W/cm)=163.4
+Peak linear power for normal operating conditions (W/cm)=470
+Peak linear power protection setpoint (W/cm)=590
+Peak linear power for prevention of centreline melt (W/cm)> 590
+Power density in hot conditions (KW/core liter)=94.6
+
+Vessel and core pressure losses:
+Reactor vessel (bar)=1.66
+Core (bar)=2.55
+
+Fuel assemblies (The sizes are given in cold conditions (20°C)):
+Rod array=17 x 17
+Number of fuel assemblies=241
+Rods per assembly=265
+Fuel assembly pitch (cm)=21.504
+Fuel assembly length without hold-down spring (cm)=480
+Lattice rod pitch (cm)=1.26
+Overall transverse dimensions (cm)=21.4 x 21.4
+Fuel weight per assembly (kg)=598 UO2, 527.5 U
+Number of grids per assembly=10
+Composition of grids=Zircaloy & Inconel
+Number of guide thimbles per assembly=24
+Number of instrumentation thimbles per assembly=0
+
+Fuel rods (The sizes are given in cold conditions (20°C)):
+Number=63865
+Outside diameter (mm)=9.50
+Diametral gap (mm)=0.17
+Clad thickness (mm)=0.57
+Clad material=M5
+
+Fuel pellet (The sizes are given in cold conditions (20°C)):
+Material=UO2 or MOX
+UO2 density (% of the theoretical density)=95
+UO2 + PuO2 density (% of the theoretical density)=94.5
+Diameter (mm)=8.19
+
+Rod cluster control assemblies (The sizes are given in cold conditions (20°C)):
+Absorber:
+1) AIC part (lower part)
+Composition (% wt):
+Ag=80
+In=15
+Cd=5
+Density (g/cm³)=10.17
+Absorber outer diameter (mm)=7.65
+Length (mm)=1500
+2) B4C part (upper part)
+Composition: natural boron (19.9 atoms of percent B10)
+Density (g/cm³)=1.79
+Absorber diameter (mm)=7.47
+Length (mm)=2610
+Cladding:
+Outer diameter (mm)=9.68
+Inner diameter (mm)=7.72
+Thickness (mm)=0.98
+Material=Stainless steel
+Number of clusters, full length=89
+Number of absorber rods per cluster=24
+
+Active core (The sizes are given in cold conditions (20°C)) :
+Equivalent diameter (mm)=3767
+Core average active fuel height (mm)=4200
+Height-to-diameter ratio=1.115
+Total cross-section area (cm²)=111 440
+
+Heavy, radial reflector (The sizes are given in cold conditions (20°C)):
+Thickness (mm)=Between 77 and 297 (average 194)
+Composition (% volume)=Roughly 95 % steel, 4 % water
+
+melting temperature for UO2 is 2800°C for an unirradiated element
+MOX is 2737°C for an unirradiated element                          
+These values decrease with burn-up.
+By precluding fuel melting, the fuel geometry is preserved, and possible adverse effects of molten fuel on the cladding are eliminated.
+During modes of operation associated with PCC1 and PCC2 events, there is at least a 95% probability that the peak W/cm fuel rods will not exceed the fuel melting temperature at the 95% confidence level.
+The requirement is that there is at least a 95% probability at a 95% confidence level that departure from nucleate boiling (DNB) will not occur on the limiting fuel rods during normal operation and operational transients and in any transient conditions arising from faults of moderate frequency (PCC1 and PCC2 events).
+
+ANALYTICAL TECHNIQUES IN CORE DESIGN
+Thermal - Hydraulic design:
+Technique: Subchannel analysis of local fluid conditions (treatment performed for the core, the assembly, and the hot channel)
+Computer code: FLICA

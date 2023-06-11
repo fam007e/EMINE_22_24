@@ -1,0 +1,60 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Core model based on the BEAVRS benchmark %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+include "./includes/materials"
+include "./includes/axial_surf"
+include "./includes/grids"
+include "./includes/pins"
+include "./includes/assembly_1"
+include "./includes/assembly_2"
+include "./includes/assembly_3"
+include "./includes/assembly_u"
+include "./includes/core_test"
+include "./includes/reactor_test"
+
+
+set acelib "/codes/SERPENT/xsdata/endfb7.xsdata"
+therm lwtr 583 lwj3.11t lwj3.13t
+
+set power 3411e6
+
+set pop 100000 200 50
+
+% plot 3 2500 2500 230
+mesh 3 5000 5000 0 -188 188 -188 188 
+% plot 2 2500 2500 0 
+
+/********* Burn up parameters *********/
+
+dep butot 0.1 0.5 10 20 30 40
+
+div fuel1  sep 4
+
+div fuel2  sep 4
+
+div fuel3  sep 4
+
+div bglass sep 4 subr 10 0.24130 0.42672
+
+% set mcvol 1e9
+include "./input_test.mvol"
+
+set inventory
+ 922350
+ 922380
+ 942380
+ 942390
+ 942400
+ 942410
+ 942420
+  50100
+  50110
+
+set pcc leli 10 10
+
+set declib "/codes/SERPENT/xsdata/sss_jeff311.dec"
+
+set nfylib "/codes/SERPENT/xsdata/sss_jeff311.nfy"
+
+set egrid 5e-5 1e-9 15.0

@@ -1,0 +1,910 @@
+\documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{float}
+
+\usepackage{subcaption}
+\usepackage{mathrsfs, mathtools, amsmath}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{booktabs}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{General Features and Principles of EPR Nuclear Reactor Operation: A Design and Thermal-hydraulic Calculation Study}
+
+\author{Atilla Cakir}
+\author{Faisal Ahmed Moshiur}
+
+\affiliation{organization={KTH}, Department= {EMINE, Team 41 (EPR)}}
+
+\begin{abstract}
+    This report describes the general features and principles of an EPR nuclear reactor operation. The project consists of six tasks, the first three requiring literature studies, while the last three require calculations to determine the basic design parameters of the reactor core. The tasks include a general design specification of the nuclear power plant, operational principles of the EPR, safety features of the power plant, calculation of selected core parameters, calculation of critical heat flux (CHF) margins in a hot channel, and calculation of the maximum cladding and fuel pellet temperature. The results of the calculations are presented in plots and single parameter values.
+
+\end{abstract}
+
+\begin{keyword}
+EPR \sep critical heat flux \sep design parameters \sep safety features \sep hot channel
+\end{keyword}
+
+\end{frontmatter}
+
+\tableofcontents
+
+\section{Introduction}
+The EPR is a third-generation pressurized water reactor, developed primarily by Électricité de France (EDF) and Framatome (part of AREVA between 2001 and 2017) in France and Siemens in Germany. Initially known as the European Pressurised Reactor in Europe and the Evolutionary Power Reactor internationally, it is now commonly known as EPR.
+
+The report aims to provide an overview of EPR in the context of the UK EPR reactor, an evolutionary four-loop Pressurised Water Reactor (PWR) developed by EDF and AREVA. The reactor design draws maximum benefits from the operational experience of the French and German fleets and is claimed to meet the Franco-German technical guidelines developed between 1993 and 2000. The report discusses the general features and principles of the EPR operation, including the reactor core design, fuel assembly, reactor coolant system, safety features, and compliance with the European Utility Requirements.
+
+\section{Design}
+The EPR reactor is designed based on principles established by French and German nuclear safety authorities for the next generation of pressurized water reactors. The design aims to draw maximum benefit from accumulated experience, achieve an enhanced safety level, limit radiological consequences in case of accidents, exclude situations that could lead to significant early releases, and take reactor operating problems into account very early in the design. The design also integrates the human factor to prevent human error in the operation of EPR units. Due consideration was also given to reducing the residual risk allocated to beyond-design accident sequences.
+
+\subsection{Plant layout}
+The plant layout is shown in Fig. \ref{fig:2.1.1}. The EPR plant comprises a reactor building, a fuel building, four Safeguard buildings, two diesel buildings, a nuclear auxiliary building, a waste building, and a turbine building.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{images/typ_pl_lay.png}
+\caption{Typical plant layout}
+\label{fig:2.1.1}
+\end{figure}
+
+The reactor building is surrounded by the four safeguard buildings and the fuel building. The
+internal structures and components within the reactor building, fuel building, and two
+safeguard buildings (including the plant's main control room) are protected against aircraft
+hazard and external explosions. The other two safeguard buildings are not protected against
+aircraft hazard; however, they are geographically separated by the reactor building, which prevents both buildings from being simultaneously affected by such a hazard.
+
+\begin{itemize}
+\item Reactor building:
+The Reactor Building, located in the center of the Nuclear Island, houses the main components
+of the nuclear steam supply system (NSSS). Its primary function is to prevent the release of
+radioactive materials into the environment under all circumstances, including possible accident
+conditions. It consists of a cylindrical pre-stressed concrete inner containment with a metallic
+liner surrounded by an outer reinforced concrete shell. The primary system components are
+arranged within shielded areas within the reactor building.
+
+\item Fuel building:
+The Fuel Building, located on the same base-mat that supports the Reactor Building and the
+safeguard buildings, houses an interim fuel storage pool for fresh and spent fuel and associated
+fuel handling equipment.
+
+\item The safeguard buildings:
+The four Safeguard Buildings house key safeguard systems and their support systems. These safeguard systems are divided into four trains, each housed in a separate division in one of the four Safeguard Buildings. The main control room is located in one of the Safeguard Buildings.
+
+\item Diesel buildings:
+The two diesel buildings house the four Emergency Diesel Generators and two station black-out diesel generators. Their support systems supply electricity to the safeguard systems in the event of a complete loss of electrical power. The physical and geographical separation of these two buildings provides additional protection.
+
+\item Nuclear auxiliary building:
+The Nuclear Auxiliary Building is located on a base mat separate from that supporting the reactor building. All air exhausts from the radiologically controlled areas are routed, collected, and controlled within the Nuclear Auxiliary Building before being released through the stack.
+
+\item Waste building:
+The Waste Building is used for collecting, storing, treating, and disposing of liquid and solid radioactive waste and is adjacent to the Nuclear Auxiliary Building.
+
+\item Turbine building:
+The Turbine Building contains the components of the steam-condensate feed-water cycle, including the turbine and generator set. The Turbine Building is independent of the nuclear island such that internal hazards in the Turbine Building remain confined. The building is located in a radial position concerning the Reactor Building to protect from turbine missile impact.
+\end{itemize}
+
+\subsection{Reactor core}
+The reactor core houses the fuel where fission reactions generate energy. The fuel assemblies are supported by internal structures that direct coolant flow and guide control rods, which regulate the reaction. The core is cooled and moderated by pressurized water at around 300°C with soluble boron as a neutron absorber. Gadolinium burnable absorber-bearing fuel rods adjust initial reactivity and power distribution. Instrumentation inside and outside the core monitors nuclear and thermal-hydraulic performance for control and protection functions. The core is designed for high thermal efficiency, flexible fuel cycle lengths, and load following.
+
+\begin{itemize}
+\item The reactor core contains 241 fuel assemblies that use uranium dioxide pellets stacked in cladding tubes with enrichment of up to 5\% U-235. MOX fuel can also be used. Some important parameters of EPR are depicted in Tab. \ref{tab: 1} from Ref. [1]. The EPR fuel design is highly reliable and has a low proportion of fuel rod failures. Even if fuel damage occurs, the mechanical integrity is preserved, and the fuel remains inside the cladding. The low power density of the core allows for flexible fuel cycle lengths between 1 and 2 years and efficient fuel use. For an 18-month fuel cycle, the amount of natural uranium required is limited to around 20 te/TWhe. Typical fuel assembly and rod schematics are shown below in Fig. \ref{fig:2.3.0} and Fig. \ref{fig:2.3.0.1}, respectively.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{images/asmble.png}
+\caption{Fuel assembly}
+\label{fig:2.3.0}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{images/f_rod.png}
+\caption{Fuel rod}
+\label{fig:2.3.0.1}
+\end{figure}
+
+\item To determine the nuclear power level in the core, primary heat balance and neutron flux measurements from the ex-core instrumentation are used. The ex-core instrumentation also detects criticality and power imbalances between core quadrants. The "Aeroball" system, which involves inserting vanadium alloy steel balls into the core and using activation measurements to determine local neutron fluxes, is used as reference instrumentation to periodically establish the power distribution in the core and construct a three-dimensional power map. Neutron detectors and thermocouples are used as fixed in-core instrumentation to continuously measure the neutron flux distribution and the margin-to-saturation in post-accident or degraded thermal-hydraulic conditions. Fig. \ref{fig:2.3.1} is used below to show this graphically.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{images/incr_excr.jpg}
+\caption{In-core and ex-core instrumentation of reactor core}
+\label{fig:2.3.1}
+\end{figure}
+
+
+\item The fuel handling system regularly replaces the reactor core's fuel assemblies with new ones. The spent fuel assemblies are then transported and stored in the Spent Fuel Pool. The fresh and spent fuel assemblies are stored underwater racks, although a dry rack is only available for new fuel storage. The pool's capacity allows for storing spent fuel generated over at least a 10-year operation period before export.
+\end{itemize}
+
+
+
+\subsection{EPR nuclear systems}
+The EPR nuclear systems are mainly located in the reactor, fuel, and safeguard buildings. These buildings are robust and shielded where necessary to ensure all radioactive substances are always secure, and the systems include:
+\begin{itemize}
+\item reactor coolant system (RCS)
+\item fuel handling and storage system
+\item shut-down and reactivity control systems
+\item emergency core cooling systems (ECCS), containment cooling system (CCS), chemical and volume control system (CVCS), in-containment refueling water storage tank (IRWST).
+\end{itemize}
+
+\subsection{Reactor coolant system (RCS)}
+The core with fuel assemblies is located in the reactor pressure vessel (RPV) at the center of the Reactor Building. The reactor coolant flows through hot-leg pipes to the steam generators (SGs) and then back to the RPV through cold-leg pipes by the reactor coolant pumps (RCPs). The pressurizer (PZR) connects one hot leg through the surge line and two cold legs through the spray lines.
+
+\begin{itemize}
+\item The reactor pressure vessel (RPV) is the RCS's primary component. It is a cylindrical structure with a hemispherical bottom welded and a removable-flange-hemispherical upper head with a gasket. The RPV houses the reactor core, control rods, neutron shield, and supporting and flow-directing internals. The RPV is constructed of low-alloy steel and coated with stainless steel cladding for corrosion resistance. Cold legs transfer the coolant to the inlet nozzles at the vessel's bottom, flow through the annulus between the core barrel and inner vessel wall, then into the RPV outlet nozzles and towards the SGs. The RPV closure head has control rod drive mechanisms, level measurement, in-core instrumentation, dome temperature, and venting pipes. The RPV is fully supported to ensure its ability to withstand the forces generated during both design basis and severe accidents and seismic events. (Refer to Fig. \ref{fig:2.3.2} for a better understanding.)
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{images/RPV_in.jpg}
+\caption{Reactor pressure vessel and its internals}
+\label{fig:2.3.2}
+\end{figure}
+
+\item The pressurizer is responsible for controlling the pressure of the RCS and acts as a coolant expansion vessel. It comprises a vertical cylindrical shell with hemispherical heads at both ends. The spray system inside includes main and auxiliary spray nozzles, with the main ones connected to cold legs and the auxiliary one connected to the CVCS. Electric heater rods are also included, and the upper head has multiple nozzles for safety valve connections, a pressurizer Depressurisation System line, and venting. It is connected to the RCS through a surge line and two spray lines connected to separate cold legs.
+
+\item The steam generators (SGs) are heat exchangers with integral moisture-separating devices, and they have a vertical shell and a U-tube design that uses natural circulation. The reactor coolant flows through the inverted U-tubes and enters and exits through nozzles located in the hemispherical bottom channel head of the SG (as shown in Fig. \ref{fig:2.3.3}). The heat from the reactor coolant is transferred to the secondary fluid through the tube walls of the tube bundle. The feed-water is directed to the cold side of the tube sheet by an annular skirt, which is injected by the feed-water distribution ring. This design improves heat exchange efficiency between the primary and secondary sides. Inconel 690 is the tube material because of its high corrosion resistance.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{images/SG.jpg}
+\caption{Steam generator}
+\label{fig:2.3.3}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{images/cool_pump_sys.jpg}
+\caption{Primary circuit installation (3D) including pumping system}
+\label{fig:2.3.4}
+\end{figure}
+
+
+\item The reactor coolant pumps (RCPs) are single-stage vertical units driven by air-cooled, three-phase induction motors and equipped with shaft seals. The entire assembly comprises a motor, a hydraulic unit, and a seal assembly. The shaft seals have a standstill seal system (SSSS) to prevent leakage.
+
+\item Each of the four coolant loops in the reactor coolant system includes three components: a hot leg, a crossover leg, and a cold leg. The hot leg goes from the RPV to the SG, the crossover leg goes from the SG to the RCP, and the cold leg goes from the RCP to the RPV. The coolant system has been designed to use forged pipework and components and high mechanical performance materials to prevent major reactor coolant pipework rupture and to allow for early leak detection and in-service inspections. As a result, the rupture of major reactor coolant pipework is not included in the design basis.
+\end{itemize}
+
+\section{Safety systems}
+The safety systems and functions have been designed with the following principles in mind: separation of operational and safety functions to simplify; four-fold redundancy in safeguard systems and their support systems to ensure high plant availability factor and ease of maintenance during plant operation; strict physical separation of buildings where the different trains of safety systems are located; and the application of systematic functional diversity to ensure that there is always a diverse system available that can perform the desired function and bring the plant back to a safe condition even in the highly unlikely event of all redundant trains of a system becoming unavailable.
+
+\subsection{Chemical and volume control}
+To connect the high-pressure RCS and low-pressure systems in the nuclear auxiliary building and fuel Building, the Chemical and Volume Control System (CVCS) is utilized. The CVCS enables the continuous release and intake of RCS water and regulates the RCS water inventory at the required level while also permitting modification of the soluble boron concentration.
+
+\subsection{Safety injection / residual heat removal}
+This system (SIS/RHRS) serves a dual purpose in normal operating conditions and accidents. During normal operations in RHR mode, it facilitates heat transfer from the RCS to the component cooling water system (CCWS) and transfers heat during cold shutdowns and refueling. In the event of an accident, the SIS, along with the CCWS and the essential service water system (ESWS), maintains the RCS core outlet and hot leg temperatures below 180°C following a reactor shutdown. When operating in safety injection mode during a postulated loss of coolant accident, the SIS injects water into the reactor core to compensate for the effects of the event.
+
+\subsection{In-containment refueling water Storage tank (IRWST)}
+The in-containment refueling water Storage tank (IRWST) is a large tank filled with borated water that can be used to fill various compartments during refueling, collect water in case of accidents, and supply water to different pumps and systems like containment heat removal system (CHRS), SIS, and CVCS pumps under fault conditions. In case of a hypothetical core melt accident, it can also flood the area where corium is spreading.
+
+\subsection{Emergency feed-water system (EFWS)}
+The emergency feed-water system (EFWS) provides water to the steam generators in case all other feed-water supply systems are unavailable.
+
+\subsection{Other safety systems}
+The extra boration system (EBS) is designed to maintain the required boron concentration in the reactor coolant system (RCS) for cold shutdown and has two independent trains. In the event of an accident and reactor trip unavailability, boric acid is automatically injected into the RCS. Some parts of the main steam system (MSS) and Main feed-water system (MFWS) are also classified as safety systems.
+
+\subsection{Component cooling water system (CCWS)}
+The CCWS transfers heat from various systems and equipment in the reactor to the ultimate heat sink through the ESWS. These systems include both safety-related and operational auxiliary systems.
+
+\subsection{Ultimate cooling water system (UCWS)}
+The UCWS system has multiple functions, including cooling the dedicated cooling system for managing severe accidents and serving as a backup for cooling the fuel pool.
+
+
+
+
+Additional systems in the EPR nuclear power plant include the Nuclear Sampling System for collecting samples of gases and liquids, the Vent and Drain System for collecting waste, the steam generator blow-down system to prevent buildup, and waste treatment systems for solid, liquid, and gaseous wastes. The fire protection system of the EPR is based on the defense in depth principle to protect the public, environment, and plant personnel from fire and its impact on reactor operations. The heating, ventilation, and air conditioning systems (HVAC) aim to contain radioactive substances and reduce radioactive releases while maintaining appropriate conditions for equipment and personnel. 
+
+Fig. \ref{fig:3.1} below illustrates the primary systems.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{images/mfl_sys.jpg}
+\caption{Main fluid systems}
+\label{fig:3.1}
+\end{figure}
+
+\section{Instrumentation and control system (I\&C)}
+The plant instrumentation and control system consists of sensors, controllers, actuators, and monitors plant operators use. The EPR I\&C system is computerized and backed up by a non-computerized safety system to ensure plant safety. The I\&C systems comply with redundancy, separation, and diversity principles. Plant operators use workstations and a plant overview panel in the main control room, with backup options available in case of failure or unavailability.
+
+\section{Electrical power system}
+To power, the EPR plant, a 50 Hz power supply is regulated by on-load tap changers via a site/utility-specific transmission grid. The electrical distribution system (EDS) is designed as a 4-train, 4-division system. The EDS's emergency power supply system (EPSS) ensures that safety systems are supplied with electrical power in case the preferred electrical sources are lost. Each train has an emergency diesel generator (EDG) set, and in case of total EDG loss, the station black-out (SBO) diesel generators supply the necessary power to emergency loads.
+
+\section{Nuclear safety}
+The process of nuclear fission generates a large number of radioactive materials that need to be protected for the safety of people and the environment. Nuclear safety involves the application of technical and organizational measures during the design, construction, and operation of a nuclear plant to reduce the likelihood and consequences of an accident. Nuclear reactor safety depends on three essential functions: controlling the nuclear chain reaction and power generation, cooling the fuel, and containing radioactive materials.
+
+Two fundamental principles of nuclear safety are:
+\begin{itemize}
+\item ensuring the existence of three protective barriers
+\item applying the concept of defense in depth.
+\end{itemize}
+
+\subsection{Three protective barriers}
+To ensure nuclear safety, a series of strong, leak-tight physical barriers contain radioactive materials and prevent their release into the environment. These protective barriers include three layers: the first is the fuel, which is enclosed in metal cladding and traps most radioactive products. The second is the reactor coolant system, enclosed in a pressurized metal envelope that includes the reactor vessel containing the fuel rods. The third is the containment building, which houses the reactor coolant system and is designed as a double shell with a thick and leak-tight metallic liner covering the inner wall of the first shell. Fig. \ref{fig:6.1.1} below depicts that.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{images/TPBs.png}
+\caption{The three protective barriers}
+\label{fig:6.1.1}
+\end{figure}
+
+\subsection{Defense in depth}
+The principle of "defense in depth" involves protecting the protective barriers by providing multiple layers of defense against failures. The first layer involves implementing safe design, construction, and operation. The second layer involves monitoring for anomalies and detecting failures as soon as they occur. The third layer involves mitigating the consequences of failures and preventing core meltdowns using redundant systems. In a severe accident, a fourth layer of defense is provided to minimize the consequences.
+
+The EPR safety approach for nuclear power plants is based on the deterministic application of the "defense in depth" concept, improved preventive measures, and innovations that reduce the probability of severe accidents. The design is supported by probabilistic analyses to identify accident sequences, evaluate their probability, and identify their potential causes and countermeasures. The safeguard systems are designed based on quadruple redundancy to minimize the risks from hazards such as earthquakes, flooding, fire, or aircraft crash. The policy of mitigating the consequences of a severe accident aims to "practically eliminate" situations that could lead to early containment failure.
+
+\subsection{Dose targets and legal limits (for UK-EPR)} 
+The legal limits for radiation doses to the public and workers in the UK are the same as the recommendations of the International Commission on Radiological Protection (ICRP) for a reactor during normal operation. The EPR reactor is expected to comfortably meet lower fundamental safety limits prescribed by the UK HSE for doses to worker groups. The EPR plant has a collective dose target of $350 man mSv/year$ during normal operation, a small fraction of the dose target for earlier generation PWRs like the UK Sizewell B PWR. An assessment of the annual dose to the most exposed members of the public off-site due to the operation of an EPR reactor in the UK shows that the total annual dose is estimated to be $26 \mu Sv$, well below the UK government limit of $300 \mu Sv$. The EPR design complies with the HSE Basic Safety Objectives in all cases for doses to the public due to accidents.
+
+\section{Operation and maintenance (UK-EPR)}
+During normal operation of a nuclear power plant, there may be scheduled changes in power load, unit shutdown/startup, or unplanned events like power source loss. The plant can also be shut down for maintenance, repair, fuel saving, or grid management. The shutdown mode depends on the nature of the intervention and duration, and during prolonged hot shutdowns, the boron concentration is adjusted for the shutdown margin. A cold shutdown is needed for refueling or maintenance. The main operating principles, from reactor shutdown to power operation for the next fuel cycle, are described chronologically. Operation with an extended cycle is also explained.
+
+\subsection{Reactor shutdown}
+The reactor is initially in power operation mode at the end of a fuel cycle. The unit shutdown process starts by reducing the turbine load and tripping the turbine. The control rods are inserted manually to shut down the reactor, and the turbine bypass system controls the primary coolant temperature. The primary system is cooled to around 120°C, and the pressure is reduced to about 25 bar. The RIS-RRA [SIS-RHR] trains are started to continue cooling the primary system. The reactor refueling cavity slabs are removed below 120°C. The equipment hatch may be opened at 90°C, and the last primary pump is shut down when the radio-chemical criteria are met, and the vessel head temperature is below 70°C. The primary system is maintained at 55°C, and boration is continued until the required boron concentration is achieved during the cold shutdown for fuel reloading. The primary pressure is reduced to 5 bar by auxiliary spray, and the pressurizer is maintained with a nitrogen gas bubble above the water.
+
+\subsection{Draining and opening the primary system}
+Before draining the primary system to ¾ loop level, one RIS [SIS] train in RRA [RHR] mode is stopped. The excess volume of primary coolant is transferred to TEP [CSTS] storage tanks for recycling. The RCP [RCS] is swept and vented before opening the primary system. The electrical connections of the rod control system mechanisms and core instrumentation are removed, and the mechanical seals are opened. After removing its thermal insulation, the vessel head is opened using a multistud tensioning machine (MSDG).
+
+\subsection{Core unloading}
+During the removal of the vessel head, borated water from the IRWST is used to fill the compartments of the reactor refueling cavity. The core instrumentation and rod control system mechanisms are disconnected, and fuel unloading can begin after approximately 70 hours. Fuel unloading takes around 40 hours, and an engineered safeguard train may be unavailable during this time for maintenance. During this process, the PTR must be started to maintain the pool temperature below 50°C. After unloading, maintenance work is carried out, including inspection of steam generator tubes and fuel elements if needed.
+
+\subsection{Core reloading}
+The steam generator manways are closed, and the vessel refueling cavity is filled with borated water from the IRWST using the ISBP pumps. Then, the sluice gates are removed, and fuel is loaded into the vessel using the handling devices. The RIS in RRA mode maintains the primary temperature below 50°C during the 45-hour core loading and mapping operations. After loading, the transfer tube is closed, and the upper internals, rod cluster control assemblies, aeroball lances, and core instrumentation are reinstalled.
+
+\subsection{Closing and filling the primary coolant system}
+The spent fuel pool compartments in the reactor building are emptied using the PTR's purification pumps, filters, and demineralizers [FPPS/FPCS], and the water is transferred to the IRWST. The reactor vessel is cleaned, closed with the MSDG, and reconnected to the primary system. The primary system is drained and filled using the RCV [CVCS] pumps and degassed by related systems. The conventional island operations are also completed, including filling the feed-water plant and steam generators, creating a vacuum in the condenser, and starting heating and chemical treatment.
+
+\subsection{Heating the primary coolant}
+The pressurizer is heated using heaters to raise primary pressure without exceeding 30 bar after shutting off the vacuum-creating device. The primary coolant is heated using the four pumps and fuel decay heat. The heating rate is limited to 50°C/hr. The secondary circuit is made available at the same time. The steam generators are filled, and the feed-water plant is heated and chemically treated. The excess coolant volume is drawn off through the RCV letdown line. Tests may be conducted during heat up, and at hot shutdown, the pressurizer level is set to its no-load set-point. The pressurizer heaters and steam generators control the pressure and temperature. The turbine generator unit is on its barring gear.
+
+\subsection{From hot shutdown to power operation}
+Before criticality, safety functions for power operation must be available. Tests such as rod drop time measurement are conducted during the hot shutdown. GCT [MSB] automatically controls the primary coolant temperature. Tests at zero power are done, and demineralized water is injected from the REA [RBWMS] using the RCV [CVCS] charging pumps to dilute the primary coolant. Power is increased by controlling the flux level. The startup and shutdown pump (AAD [SSS]) supplies the steam generators, followed by the feed-water pumps (APA [MFWPS]) using the normal feed-water flow control system (ARE [MFWS]). The turbine is commissioned and connected to the main grid, gradually increasing power. The normal steam generator control mode takes over flux level control. All RCP [RCS] controls are in automatic mode, gradually increasing power to 100\%.
+
+\subsection{Power operation- load following}
+During normal operation, the primary coolant only needs to be diluted gradually to a boron concentration of 5-10 ppm at the end of the fuel cycle to compensate for long-term reactivity effects such as fuel burnup and samarium buildup. If necessary, the power plant may have to reduce power and resume full power production later. Steam generator control is automatic, and rod cluster control assemblies compensate for rapid reactivity changes through temperature control and power distribution. Boron concentration or rod cluster control assemblies are adjusted to compensate for slow variations in reactivity. The primary coolant is also chemically treated to meet the chemical and primary activity criteria, and fluid volumes may be recycled or directed toward waste treatment to avoid tritium buildup in the primary system.
+
+\subsection{Extended cycle operation}
+During power operation, primary boration compensates for available reactivity, with the boron content reduced as burnup increases until it reaches close to zero at the end of the cycle. To extend power operation beyond the natural end of the cycle, the decrease in reactivity due to fuel depletion may be compensated for by reducing the primary temperature. When control rods are mainly extracted and turbine inlet valves fully open, the power level is determined by core reactivity balance and turbine characteristics. There is no built-in reactivity to maintain a constant average primary coolant temperature, and reactor power and steam pressure decrease steadily. Primary coolant mass is constant during power operation, so the drop in primary temperature requires a re-adjustment of main parameters. Extended cycle operation consumes the remaining built-in reactivity through repeated set-point adjustments. The pre-operational safety report will present studies of a cycle extended by up to 70 EFPD and early shutdown of 30 EFPD.
+
+\subsection{Reactivity-control systems}
+There are two methods used to control reactivity in nuclear reactors. The first method involves adding boron to the RCS to counteract slow reactivity changes. The second method involves using control-rod clusters, which contain a neutron-absorbing alloy and can be inserted or removed from the core to control reactivity. When the reactor temperature drops, reactivity in the core increases and boron concentration is increased to compensate for the control rods' inability to control reactivity. Boric acid is injected into the RCS during plant operation or shutdown using the CVCS system.
+
+\subsection{Specific operations}
+Suppose an event occurs unrelated to an incident or accident, and the standard guidelines are inappropriate for handling the situation (such as during routine maintenance or power loss). In that case, the operators must follow specific event management guidelines.
+
+\subsection{Preventive maintenance}
+Maintenance is a set of technical, administrative, and management actions taken during the service life of the equipment to ensure that it performs its required function. Preventive maintenance aims to reduce the likelihood of equipment failure. The objectives of safety, availability and cost must be achieved while adhering to regulations and protecting the environment, staff safety, and radiation protection. Re-qualification tests are carried out after maintenance operations to ensure equipment operates correctly. Design requirements are necessary to meet availability objectives and safety goals, and aspects related to radiation protection, operating costs, and availability must be considered during maintenance tasks. The design of the EPR takes into account several factors, such as engineered safeguard trains, PTR trains, and pressurizer conditions.
+
+
+Designing a maintenance program during the design phase of an installation using the FMD approach can positively contribute to safety, unit availability, the environment, radiation protection, and human factors. The program should match maintenance activities to the importance and risk of the actual systems and equipment and comply with safety, availability, dosimetry, and cost objectives. The FMD approach aims to optimize preventive maintenance programs on equipment declared safety-critical while enhancing availability and meeting maintenance-related constraints. During the in-depth design study stage, adjustments can be made to equipment technology, systems, instrumentation, and condition monitoring. Developing maintenance programs requires ensuring compatibility and feasibility concerning the duration of work, accessibility of work zones, intervention dosimetry and decontamination, isolations, draining durations, and system startup. It is essential to differentiate between equipment for which maintenance may occur while the unit is in operation and equipment that must be carried out during the unit shutdown. Optimizing maintenance programs while meeting safety, availability, and environmental requirements is key.
+
+
+\section{Thermodynamic analysis (axial and flow characteristics)}
+The axial distribution analysis is integral to calculating selected core parameters for a Pressurized Water Reactor (PWR). This involves collecting data on key core parameters such as total core heat output, nominal system pressure, number of fuel assemblies, and more. With this data, several core-averaged thermal-hydraulic characteristics, such as axial pressure drop distribution, axial coolant enthalpy distribution, and axial coolant temperature distribution, must be calculated and presented as plots. Additionally, the flow characteristic of the core must be studied for core power levels ranging from 0\% to 150\% of the nominal power, with flow varying from 1\% to 150\% of the core nominal flow. Proper inlet orifices should be applied to stabilize flow through the core and avoid hydrodynamic instabilities.
+
+\subsection{Axial pressure drop }
+The pressure drop along a fuel assembly can be caused by various mechanisms, including frictional losses from the fuel rod bundle, local losses from spacer grids, local losses at the core inlet and exit, and elevation pressure drop. The total pressure drop in a channel with a constant cross-section area can be determined using equation \eqref{e1}, which takes into account Fanning friction coefficient $C_f$, length of the channel $L$, mass flux $G$, channel hydraulic diameter $D_h$, and coolant density $\rho$. The equation, from ref. [2], can be written as
+
+\begin{equation}\label{e1}
+\resizebox{0.48\textwidth}{!}{$-\Delta p_{\text {tot }}=-\Delta p_{\text {fric }}-\Delta p_{\text {loc }}-\Delta p_{\text {elev }}=\left(\frac{4 C_f L}{D_h}+\sum_i \xi_i\right) \frac{G^2}{2 \rho}+L \rho g \sin \varphi$}
+\end{equation}
+
+Fanning friction coefficient $C_f$, however, can be influenced by different flow patterns as it is shown to be dependent on Reynolds number, $Re$: 
+\begin{itemize}
+\item for laminar flow ($Re<2300$): $C_f=\frac{16}{Re}$
+\item for turbulent flow (Blasius's formula, ${10}^4<Re<{10}^5$): $$C_f=\frac{0.0791}{Re}$$
+\item for turbulent flow in commercial rough tubes (Colebrook's formula can be replaced with Haaland's formula): 
+\begin{equation}\label{e2}
+\resizebox{0.3\textwidth}{!}{$\frac{1}{\sqrt{C_f}}=-3.6 \mathrm{log_{10}}[(\frac{\frac{k}{D}}{3.7})^{1.11} + \frac{6.9}{Re}]$}
+\end{equation}
+\end{itemize}
+
+The pressure drop caused by spacer grids, coolant inlet, exit, and changes in bundle cross-section also contributes to additional pressure losses. These losses are called local pressure losses and can be calculated using the following general formula:
+
+\begin{equation}
+    -\Delta p_{\text {loc }}=\xi_{loc} \frac{G^2}{2 \rho}
+\end{equation}
+
+where $\xi_{loc}$ is the local pressure loss coefficient.
+
+The loss coefficient for grid spacers, which represents the pressure loss associated with spacer geometry, is typically determined through experimental means. The value for the loss coefficient for a typical spacer is given by:
+
+\begin{equation}
+    \xi_{space} = a + b \mathrm{Re}^{-c}
+\end{equation}
+
+where a, b, and c a are constants determined experimentally.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{images/spacr.png}
+\caption{Part of spacer grids}
+\label{fig:8.1.1}
+\end{figure}
+
+\subsection{Axial coolant enthalpy and temperature}
+Nuclear reactor rod bundles have a complex geometry, which requires advanced computational tools for a comprehensive thermal-hydraulic analysis. Different levels of approximations can be used, such as a simple one-dimensional analysis of a single sub-channel or a fuel assembly, an analysis of the entire fuel assembly using a sub-channel analysis code, or a complex three-dimensional analysis using Computational Fluid Dynamics (CFD) codes. This report focuses on the simple approach, where a single sub-channel or a fuel assembly is treated as a one-dimensional channel with an equivalent hydraulic diameter.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{images/typ_col_rbndl.png}
+\caption{Typical coolant sub-channels in rod bundles}
+\label{fig:8.2.1}
+\end{figure}
+
+The whole-assembly approach for thermal-hydraulic analysis approximates the entire fuel assembly as a one-dimensional channel, using global parameters such as hydraulic diameter, heated length, wetted perimeter, heated perimeter, and total flow area. The internal structure of the assembly is not considered in this approach. The heated perimeter is the total perimeter of all the rods in the fuel assembly that are in contact with the coolant and are generating heat. Suppose it is assumed that all rods are heated. In that case, the heated perimeter can be calculated by multiplying the number of rods in the assembly by the circumference of one rod, given by the formula:
+
+\begin{equation}
+    P_H = N \pi d
+\end{equation}
+and the corresponding heated diameter is as follows,
+
+\begin{equation}
+    D_H \equiv \frac{4 A}{P_H} = \frac{4 w^2 - N \pi d^2}{N \pi d} .
+\end{equation}
+
+\begin{itemize}
+\item For enthalpy distribution in heated channel: 
+
+Suppose a channel is heated with an arbitrary distribution of the heat flux $q\prime\prime(z)$ along the axial direction. The channel geometry also varies axially, as illustrated in Fig. \ref{fig:8.2.2}. The mass flow rate of the coolant flowing through the channel is constant and denoted by $W$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.25\textwidth]{images/heat_chnl.png}
+\caption{A heated channel}
+\label{fig:8.2.2}
+\end{figure}
+
+The amount of energy in a heated channel between two points, $z$ and $z+dz$, can be expressed using an energy balance equation:
+
+
+$W \cdot i_l(z)+q^{\prime \prime}(z) \cdot P_H(z) \cdot dz=W \cdot\left[i_l(z)+di_l\right]$,
+
+
+where $W$ is the constant mass flow rate of the coolant, $q^{\prime \prime}(z)$ is the heat flux, $P_H(z)$ is the heated perimeter of the channel, $i_l(z)$ is the coolant enthalpy at location $z$, and $di_l$ is the change in enthalpy over the length $dz$. 
+
+Solving for $di_l$ results in the following differential equation for the coolant enthalpy:
+
+\begin{equation}\label{fldev}
+    \frac{di_l(z)}{dz}=\frac{q^{\prime \prime}(z) \cdot P_H(z)}{W} .
+\end{equation}
+
+
+
+Integrating this equation from the channel inlet ($z=-H/2$) to a particular location $z$ yields the coolant enthalpy at that location:
+
+\begin{equation}\label{enth}
+    i_l(z)=i_{li}+\frac{1}{W} \int_{-H/2}^z q^{\prime \prime}(z) \cdot P_H(z) dz ,
+\end{equation}
+
+where $i_{li}$ is the coolant enthalpy at the inlet to the channel.
+
+
+\item For temperature distribution in channel:
+
+Assuming that the temperature and pressure changes are small, the enthalpy of a non-boiling, single-phase coolant can be expressed as a linear function of the temperature. If there is a uniform axial distribution of heat sources and a constantly heated perimeter, then equation \eqref{enth} can be simplified as follows:
+
+\begin{equation}\label{tlb}
+    T_{lb}(z) = T_{lbi} + \frac{q^{\prime\prime} P_H(z+H/2)}{c_p W} ,
+\end{equation} 
+
+where $T_{lb}(z)$ is the temperature of the coolant at location $z$, $T_{lbi}$ is the coolant temperature at the inlet to the channel, $c_p$ is the specific heat of the coolant, and $H$ is the heated length of the channel.
+
+The coolant's bulk temperature at a particular location is called $T_{l b}(z)$. It is defined as the temperature that can be determined from the energy balance of a section of the channel. This method works for any distribution of temperature, velocity, and fluid properties across the channel cross-section.
+
+\begin{equation}
+    T_{l b}=\frac{\int_A \rho_l c_{p l} v_l T_l d A}{\int_A \rho_l c_{p l} v_l d A}
+\end{equation}
+
+The equation \eqref{tlb} is limited to coolant that doesn't undergo a phase change, while equation \eqref{enth} can be used for both single-phase and two-phase flows. The local velocity in a channel cross-section is denoted by $v_l$
+
+The temperature of the coolant changes linearly with the distance from the inlet to the channel. If we assume that the entire length of the channel is H, then we can calculate the exit temperature using the following equation:
+
+$$T_{l b ex}=T_{l b i}+\frac{q^{\prime \prime} P_H H}{c_p W}$$
+
+However, various shapes of axial power distribution may exist in nuclear reactor cores. In cylindrical homogeneous reactors, a cosine-shaped power distribution, from ref. [2], is obtained by applying the diffusion approximation for neutron distribution calculation. 
+
+\begin{equation}\label{flx}
+    q^{\prime \prime}(r, z)=q_0^{\prime \prime} J_0\left(\frac{2.405 r}{\tilde{R}}\right) \cos \left(\frac{\pi z}{\tilde{H}}\right) ,
+\end{equation}
+
+Equation \eqref{flx} and the coordinate system in Fig. \ref{fig:8.2.3} express the power distribution.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.2\textwidth]{images/htchnlcosshp.png}
+\caption{Heated channel with cosine power shape}
+\label{fig:8.2.3}
+\end{figure}
+
+Equation \eqref{fldev} then becomes,
+\begin{equation}
+ \resizebox{0.25\textwidth}{!}{$\frac{d i_l(z)}{d z}=\frac{q_0^{\prime \prime} \cdot P_H(z)}{W} \cos \left(\frac{\pi z}{\widetilde{H}}\right), \quad$}
+\end{equation}
+
+or, 
+\begin{equation}
+ \resizebox{0.25\textwidth}{!}{$\quad \frac{d T_{l b}(z)}{d z}=\frac{q_0^{\prime \prime} \cdot P_H(z)}{W \cdot c_p} \cos \left(\frac{\pi z}{\widetilde{H}}\right)$}
+\end{equation}
+
+After integration, the coolant enthalpy and temperature distributions are as follows,
+
+\begin{equation}\label{enthnew}
+    i_l(z)=\frac{q_0^{\prime \prime} \cdot P_H}{W} \cdot \frac{\widetilde{H}}{\pi}\left[\sin \left(\frac{\pi z}{\widetilde{H}}\right)+\sin \left(\frac{\pi H}{2 \widetilde{H}}\right)\right]+i_{l i}
+\end{equation}
+
+or,
+
+\begin{equation}\label{tempnew}
+    T_{l b}(z)=\frac{q_0^{\prime \prime} \cdot P_H}{W \cdot c_p} \cdot \frac{\widetilde{H}}{\pi}\left[\sin \left(\frac{\pi z}{\widetilde{H}}\right)+\sin \left(\frac{\pi H}{2 \widetilde{H}}\right)\right]+T_{l b i}
+\end{equation}
+
+The channel exit temperature and enthalpy can be found substituting $z=H / 2$ into \eqref{tempnew} and \eqref{enthnew} as follows,
+$$
+i_{\text {lex }}=i_l(H / 2)=\frac{2 q_0^{\prime \prime} \cdot P_H \cdot \widetilde{H}}{\pi \cdot W} \sin \left(\frac{\pi H}{2 \widetilde{H}}\right)+i_{l i} \text {, or }
+$$
+$$
+T_{l b e x}=T_{l b}(H / 2)=\frac{2 q_0^{\prime \prime} \cdot P_H \cdot \widetilde{H}}{\pi \cdot W \cdot c_p} \sin \left(\frac{\pi H}{2 \widetilde{H}}\right)+T_{l b i}
+$$
+
+\item The flow characteristics of a reactor core can be described by the relationship between core pressure drop and mass flux, where the core power is equal to fractions of the nominal power, and the flow is varied to different core nominal flow rates. Generally, as the mass flux increases, the core pressure drop also increases, indicating a higher resistance to flow through the core. This relationship can be influenced by factors such as fuel burnup, core geometry, and coolant properties. Understanding these flow characteristics is vital for ensuring a nuclear reactor's efficient and safe operation, as deviations from expected flow behavior can impact core performance and potentially lead to safety concerns.
+\end{itemize}
+
+\subsection{Critical heat flux (CHF)}
+The Critical Heat Flux (CHF) conditions refer to the point at which the wall temperature rises and heat transfer decreases due to a change in the heat transfer mechanism and can vary with the enthalpy of the flow. Sub-cooled conditions and low qualities correspond to a change in boiling mechanism from nucleate to film boiling, known as Departure from Nucleate Boiling (DNB). Saturated conditions with moderate and high qualities usually have an annular flow pattern. The change in the heat transfer mechanism is associated with the disappearance of the liquid film, called dry-out. The mechanisms responsible for CHF are not fully understood, so predictions rely on correlations from specific experimental data. LWR fuel vendors develop their proprietary CHF correlations based on measured data. Numerous experimental efforts have been made to obtain CHF data, resulting in hundreds of correlations developed to correlate the data.
+
+The peaking factor is the ratio of a reactor core's maximum to average power densities. The peaking factor, from ref. [2], can be calculated for the whole core volume: 
+
+
+$$\quad f_V=\frac{q_0^{\prime \prime \prime}}{\bar{q}^{\prime \prime \prime}}=\frac{q^{\prime \prime \prime}(0,0)}{\frac{1}{V} \int_V q^{\prime \prime \prime} d V}$$
+
+
+
+In a cylindrical core, we have in addition radial and axial peaking factors:
+
+\begin{align*}
+    \resizebox{0.45\textwidth}{!}{$f_R\left(z_P\right)=\frac{q^{\prime \prime \prime}\left(0, z_P\right)}{\frac{1}{\pi R^2} \int_0^R q^{\prime \prime \prime}\left(r, z_P\right) 2 \pi r d r} \quad f_A\left(r_P\right)=\frac{q^{\prime \prime \prime}\left(r_P, 0\right)}{\frac{1}{H} \int_{-H / 2}^{H / 2} q^{\prime \prime \prime}\left(r_P, z\right) d z}$}
+\end{align*}
+
+Here $z_P$ and $r_P$ are fixed values of the axial and radial coordinates at which peaking factors are defined.
+
+For example, for a fuel rod located at $r=r_p$ distance from the center line, the axial peaking factor is found as:
+$$
+\begin{aligned}
+& f_A\left(r_P\right)=\frac{q_0^{\prime \prime \prime} J_0\left(\frac{2.405 r_P}{\tilde{R}}\right) \cos (0)}{\frac{1}{H} \int_{-H / 2}^{H / 2} q_0^{\prime \prime \prime} J_0\left(\frac{2.405 r_P}{\tilde{R}}\right) \cos \left(\frac{\pi z}{\tilde{H}}\right) d z} \\&= 
+ \frac{1}{\frac{1}{H} \int_{-H / 2}^{H / 2} \cos \left(\frac{\pi z}{\tilde{H}}\right) d z}=\frac{\pi H}{2 \tilde{H} \sin \left(\frac{\pi}{2} \cdot \frac{H}{\tilde{H}}\right)}
+\end{aligned}
+$$
+As can be seen, the axial peaking factor does not depend on $r_p$
+Similarly, for a core cross-section located at $z=z_p$, the radial peaking factor is found as:
+$$
+\begin{gathered}
+f_R\left(z_P\right)=\frac{q_0^{\prime \prime \prime} J_0(0) \cos \left(\frac{\pi z_P}{\tilde{H}}\right)}{\frac{1}{\pi R^2} \int_0^R q_0^{\prime \prime} J_0\left(\frac{2.405 r}{\tilde{R}}\right) 2 \pi r \cos \left(\frac{\pi z_P}{\tilde{H}}\right) d r}\\= 
+\frac{1}{\frac{1}{\pi R^2} \int_0^R J_0\left(\frac{2.405 r}{\tilde{R}}\right) 2 \pi r d r}=\frac{2.405 \cdot R}{2 \tilde{R} \cdot J_1\left(\frac{2.405 R}{\tilde{R}}\right)}
+\end{gathered}
+$$
+As can be seen, the radial peaking factor does not depend on $\mathrm{Z}_{\mathrm{P}}$
+$$
+\frac{R}{\tilde{R}} \cong \frac{H}{\tilde{H}} \cong \frac{5}{6}
+$$
+
+From Bowring correlation [2]:
+$$
+\begin{aligned}
+& q_{c r}^{\prime \prime}=\frac{A+D \cdot G \cdot \Delta i_{s u b i} / 4}{C+L} \\
+& A=\frac{0.579 F_{B 1} D \cdot G \cdot i_{f g}}{1+0.0143 F_{B 2} D^{1 / 2} G} \\
+& C=\frac{0.077 F_{B 3} D \cdot G}{1+0.347 F_{B 4}(G / 1356)^n} \\
+& F_{B 1}=\left\{\begin{array}{cc}
+\frac{p_R^{18.922} \exp \left[20.8\left(1-p_R\right)\right]+0.917}{1.917} & p_R \leq 1 \\
+p_R^{0.368} \exp \left[0.648\left(1-p_R\right)\right] & p_R>1
+\end{array}\right. \\
+& \begin{array}{l}
+n=2.0-0.5 p_R \\
+p_R=\frac{p}{6.895 \cdot 10^6}
+\end{array} \\
+& \frac{F_{B 1}}{F_{B 2}}=\left\{\begin{array}{cc}
+\frac{p_R^{1316} \exp \left[2.444\left(1-p_R\right)\right]+0.309}{1.309} & p_R \leq 1 \\
+p_R^{-0.48} \exp \left[0.245\left(1-p_R\right)\right] & p_R>1
+\end{array}\right. \\
+& 136<\mathrm{G}<18600 \mathrm{~kg} / \mathrm{m}^2 \mathrm{~s} \text { - mass flux } \\
+& 2 \cdot 10^5<p<190 \cdot 10^5 \mathrm{~Pa} \text { - pressure } \\
+& 2<\mathrm{D}<45 \mathrm{~mm} \text { - diameter } \\
+& 0.15<\mathrm{L}<3.7 \mathrm{~m} \text { - heated length } \\
+& \Delta i_{\text {sub }}=\mathrm{i}_{\mathrm{f}}-\mathrm{i}_{\mathrm{in}}, \mathrm{J} / \mathrm{kg} \text { - inlet sub-cooling } \\
+& F_{B 3}=\left\{\begin{array}{cc}
+\frac{p_R^{17.023} \exp \left[16.658\left(1-p_R\right)\right]+0.667}{1.667} & p_R \leq 1 \\
+p_R^{-0.219} & p_R>1
+\end{array}\right. \\
+& \frac{F_{B 4}}{F_{B 3}}=p_R^{1.649} \\
+&
+\end{aligned}
+$$
+
+In sub-channel CHF correlation, Reddy and Fighetti developed a generalized sub-channel CHF correlation for both PWR and BWR fuel assemblies (both DNB and dry-out) [2]
+
+$$q_{c r}^{\prime \prime}(\mathbf{r})=B \frac{A-x_{i n}}{C+\frac{x(\mathbf{r})-x_{i n}}{q_R^{\prime \prime}(\mathbf{r})}}$$
+
+$\begin{aligned} &  \quad A=a_1 p_R^{a_2} G_R^{\left(a_3+a_4 p_R\right)} \quad G_R=G / 1356.23 \\  & B=3.1544 \times 10^6  \quad p_R=p / p_{c r} \\ & C=c_1 p_R^{c_2} G_R^{\left(c_3+c_4 p_R\right)} \quad q_R^{\prime \prime}(\mathbf{r})=q^{\prime \prime}(\mathbf{r}) / 3.1544 e 6 \\ & \end{aligned}$
+
+where,
+$q_{c r}$ - critical heat flux, $\mathrm{W} / \mathrm{m}^2$, $x_{in}$ - inlet equilibrium quality, $G$ - mass flux, $\mathrm{kg} / \mathrm{m}^2 \mathrm{~s}$, $p$-pressure, $\mathrm{Pa}, p_{c r}$ - critical pressure, $\mathrm{Pa}$, $r$ - location
+
+$\mathrm{a}_1=0.5328, \mathrm{a}_2=0.1212, \mathrm{a}_3=-0.3040$, $a_4=0.3285, c_1=1.6151, c_2=1.4066, c_3=0.4843, c_4=-2.0749.$
+
+Applicability range: $147<G<3023 \mathrm{~kg} / \mathrm{m}^2 \mathrm{~s}, 13.8<p<169.9 \mathrm{bar}, 8.9<D_h<13.9 \mathrm{~mm}$, $6.3<D_H<13.9 \mathrm{~mm},-0.25<x<0.75,-1.10<x_{i n}<=0.0,0.762<L<4.267 \mathrm{~m}$
+
+Therefore, the departure from the nucleate boiling ratio:
+
+$$\operatorname{DNBR}(z)=\frac{q_{c r}^{\prime \prime}(z)}{q^{\prime \prime}(z)}$$
+
+\subsection{Fuel assembly nodalization [3] [4]}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.15\textwidth}
+\centering
+\includegraphics[width = \textwidth]{images/pdrcv.png}
+\caption{Pipe discretization represented by control volumes}
+\label{fig:8.4a}
+\end{subfigure}
+\begin{subfigure}{0.15\textwidth}
+\centering
+\includegraphics[width = \textwidth]{images/nevFA.png}
+\caption{Nodalization and the end view of a fuel assembly}
+\label{fig:8.4b}
+\end{subfigure}
+\caption{Fuel assembly nodalization}
+\label{fig:8.4}
+\end{figure}
+
+- for $\mathrm{j}=2$ to $n k$
+
+- $i(j)=i(j-1)+q \_$cell(j-1) / W (energy balance)
+
+- end for
+
+- while $p$ not converged
+
+- $p(1)=$ pin + dplnletOrifice
+
+- for $\mathrm{j}=2$ to $\mathrm{nk}$
+
+- $x e(j), x a(j)$, alpha(j) (void fraction model)
+
+$
+\begin{aligned}
+\resizebox{0.46\textwidth}{!}{$-dpf\_cell(j-1),dpg\_cell(j-1), dpa\_cell(j-1),dpl\_cell(j-1)$}
+\end{aligned}
+$
+
+- $dp\_cell(j-1) (pressure drop calculation)$
+
+- $p(j)=p(j-1)+d p \_c e l l(j-1)$
+
+- end for
+
+- end while $p$
+
+- $T(j)$
+
+- $f(p(j), i(j))$ for sub-cooled water
+
+- Tsat(j) for saturated water
+
+- Inlet orifices pressure loss coefficient (designed for nominal condition)
+
+- Flow characteristic of the core $(-\mathrm{dp})=\mathrm{f}(\mathrm{G})$
+
+This algorithm describes a numerical solution procedure for nodalization (as shown in Fig. \ref{fig:8.4}), which involves dividing a fuel assembly geometry into control volumes and solving equations relating to mass, momentum, and energy balances for each fluid phase. The algorithm includes two main parts: energy balance and pressure drop calculation.
+
+In the energy balance part, the algorithm calculates the energy balance of each control volume by using the previous control volume's value, the cell flow rate, and the width of the control volume.
+
+In the pressure drop calculation part, the algorithm iteratively calculates the pressure drop across each control volume until it converges. The pressure drop is calculated based on the void fraction model, pressure drops across the cell, and the pressure of the previous control volume. The algorithm also calculates the temperature and flow characteristics of the core and the inlet orifice pressure loss coefficient.
+
+
+
+\begin{table*}
+\caption{EPR important parameters [1]}
+\label{tab: 1}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Parameters                            & \multicolumn{1}{l}{Values} \\ \midrule
+Total core heat   output              & 4275 MWth                  \\
+Total heat output   in fuel pellets (assumed 94.5\% of the total core heat output)                                  & 4039.875   MWth                     \\
+Nominal system pressure               & 155 bar                    \\
+Total core mass   flow rate                                                                                         & 113320   m\textasciicircum{}3 / h   \\
+Effective fuel cooling mass flow rate (= total mass flow rate minus bypass flow)                                    & 107087.4   m\textasciicircum{}3 / h \\
+Number of fuel assemblies             & 241                       \\
+Active fuel height                    & 4.2 m                      \\
+Lattice pitch                         & 12.6 mm                    \\
+Number of fuel rods per assembly      & 265                        \\
+Outside fuel rod diameter             & 9.5 mm                     \\
+Clad thickness                        & 0.57 mm                    \\
+Fuel pellet diameter                  & 8.19 mm                    \\
+Number of spacers, their locations, and their local pressure loss coefficients (local loss coefficient of 0.8 each) & 10                                  \\
+Spacer uniformly distributed distance & 0.382 m                    \\
+Clad and channel wall roughness       & 0.001524   mm              \\
+Flow rate for one assembly            & 96.097   kg/s              \\ \bottomrule
+\end{tabular}
+\end{table*}
+
+\section{Flow characteristics and axial distributions}
+\subsection{General core-averaged thermal-hydraulic characteristics}
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.23\textwidth}
+\centering
+\includegraphics[width = \textwidth]{images/g_apdd.png}
+\caption{Axial pressure drop distribution}
+\label{fig:9.1a}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+\centering
+\includegraphics[width = \textwidth]{images/g_aced.png}
+\caption{Axial coolant enthalpy distribution}
+\label{fig:9.1b}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+\centering
+\includegraphics[width = \textwidth]{images/g_actd.png}
+\caption{Axial coolant temperature distribution}
+\label{fig:9.1c}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+\centering
+\includegraphics[width =\textwidth]{images/g_pd.png}
+\caption{Axial power distribution}
+\label{fig:9.1d}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+\centering
+\includegraphics[width =\textwidth]{images/g_flchar.png}
+\caption{Flow characteristic of the core}
+\label{fig:9.1e}
+\end{subfigure}
+\caption{Simplified core-averaged thermal-hydraulic characteristics}
+\label{fig:9.1.0}
+\end{figure}
+
+\subsection{Hot channel thermal-hydraulic characteristics}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.16\textwidth}
+\centering
+\includegraphics[width = \textwidth]{images/ht_apdd.png}
+\caption{Axial pressure distribution}
+\label{fig:9.2a}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+\centering
+\includegraphics[width = \textwidth]{images/ht_aed.png}
+\caption{Axial coolant enthalpy distribution}
+\label{fig:9.2b}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+\centering
+\includegraphics[width = \textwidth]{images/ht_atd.png}
+\caption{Axial coolant temperature distribution}
+\label{fig:9.2c}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+\centering
+\includegraphics[width =\textwidth]{images/ht_apd.png}
+\caption{Axial power distribution}
+\label{fig:9.2d}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+\centering
+\includegraphics[width =\textwidth]{images/ht_flad.png}
+\caption{Axial distribution of minimum critical heat flux in the hot channel, $q_{cr}^{\prime\prime} (z)$ and local actual heat flux in the hot channel, $q^{\prime\prime} (z)$}
+\label{fig:9.2e}
+\end{subfigure}
+\begin{subfigure}{0.23\textwidth}
+\centering
+\includegraphics[width =\textwidth]{images/ht_dnbrad.png}
+\caption{Axial distribution of departure from nucleate boiling ratio, DNBR (MDNBR is 1.71 and zMDNBR is around 350 cm)}
+\label{fig:9.2f}
+\end{subfigure}
+\caption{Hot channel thermal-hydraulic characteristics}
+\label{fig:9.2.0}
+\end{figure}
+
+
+
+\section{Maximum cladding and fuel pellet temperature}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.2\textwidth]{images/Fel.png}
+\caption{Typical cylindrical fuel element construction}
+\label{fig:10.1}
+\end{figure}
+
+In the cylindrical coordinate system, for a fuel rod, as shown in Fig. \ref{fig:10.1}, the conduction equation, from ref. [2], can be written as
+
+\begin{equation}\label{10.1e}
+    \nabla \cdot \lambda \nabla T = -q^{\prime\prime\prime} (r)
+\end{equation}
+
+Then, equation \eqref{10.1e} can be written in the form
+
+\begin{equation}
+    \frac{1}{r} \frac{\partial}{\partial r}(r \lambda \frac{\partial T (r, z)}{\partial r}) + \frac{\partial}{\partial z} [\lambda \frac{\partial T (r,z)}{\partial z}] = -q^{\prime\prime\prime} (r)
+\end{equation}
+
+The conduction equation can be further simplified:
+\begin{itemize}
+\item Heat conduction in the z direction can be neglected since temperature gradient $\frac{d T}{d z}$ is much lower than $\frac{d T}{d r}$.
+\item In fuel region, $q^{\prime\prime\prime} =q^{\prime\prime\prime} (z)$ .
+\item In gas gap and clad regions, $q^{\prime\prime\prime}=0$ .
+\end{itemize}
+
+The conduction equation can be thus written for each region separately as:
+\begin{itemize}
+\item Fuel \begin{equation}\label{fupelor}
+    \quad \frac{1}{r} \frac{d}{d r}\left(r \lambda_F \frac{d T_F(r)}{d r}\right)=-q^{\prime \prime \prime}(z)
+\end{equation}
+\item Gap $$\quad \frac{1}{r} \frac{d}{d r}\left(r \lambda_G \frac{d T_G(r)}{d r}\right)=0$$
+\item Clad $$\quad \frac{1}{r} \frac{d}{d r}\left(r \lambda_C \frac{d T_C(r)}{d r}\right)=0$$
+\end{itemize}
+
+To solve ordinary differential equations, we need boundary conditions:
+
+\begin{itemize}
+\item Finite temperature at $r=0$
+
+\item $4^{\text {th }}$ kind b.c. at $r=r_{F 0}$
+
+$$\left.T_F\right|_{r=r_{F o}}=\left.\left.T_G\right|_{r=r_{F o}} \quad \lambda_F \frac{d T_F}{d r}\right|_{r=r_{F o}}=\left.\lambda_G \frac{d T_G}{d r}\right|_{r=r_{F o}}$$
+
+
+\item $4^{\text {th }}$ kind b.c. at $r=r_{G o}$
+$$
+\left.T_G\right|_{r=r_{G o}}=\left.\left.T_C\right|_{r=r_{G o}} \quad \lambda_G \frac{d T_G}{d r}\right|_{r=r_{G o}}=\left.\lambda_C \frac{d T_C}{d r}\right|_{r=r_{G o}}
+$$
+\item $3^{\text {rd }}$ kind b.c. at $r=r_{C o}$
+$$
+-\left.\lambda_C \frac{d T_C}{d r}\right|_{r=r_{C o}}=h\left(T_{C o}-T_{l b}\right)
+$$
+\end{itemize}
+
+\subsection{Fuel pellet temperature}
+From b.c., we can solve equation \eqref{fupelor} using integration, resulting in
+
+$$\lambda_F \frac{d T_F(r)}{d r}=-\frac{1}{r} \int q^{\prime \prime \prime}(z) \cdot r \cdot d r=-\frac{q^{\prime \prime \prime}(z) \cdot r}{2}+\frac{C}{r}$$
+
+To limit $T_{Fc}=T_F(0)$, the constant $C$ must be equal to zero: $C = 0$, 
+thus
+
+$$\lambda_F \frac{d T_F(r)}{d r}=-\frac{q^{\prime \prime \prime}(z) \cdot r}{2}$$
+
+After integration, the temperature rise in the fuel region is as follows:
+$$\Delta T_F (z) \equiv T_F (0) - T_F (r_F) = T_{Fc} - T_{Fo} = \frac{q^{\prime \prime \prime}(z) \cdot r_{Fo}^2}{4\cdot\lambda_F}$$
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.2\textwidth]{images/Fel_t.png}
+\caption{Typical cylindrical fuel element temperature distribution}
+\label{fig:10.1.1}
+\end{figure}
+
+\subsection{Cladding temperature}
+Since the conduction equation is the same in the clad region, the temperature rise in the clad is found as
+
+\begin{equation}
+\resizebox{0.48\textwidth}{!}{$\left.\begin{array}{l}\left.q^{\prime \prime}\right|_{r_{G o}}=-\left.\lambda_C \frac{d T_C(r)}{d r}\right|_{r_{G o}}=-\frac{C^{\prime}}{r_{G o}} \\ \left.q^{\prime \prime}\right|_{r_{G o}} \cdot 2 \pi r_{G o} \cdot d z=q^{\prime \prime \prime} \cdot \pi r_{F o}^2 \cdot d z\end{array}\right\} \Rightarrow C^{\prime}=-\frac{q^{\prime \prime \prime} r_{F o}^2}{2}$}
+\end{equation}
+
+Hence, we get
+$$\Delta T_C = \frac{q^{\prime\prime\prime} r_{Fo}^2}{2 \lambda_C} \mathrm{ln}[\frac{r_{Co}}{r_{Go}}]$$
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.2\textwidth]{images/Fel_c_temp.png}
+\caption{Typical cylindrical fuel element temperature distribution}
+\label{fig:10.2.1}
+\end{figure}
+
+\subsection{Temperature distribution for clad and fuel pellet}
+\begin{itemize}
+\item Fuel Pellet:
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.34\textwidth}
+\centering
+\includegraphics[width = \textwidth]{images/fp_tfoad.png}
+\caption{$T_{Fo}$ axial distribution}
+\label{fig:10.3.1a}
+\end{subfigure}
+\begin{subfigure}{0.34\textwidth}
+\centering
+\includegraphics[width =\textwidth]{images/fp_tfcad.png}
+\caption{$T_{Fc}$ axial distribution}
+\label{fig:10.3.1b}
+\end{subfigure}
+\begin{subfigure}{0.34\textwidth}
+\centering
+\includegraphics[width =\textwidth]{images/fp_deltfad.jpg}
+\caption{$\Delta T_{F}$ axial distribution}
+\label{fig:10.3.1c}
+\end{subfigure}
+\caption{Fuel pellet temperature distribution}
+\label{fig:10.3.1}
+\end{figure}
+
+\begin{itemize}
+    \item The $T_{Fc}$ reaches the highest temperature value ($1288.17 ^{\circ}C$) at around $217$ $ \mathrm{cm}$.
+    \item The $T_{Fo}$ reaches the highest temperature value ($641.7 ^{\circ}C$) at around $223$ $ \mathrm{cm}$.
+    \item The $\Delta T_F$ reaches the highest temperature value ($646.47 ^{\circ}C$) at around $219$ $ \mathrm{cm}$.
+\end{itemize}
+
+
+
+\item Cladding:
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.35\textwidth}
+\centering
+\includegraphics[width = \textwidth]{images/cl_tciad.png}
+\caption{$T_{Ci}$ axial distribution}
+\label{fig:10.3.2a}
+\end{subfigure}
+\begin{subfigure}{0.35\textwidth}
+\centering
+\includegraphics[width =\textwidth]{images/cl_tcoad.png}
+\caption{$T_{Co}$ axial distribution}
+\label{fig:10.3.2b}
+\end{subfigure}
+\begin{subfigure}{0.35\textwidth}
+\centering
+\includegraphics[width =\textwidth]{images/cl_deltcad.png}
+\caption{$\Delta T_{C}$ axial distribution}
+\label{fig:10.3.2c}
+\end{subfigure}
+\caption{Cladding temperature distribution}
+\label{fig:10.3.2}
+\end{figure}
+
+
+\begin{itemize}
+    \item The $T_{C} (r_{Go})$ reaches the highest temperature value ($429.8 ^{\circ}C$) at around $313$ $ \mathrm{cm}$.
+    \item The $T_{C} (r_{Co})$ reaches the highest temperature value ($395.09 ^{\circ}C$) at around $359$ $\mathrm{cm}$.
+    \item The $\Delta T_C$ reaches the highest temperature value ($51.09 ^{\circ}C$) at around $200$ $ \mathrm{cm}$.
+\end{itemize}
+        
+\end{itemize}
+
+
+
+
+\section{Discussions and conclusion}
+The report discusses various topics related to the design and operation of the EPR nuclear power plant. It covers plant layout, reactor core, EPR nuclear systems, reactor coolant system, safety systems, instrumentation and control system, electrical power system, nuclear safety, operation, and maintenance. Safety systems include chemical and volume control, safety injection, in-containment refueling water storage tank, emergency feed-water system, component cooling water system, and ultimate cooling water system. The report also discusses nuclear safety topics such as three protective barriers, defense in depth, dose targets, and legal limits. Operation and maintenance topics include reactor shutdown, core unloading and reloading, heating and filling the primary coolant system, power operation, and specific operations. Preventive maintenance is also covered.
+
+The report presents an analysis of axial distribution and calculation of key core parameters in an EPR reactor. The report includes various core-averaged thermal-hydraulic characteristics, such as pressure drop, coolant enthalpy, and temperature distribution. The report also covers calculating local pressure losses and approximating a single sub-channel or a fuel assembly as a one-dimensional channel with an equivalent hydraulic diameter for thermal-hydraulic analysis. The report also discusses critical heat flux and peaking factors, vital parameters in reactor design. The maximum fuel pellet and cladding temperature calculation are essential to nuclear fuel design and safety analysis.
+
+The report uses the conduction equation to calculate the temperature distribution in a typical cylindrical fuel element's fuel, gas gap, and cladding regions. The conduction equation was simplified based on the assumption that heat conduction in the z-direction can be neglected. The heat generation rate is constant in the fuel region and zero in the gas gap and cladding regions. The report employs boundary conditions at the interfaces between the fuel, gas gap, and cladding regions to solve the ordinary differential equations. The temperature at the center of the fuel pellet limited the maximum fuel pellet temperature. In contrast, the heat transfer from the cladding to the coolant limited the maximum cladding temperature. Limiting the maximum fuel pellet and cladding temperatures can ensure the safe operation of the nuclear fuel element.
+
+\section{References}
+\begin{enumerate}
+\item The Pre-Construction Safety Report (PCSR) for UK EPR™ (\url{http://www.epr-reactor.co.uk/scripts/ssmod/publigen/content/templates/show.asp?P=290&L=EN&id_cat=1.2})
+
+\item Henryk A., Nuclear Reactor Technology and Design
+
+\item Maciej S., Rafał L., Thermal-hydraulic calculations for a fuel assembly in a European Pressurized Reactor using the RELAP5 code, (NUKLEONIKA 2015;60(3):537-544, doi: 10.1515/nuka-2015-0110)
+
+\item Thiago A. S., Jose R. M. and Giovanni L. S., A THERMAL HYDRAULIC ANALYSIS IN PWR REACTORS WITH UO2 OR (U-Th)O2 FUEL RODS EMPLOYING A SIMPLIFIED CODE (Agenda Brasileira do ISBN, ISBN 978-85-99141-07)
+\end{enumerate}
+
+\section{Appendix}
+
+
+
+\end{document}

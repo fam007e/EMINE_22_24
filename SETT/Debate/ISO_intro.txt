@@ -1,0 +1,226 @@
+Introduction
+
+The increased awareness of the importance of environmental protection, and the possible impacts associated with products), both manufactured and consumed, has increased interest in the development of methods to better understand and address these impacts. One of the techniques being developed for this purpose is life cycle assessment (LCA).
+
+LCA can assist in
+— identifying opportunities to improve the environmental performance of products at various points in their life cycle,
+— informing decision-makers in industry, government or non-government organizations (e.g. for the purpose of strategic planning, priority setting, product or process design or redesign),
+— the selection of relevant indicators of environmental performance, including measurement techniques, and
+— marketing (e.g. implementing an ecolabelling scheme, making an environmental claim, or producing an environmental product declaration).
+
+LCA addresses the environmental aspects and potential environmental impacts) (e.g. use of resources and environmental consequences of releases) throughout a product's life cycle from raw material acquisition through production, use, end-of-life treatment, recycling and final disposal (i.e. cradle-to-grave).
+
+There are four phases in an LCA study:
+a) the goal and scope definition phase,
+b) the inventory analysis phase,
+c) the impact assessment phase, and
+d) the interpretation phase.
+
+The scope, including system boundary and level of detail, of an LCA depends on the subject and the intended use of the study. The depth and the breadth of LCA can differ considerably depending on the goal of a particular LCA.
+
+The life cycle inventory analysis phase (LCI phase) is the second phase of LCA. It is an inventory of input/output data with regard to the system being studied. It involves the collection of the data necessary to meet the goals of the defined study.
+
+The life cycle impact assessment phase (LCIA) is the third phase of the LCA. The purpose of LCIA is to provide additional information to help assess a product system’s LCI results so as to better understand their environmental significance.
+
+Life cycle interpretation is the final phase of the LCA procedure, in which the results of an LCI or an LCIA, or both, are summarized and discussed as a basis for conclusions, recommendations and decision-making in accordance with the goal and scope definition.
+
+There are cases where the goal of an LCA may be satisfied by performing only an inventory analysis and an interpretation. This is usually referred to as an LCI study. This International Standard covers two types of studies: life cycle assessment studies (LCA studies) and life cycle inventory studies (LCI studies). LCI studies are similar to LCA studies but exclude the LCIA phase. LCI are not to be confused with the LCI phase of an LCA study.
+
+Generally, the information developed in an LCA or LCI study can be used as part of a much more comprehensive decision process. Comparing the results of different LCA or LCI studies is only possible if the assumptions and context of each study are equivalent. Therefore this International Standard contains several requirements and recommendations to ensure transparency on these issues.
+
+LCA is one of several environmental management techniques (e.g. risk assessment, environmental performance evaluation, environmental auditing, and environmental impact assessment) and might not be the most appropriate technique to use in all situations. LCA typically does not address the economic or social aspects of a product, but the life cycle approach and methodologies described in this International Standard may be applied to these other aspects.
+
+This International Standard, like other International Standards, is not intended to be used to create non-tariff trade barriers or to increase or change an organization's legal obligations.
+
+1   Scope
+This International Standard specifies requirements and provides guidelines for life cycle assessment (LCA) including
+a) the goal and scope definition of the LCA,
+b) the life cycle inventory analysis (LCI) phase,
+c) the life cycle impact assessment (LCIA) phase,
+d) the life cycle interpretation phase,
+e) reporting and critical review of the LCA,
+f) limitations of the LCA,
+g) relationship between the LCA phases, and
+h) conditions for use of value choices and optional elements.
+
+This International Standard covers life cycle assessment (LCA) studies and life cycle inventory (LCI) studies.
+The intended application of LCA or LCI results is considered during the goal and scope definition, but the application itself is outside the scope of this International Standard.
+This International Standard is not intended for contractual or regulatory purposes or registration and certification.
+2   Normative references
+The following referenced documents are indispensable for the application of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.
+ISO 14040:2006, Environmental management — Life cycle assessment — Principles and framework
+3   Terms and definitions
+For the purposes of this document, the following terms and definitions apply.
+NOTE These terms and definitions are taken from ISO 14040:2006 and are repeated for the convenience of users of this International Standard.
+
+3.1
+life cycle
+consecutive and interlinked stages of a product system, from raw material acquisition or generation from natural resources to final disposal
+3.2
+life cycle assessment
+LCA
+compilation and evaluation of the inputs, outputs and the potential environmental impacts of a product system throughout its life cycle
+3.3
+life cycle inventory analysis
+LCI
+phase of life cycle assessment involving the compilation and quantification of inputs and outputs for a product throughout its life cycle
+3.4
+life cycle impact assessment
+LCIA
+phase of life cycle assessment aimed at understanding and evaluating the magnitude and significance of the potential environmental impacts for a product system throughout the life cycle of the product
+3.5
+life cycle interpretation
+phase of life cycle assessment in which the findings of either the inventory analysis or the impact assessment, or both, are evaluated in relation to the defined goal and scope in order to reach conclusions and recommendations
+3.6
+comparative assertion
+environmental claim regarding the superiority or equivalence of one product versus a competing product that performs the same function
+3.7
+transparency
+open, comprehensive and understandable presentation of information
+3.8
+environmental aspect
+element of an organization's activities, products or services that can interact with the environment
+[SOURCE:ISO 14001:2004; definition 3.6]
+3.9
+product
+any goods or service
+Note 1 to entry: The product can be categorized as follows:
+— services (e.g. transport);
+— software (e.g. computer program, dictionary);
+— hardware (e.g. engine mechanical part);
+— processed materials (e.g. lubricant);
+Note 2 to entry: Services have tangible and intangible elements. Provision of a service can involve, for example, the following:
+— an activity performed on a customer-supplied tangible product (e.g. automobile to be repaired);
+— an activity performed on a customer-supplied intangible product (e.g. the income statement needed to prepare a tax return);
+— the delivery of an intangible product (e.g. the delivery of information in the context of knowledge transmission);
+— the creation of ambience for the customer (e.g. in hotels and restaurants).
+
+Software consists of information and is generally intangible and can be in the form of approaches, transactions or procedures.
+Hardware is generally tangible and its amount is a countable characteristic. Processed materials are generally tangible and their amount is a continuous characteristic.
+Note 3 to entry: Adapted from ISO 14021:1999 and ISO 9000:2005
+3.10
+co-product
+any of two or more products coming from the same unit process or product system
+3.11
+process
+set of interrelated or interacting activities that transforms inputs into outputs
+[SOURCE:ISO 9000:2005, definition 3.4.1 (without notes)]
+3.12
+elementary flow
+material or energy entering the system being studied that has been drawn from the environment without previous human transformation, or material or energy leaving the system being studied that is released into the environment without subsequent human transformation
+3.13
+energy flow
+input to or output from a unit process or product system, quantified in energy units
+Note 1 to entry: Energy flow that is an input may be called an energy input; energy flow that is an output may be called an energy output.
+3.14
+feedstock energy
+heat of combustion of a raw material input that is not used as an energy source to a product system, expressed in terms of higher heating value or lower heating value
+Note 1 to entry: Care is necessary to ensure that the energy content of raw materials is not counted twice.
+3.15
+raw material
+primary or secondary material that is used to produce a product
+Note 1 to entry: Secondary material includes recycled material.
+3.16
+ancillary input
+material input that is used by the unit process producing the product, but does not constitute part of the product
+3.17
+allocation
+partitioning the input or output flows of a process or a product system between the product system under study and one or more other product systems
+3.18
+cut-off criteria
+specification of the amount of material or energy flow or the level of environmental significance associated with unit processes or product system to be excluded from a study
+3.19
+data quality
+characteristics of data that relate to their ability to satisfy stated requirements
+3.20
+functional unit
+quantified performance of a product system for use as a reference unit
+3.21
+input
+product, material or energy flow that enters a unit process
+Note 1 to entry: Products and materials include raw materials, intermediate products and co-products.
+3.22
+intermediate flow
+product, material or energy flow occurring between unit processes of the product system being studied
+3.23
+intermediate product
+output from a unit process that is input to other unit processes that require further transformation within the system
+3.24
+life cycle inventory analysis result
+LCI result
+outcome of a life cycle inventory analysis that catalogues the flows crossing the system boundary and provides the starting point for life cycle impact assessment
+3.25
+output
+product, material or energy flow that leaves a unit process
+Note 1 to entry: Products and materials include raw materials, intermediate products, co-products, and releases.
+3.26
+process energy
+energy input required for operating the process or equipment within a unit process, excluding energy inputs for production and delivery of the energy itself
+3.27
+product flow
+products entering from or leaving to another product system
+3.28
+product system
+collection of unit processes with elementary and product flows, performing one or more defined functions, and which models the life cycle of a product
+3.29
+reference flow
+measure of the outputs from processes in a given product system required to fulfil the function expressed by the functional unit
+3.30
+releases
+emissions to air and discharges to water and soil
+3.31
+sensitivity analysis
+systematic procedures for estimating the effects of the choices made regarding methods and data on the outcome of a study
+3.32
+system boundary
+set of criteria specifying which unit processes are part of a product system
+Note 1 to entry: The term “system boundary” is not used in this International Standard in relation to LCIA.
+3.33
+uncertainty analysis
+systematic procedure to quantify the uncertainty introduced in the results of a life cycle inventory analysis due to the cumulative effects of model imprecision, input uncertainty and data variability
+Note 1 to entry: Either ranges or probability distributions are used to determine uncertainty in the results.
+3.34
+unit process
+smallest element considered in the life cycle inventory analysis for which input and output data are quantified
+3.35
+waste
+substances or objects which the holder intends or is required to dispose of
+Note 1 to entry: The definition is taken from the Basel Convention on the Control of Transboundary Movements of Hazardous Wastes and Their Disposal (22 March 1989) but is not confined in this International Standard to hazardous waste.
+3.36
+category endpoint
+attribute or aspect of natural environment, human health, or resources, identifying an environmental issue giving cause for concern
+3.37
+characterization factor
+factor derived from a characterization model which is applied to convert an assigned life cycle inventory analysis result to the common unit of the category indicator
+Note 1 to entry: The common unit allows calculation of the category indicator result.
+3.38
+environmental mechanism
+system of physical, chemical and biological processes for a given impact category, linking the life cycle inventory analysis results to category indicators and to category endpoints
+3.39
+impact category
+class representing environmental issues of concern to which life cycle inventory analysis results may be assigned
+3.40
+impact category indicator
+quantifiable representation of an impact category
+Note 1 to entry: The shorter expression “category indicator” is used in this International Standard for improved readability.
+3.41
+completeness check
+process of verifying whether information from the phases of a life cycle assessment is sufficient for reaching conclusions in accordance with the goal and scope definition
+3.42
+consistency check
+process of verifying that the assumptions, methods and data are consistently applied throughout the study and are in accordance with the goal and scope definition performed before conclusions are reached
+3.43
+sensitivity check
+process of verifying that the information obtained from a sensitivity analysis is relevant for reaching the conclusions and giving recommendations
+3.44
+evaluation
+element within the life cycle interpretation phase intended to establish confidence in the results of the life cycle assessment
+Note 1 to entry: Evaluation includes completeness check, sensitivity check, consistency check, and any other validation that may be required according to the goal and scope definition of the study
+3.45
+critical review
+process intended to ensure consistency between a life cycle assessment and the principles and requirements of the International Standards on life cycle assessment
+Note 1 to entry: The principles are described in ISO 14040:2006, 4.1.
+Note 2 to entry: The requirements are described in this International Standard.
+3.46
+interested party
+individual or group concerned with or affected by the environmental performance of a product system, or by the results of the life cycle assessment

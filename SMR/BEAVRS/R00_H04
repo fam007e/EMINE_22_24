@@ -1,0 +1,148 @@
+% -----------------------------------------------------------------------------
+
+% ----- Geometry --------------------------------------------------------------
+
+% --- Fuel pin with 1.6 w-% U-235: 
+
+pin FUE
+fuel        0.36309
+fuel        0.39218
+helium      0.40005
+zirc4       0.45720
+cool
+
+% --- Empty guide tube:
+
+pin GTU
+coolc       0.56134
+zirc4       0.60198
+cool
+
+% --- Control rod: 
+
+pin ROD
+AIC         0.43310
+air         0.43688
+steel       0.48387
+coolc       0.56134
+zirc4       0.60198
+cool
+
+% --- Bare instrumentation tube:
+
+pin ITU
+coolc       0.56134
+zirc4       0.60198
+cool
+
+% --- Empty lattice cell:
+
+pin XXX
+void
+
+% --- Assembly cell boundary:
+
+surf A01 sqc 0.0 0.0 10.70864
+
+% --- Fuel assembly without BA:
+
+cell A01 ASS fill LAT1  -A01
+cell A02 ASS cool A01
+
+lat LAT1 1 5.0394 5.0394 9 9 1.25984
+
+ ITU XXX XXX XXX XXX XXX XXX XXX XXX  
+ FUE FUE XXX XXX XXX XXX XXX XXX XXX  
+ FUE FUE FUE XXX XXX XXX XXX XXX XXX  
+ GTU FUE FUE GTU XXX XXX XXX XXX XXX  
+ FUE FUE FUE FUE FUE XXX XXX XXX XXX  
+ FUE FUE FUE FUE FUE GTU XXX XXX XXX  
+ GTU FUE FUE GTU FUE FUE FUE XXX XXX  
+ FUE FUE FUE FUE FUE FUE FUE FUE XXX  
+ FUE FUE FUE FUE FUE FUE FUE FUE FUE  
+
+% --- Geometry:
+
+surf 1 sqc 0.0 0.0  10.75182
+
+cell 1 0 fill ASS  -1
+cell 2 0 outside    1
+
+% --- Boundary condition:
+
+set bc 2  
+
+% --- Material subdivision and symmetry:
+
+div fuel sep 1
+set usym LAT1 z 2 0.0 0.0 45 45
+
+% -----------------------------------------------------------------------------
+
+% ----- Materials -------------------------------------------------------------
+
+% ----- Fuel 1.6% 
+
+mat fuel  sum  burn 1 
+ 92234.09c  3.0131e-06
+ 92235.09c  3.7503e-04
+ 92238.09c  2.2626e-02
+  8016.09c  4.5896e-02
+  8017.09c  1.7483e-05
+
+% --- Water 
+
+mat water  -0.74080 tmp 566  moder lwtr 1001
+  1001.03c  4.9457e-02
+  1002.03c  7.4196e-06
+  8016.03c  2.4672e-02
+  8017.03c  9.3982e-06
+
+therm lwtr 566 lwe7.10t lwe7.12t
+
+% --- Coolant
+
+mix cool   rgb 100 150 250  
+water  -9.99650E-01
+boron  -350E-6
+
+% --- Unheated coolant
+
+mix coolc  rgb  80 130 250  
+waterc -9.99650E-01
+boron  -350E-6
+
+% -----------------------------------------------------------------------------
+
+% ----- Group constant generation ---------------------------------------------
+
+surf ADF sqc 0.0 0.0  10.75182
+
+set adf 0 ADF full 
+set ppw 0 LAT1
+set poi 1 0.27587
+set fum defaultmg 2
+
+% ----- Branch used to set history variables:
+
+branch HIS
+var VHI 566
+var BHI 350
+
+% -----------------------------------------------------------------------------
+
+% ----- Misc. stuff -----------------------------------------------------------
+
+% --- Read additional input files:
+
+include "input/R00.vol"
+include "input/materials.inp"
+include "input/common.inp"
+include "input/burn_noba.inp"
+include "input/branch.inp"
+include "input/coef_nomcr.inp"
+include "input/para_b1.inp"
+
+set pop 100000 100 10
+
+% -----------------------------------------------------------------------------

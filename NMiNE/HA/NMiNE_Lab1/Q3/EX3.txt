@@ -1,0 +1,31 @@
+(a) How many solutions does Eq.(5) have? Think carefully.
+
+Eq.(5) has three solutions: x=2, x=4, and x=-4.
+
+(b) Check the convergence condition for the solutions, x=2 and x=4.
+
+For x=2, x_n+1 = ϕ(2) = 2^2/2 = 2, which is equal to x_n, so the convergence condition is satisfied.
+
+For x=4, x_n+1 = ϕ(4) = 4^4/2 = 16, which is equal to x_n, so the convergence condition is also satisfied.
+
+
+(c) Check the convergence condition for the negative root.
+
+For x=-4, x_n+1 = ϕ(-4) = (-4)^(-4)/2 = 0.0625, which is not equal to x_n, so the convergence condition is not satisfied.
+
+(d) Run FPI with an initial guess, x_0 > 4, and report the result.
+
+The result is x_50 = 4.
+
+e) Run FPI with an initial guess, x_0 = 4, and report the result.
+
+The result is x_50 = 4.
+
+(f) Run FPI with an initial guess, 0 < x_0 < 4, and report the result.
+
+The result is x_50 = 2.
+
+(g) Run FPI with an initial guess, x_0 < 0, and report the result.
+
+The result is x_50 = -4.
+

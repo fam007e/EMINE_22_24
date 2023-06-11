@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lattices inside grid sleeves %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+/*********** Sleeve (and grid) filled with different assemblies ************/
+
+% --- Fuel 1 (1.6% enriched)
+
+cell c100s0  100s     fill l100s               -sSleeveIn
+cell c100s1  100s     fill sleeve   sSleeveIn
+
+cell c106B0  106B     fill l106B               -sSleeveIn
+cell c106B1  106B     fill sleeve   sSleeveIn
+
+cell c106T0  106T     fill l106T               -sSleeveIn
+cell c106T1  106T     fill sleeve   sSleeveIn
+trans U 106T 0 0 0 0 0 180 1
+
+cell c106L0  106L     fill l106L               -sSleeveIn
+cell c106L1  106L     fill sleeve   sSleeveIn
+trans U 106L 0 0 0 0 0 270 1
+
+cell c106R0  106R     fill l106R               -sSleeveIn
+cell c106R1  106R     fill sleeve   sSleeveIn
+trans U 106R 0 0 0 0 0 90 1
+
+cell c112s0  112s     fill l112s               -sSleeveIn
+cell c112s1  112s     fill sleeve   sSleeveIn
+
+cell c115s0  115s     fill l115s               -sSleeveIn
+cell c115s1  115s     fill sleeve   sSleeveIn
+
+cell c116s0  116s     fill l116s               -sSleeveIn
+cell c116s1  116s     fill sleeve   sSleeveIn
+
+cell c120s0  120s     fill l120s               -sSleeveIn
+cell c120s1  120s     fill sleeve   sSleeveIn
+
+% --- Fuel 2 (2.4% enriched)
+
+cell c200s0  200s     fill l200s               -sSleeveIn
+cell c200s1  200s     fill sleeve   sSleeveIn
+
+cell c206s0  206s     fill l206s               -sSleeveIn
+cell c206s1  206s     fill sleeve   sSleeveIn
+
+cell c212s0  212s     fill l212s               -sSleeveIn
+cell c212s1  212s     fill sleeve   sSleeveIn
+
+cell c215s0  215s     fill l215s               -sSleeveIn
+cell c215s1  215s     fill sleeve   sSleeveIn
+
+cell c216s0  216s     fill l216s               -sSleeveIn
+cell c216s1  216s     fill sleeve   sSleeveIn
+
+cell c220s0  220s     fill l220s               -sSleeveIn
+cell c220s1  220s     fill sleeve   sSleeveIn
+
+% --- Fuel 3 (3.1% enriched)
+
+cell c300s0  300s     fill l300s               -sSleeveIn
+cell c300s1  300s     fill sleeve   sSleeveIn
+
+cell c306B0  306B     fill l306B               -sSleeveIn
+cell c306B1  306B     fill sleeve   sSleeveIn
+
+cell c306T0  306T     fill l306T               -sSleeveIn
+cell c306T1  306T     fill sleeve   sSleeveIn
+trans U 306T 0 0 0 0 0 180 1
+
+cell c306L0  306L     fill l306L               -sSleeveIn
+cell c306L1  306L     fill sleeve   sSleeveIn
+trans U 306L 0 0 0 0 0 270 1
+
+cell c306R0  306R     fill l306R               -sSleeveIn
+cell c306R1  306R     fill sleeve   sSleeveIn
+trans U 306R 0 0 0 0 0 90 1
+
+cell c312s0  312s     fill l312s               -sSleeveIn
+cell c312s1  312s     fill sleeve   sSleeveIn
+
+cell c315SE0  315SE     fill l315SE               -sSleeveIn
+cell c315SE1  315SE     fill sleeve   sSleeveIn
+
+cell c315NE0  315NE     fill l315NE               -sSleeveIn
+cell c315NE1  315NE     fill sleeve   sSleeveIn
+trans U 315NE 0 0 0 0 0 90 1
+
+cell c315SW0  315SW     fill l315SW               -sSleeveIn
+cell c315SW1  315SW     fill sleeve   sSleeveIn
+trans U 315SW 0 0 0 0 0 270 1
+
+cell c315NW0  315NW     fill l315NW               -sSleeveIn
+cell c315NW1  315NW     fill sleeve   sSleeveIn
+trans U 315NW 0 0 0 0 0 180 1
+
+cell c316s0  316s     fill l316s               -sSleeveIn
+cell c316s1  316s     fill sleeve   sSleeveIn
+
+cell c320s0  320s     fill l320s               -sSleeveIn
+cell c320s1  320s     fill sleeve   sSleeveIn

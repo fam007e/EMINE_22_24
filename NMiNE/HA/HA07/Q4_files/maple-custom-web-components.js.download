@@ -1,0 +1,15 @@
+MapleOnline.CustomWebComponents = {};
+MapleOnline.CustomWebComponents.registeredComponents = false;
+MapleOnline.CustomWebComponents.registerWebComponent = function (name, parent) {
+	class BaseElement extends HTMLElement {
+		constructor() {
+			super();
+			MapleOnline.CustomWebComponents.registeredComponents = true;
+			MapleOnline.handleCustomElement(name, this);
+		}
+	}
+	window.customElements.define("maple-worksheet", BaseElement, { extends: parent });
+}
+MapleOnline.CustomWebComponents.areAnyRegisteredComponents = function () {
+	return MapleOnline.CustomWebComponents.registeredComponents;
+}

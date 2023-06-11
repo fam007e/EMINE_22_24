@@ -1,0 +1,436 @@
+set title "PWR Burnup Calculation Based on NEA Benchmark"
+
+% --- Fuel pins:
+
+pin 10
+UO2     0.4025
+clad    0.4750
+water
+
+pin 11
+UO2     0.4025
+clad    0.4750
+water
+
+pin 12
+UO2     0.4025
+clad    0.4750
+water
+
+pin 13
+UO2     0.4025
+clad    0.4750
+water
+
+pin 14
+UO2     0.4025
+clad    0.4750
+water
+
+pin 15
+UO2     0.4025
+clad    0.4750
+water
+
+pin 16
+UO2     0.4025
+clad    0.4750
+water
+
+pin 17
+UO2     0.4025
+clad    0.4750
+water
+
+pin 18
+UO2     0.4025
+clad    0.4750
+water
+
+pin 19
+UO2     0.4025
+clad    0.4750
+water
+
+pin 20
+UO2     0.4025
+clad    0.4750
+water
+
+pin 21
+UO2     0.4025
+clad    0.4750
+water
+
+pin 22
+UO2     0.4025
+clad    0.4750
+water
+
+pin 23
+UO2     0.4025
+clad    0.4750
+water
+
+pin 24
+UO2     0.4025
+clad    0.4750
+water
+
+pin 25
+UO2     0.4025
+clad    0.4750
+water
+
+pin 26
+UO2     0.4025
+clad    0.4750
+water
+
+pin 27
+UO2     0.4025
+clad    0.4750
+water
+
+pin 28
+UO2     0.4025
+clad    0.4750
+water
+
+pin 29
+UO2     0.4025
+clad    0.4750
+water
+
+pin 30
+UO2     0.4025
+clad    0.4750
+water
+
+pin 31
+UO2     0.4025
+clad    0.4750
+water
+
+pin 32
+UO2     0.4025
+clad    0.4750
+water
+
+pin 33
+UO2     0.4025
+clad    0.4750
+water
+
+pin 34
+UO2     0.4025
+clad    0.4750
+water
+
+pin 35
+UO2     0.4025
+clad    0.4750
+water
+
+pin 36
+UO2     0.4025
+clad    0.4750
+water
+
+pin 37
+UO2     0.4025
+clad    0.4750
+water
+
+pin 38
+UO2     0.4025
+clad    0.4750
+water
+
+pin 39
+UO2     0.4025
+clad    0.4750
+water
+
+pin 40
+UO2     0.4025
+clad    0.4750
+water
+
+pin 41
+UO2     0.4025
+clad    0.4750
+water
+
+pin 42
+UO2     0.4025
+clad    0.4750
+water
+
+pin 43
+UO2     0.4025
+clad    0.4750
+water
+
+pin 44
+UO2     0.4025
+clad    0.4750
+water
+
+pin 45
+UO2     0.4025
+clad    0.4750
+water
+
+% --- Gd-pins:
+
+pin 50
+UO2Gd   0.4025
+clad    0.4750
+water
+
+pin 51
+UO2Gd   0.4025
+clad    0.4750
+water
+
+pin 52
+UO2Gd   0.4025
+clad    0.4750
+water
+
+% --- Guide tube:
+
+pin 90
+water   0.5730
+tube    0.6130
+water
+
+% --- Pin lattice:
+
+lat 110  1  0.0 0.0 17 17  1.265
+  
+45 44 43 42 41 40 39 38 37 38 39 40 41 42 43 44 45 
+44 36 35 34 33 32 31 30 29 30 31 32 33 34 35 36 44 
+43 35 28 27 52 90 26 25 90 25 26 90 52 27 28 35 43 
+42 34 27 90 24 23 22 21 51 21 22 23 24 90 27 34 42 
+41 33 52 24 20 19 18 17 16 17 18 19 20 24 52 33 41 
+40 32 90 23 19 90 15 14 90 14 15 90 19 23 90 32 40 
+39 31 26 22 18 15 50 13 12 13 50 15 18 22 26 31 39 
+38 30 25 21 17 14 13 11 10 11 13 14 17 21 25 30 38 
+37 29 90 51 16 90 12 10 90 10 12 90 16 51 90 29 37 
+38 30 25 21 17 14 13 11 10 11 13 14 17 21 25 30 38 
+39 31 26 22 18 15 50 13 12 13 50 15 18 22 26 31 39 
+40 32 90 23 19 90 15 14 90 14 15 90 19 23 90 32 40 
+41 33 52 24 20 19 18 17 16 17 18 19 20 24 52 33 41 
+42 34 27 90 24 23 22 21 51 21 22 23 24 90 27 34 42 
+43 35 28 27 52 90 26 25 90 25 26 90 52 27 28 35 43 
+44 36 35 34 33 32 31 30 29 30 31 32 33 34 35 36 44 
+45 44 43 42 41 40 39 38 37 38 39 40 41 42 43 44 45 
+
+% --- assembly data:
+
+surf  1000  sqc  0.0 0.0 10.752
+surf  1001  sqc  0.0 0.0 10.806
+
+cell 110  0  fill 110   -1000
+cell 111  0  water       1000 -1001
+cell 112  0  outside     1001
+
+% --- Materials:
+
+mat UO2    6.7402E-02  burn 1
+92234.09c  9.1361E-06
+92235.09c  9.3472E-04
+92238.09c  2.1523E-02
+ 8016.09c  4.4935E-02
+
+mat UO2Gd  6.8366E-02  burn 10
+92234.09c  4.2940E-06
+92235.09c  5.6226E-04
+92238.09c  2.0549E-02
+64154.09c  4.6173E-05
+64155.09c  2.9711E-04
+64156.09c  4.1355E-04
+64157.09c  3.1518E-04
+64158.09c  4.9786E-04
+64160.09c  4.3764E-04
+ 8016.09c  4.5243E-02
+
+mat clad   3.8510E-02
+26000.06c  1.3225E-04
+24000.06c  6.7643E-05
+40000.06c  3.8310E-02
+
+mat tube   4.3206E-02
+26000.06c  1.4838E-04
+24000.06c  7.5891E-05
+40000.06c  4.2982E-02
+
+mat water  7.2216E-02  moder lwtr 1001
+ 1001.06c  4.8132E-02
+ 8016.06c  2.4066E-02
+ 5010.06c  3.6487E-06
+ 5011.06c  1.4686E-05
+
+therm lwtr lwj3.11t
+
+% --- Cross section library file path:
+
+set acelib "/codes/SERPENT/xsdata/endfb7.xsdata"
+
+% --- Periodic boundary condition:
+
+set bc 3
+
+% --- Neutron population and criticality cycles:
+
+set pop 6000 500 20
+
+% --- Geometry and mesh plots:
+
+plot 3 500 500
+mesh 3 500 500
+
+% --- Decay and fission yield libraries:
+
+set declib "/codes/SERPENT/xsdata/sss_endfb7.dec"
+set nfylib "/codes/SERPENT/xsdata/sss_endfb7.nfy"
+
+% --- Reduce energy grid size:
+
+set egrid 5E-5 1E-9 15.0
+
+% --- Cut-offs:
+
+set fpcut   1E-6
+set stabcut 1E-12
+
+% --- Options for burnup calculation:
+
+set bumode  2  % CRAM method
+set pcc     1  % Predictor-corrector calculation on
+set xscalc  2  % Cross sections from spectrum
+
+% --- Irradiation cycle:
+
+set powdens 38.6E-3
+
+dep butot
+
+    0.10000
+    0.50000
+    1.00000
+    1.50000
+    2.00000
+    2.50000
+    3.00000
+    3.50000
+    4.00000
+    4.50000
+    5.00000
+    5.50000
+    6.00000
+    6.50000
+    7.00000
+    7.50000
+    8.00000
+    8.50000
+    9.00000
+    9.50000
+   10.00000
+   10.50000
+   11.00000
+   11.50000
+   12.00000
+   12.50000
+   13.00000
+   13.50000
+   14.00000
+   14.50000
+   15.00000
+   17.50000
+   20.00000
+   22.50000
+   25.00000
+   27.50000
+   30.00000
+   32.50000
+   35.00000
+   37.50000
+   40.00000
+
+% --- Nuclide inventory:
+
+set inventory
+
+ 922340
+ 922350
+ 922360
+ 922370
+ 922380
+ 922390
+ 932360
+ 932370
+ 932380
+ 932390
+ 942360
+ 942380
+ 942390
+ 942400
+ 942410
+ 942420
+ 942430
+ 952410                                       
+ 952420
+ 952430
+ 952440
+ 952421
+ 962420
+ 962430
+ 962440
+ 962450
+ 962460
+ 962470
+ 962480
+ 962490
+ 972490
+ 972500
+ 982490
+ 982500
+ 982510
+ 982520
+ 360830
+ 451030
+ 451050
+ 471090
+ 531350
+ 541310
+ 541350
+ 551330
+ 551340
+ 551350
+ 551370
+ 561400
+ 571400
+ 601430
+ 601450
+ 611470
+ 611480
+ 611490
+ 611481
+ 621470
+ 621490
+ 621500
+ 621510
+ 621520
+ 631530
+ 631540
+ 631550
+ 631560
+ 641520
+ 641540
+ 641550
+ 641560
+ 641570
+ 641600

@@ -1,0 +1,73 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Reactor outer elements %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+/***** Radial boundaries of the core *****/
+
+% --- Inner radius of RPV
+
+surf sCYL1 cylz 0.0 0.0 219.710
+
+% --- Outer radius of RPV
+
+surf sCYL2 cylz 0.0 0.0 241.3
+
+% --- Inner radius of RPV liner
+
+surf sCYL3 cylz 0.0 0.0 219.150
+
+% --- Outer radius of RPV liner
+
+surf sCYL4 cylz 0.0 0.0 219.710
+
+% --- Inner radius of core barrel
+
+surf sCYL5 cylz 0.0 0.0 187.960
+
+% --- Outer radius of core barrel
+surf sCYL6 cylz 0.0 0.0 193.675
+
+% --- NO neutron shield
+
+surf sNOs pad 0.0 0.0 194.840 201.630 29 61
+
+% --- SO neutron shield
+
+surf sSOs pad 0.0 0.0 194.840 201.630 119 151
+
+% --- SE neutron shield
+
+surf sSEs pad 0.0 0.0 194.840 201.630 209 241
+
+% --- NE neutron shield
+
+surf sNEs pad 0.0 0.0 194.840 201.630 299 331
+
+/********** Radial boundaries of the baffle ***********/
+
+surf bflIN gcross 0.0 0.0 161.44 139.93636 118.43272 75.42544
+
+surf bflOUT  gcross 0.0 0.0 163.6625 142.15886 120.65522 77.64794
+
+
+/***** Radial cells of the reactor *****/
+
+cell cRPV           0 csteel      -sCYL2 sCYL1
+cell cRPVliner      0 ssteel      -sCYL4 sCYL3
+cell cBarrel        0 ssteel      -sCYL6 sCYL5
+cell cNOshield      0 ssteel      -sNOs
+cell cSOshield      0 ssteel      -sSOs
+cell cSEshield      0 ssteel      -sSEs
+cell cNEshield      0 ssteel      -sNEs
+cell cbaffle        0 ssteel      -bflOUT bflIN
+cell cwateroutbfl   0 waterb      -sCYL5 bflOUT
+cell coutwater      0 waterb      -sCYL3 sCYL6 sNOs sNEs sSEs sSOs
+cell ccore          0 fill ucore  -bflIN
+
+cell cOUT1          0 outside              sCYL2
+cell cOUT2          0 outside -sCYL2 -sBOT sTOP 
+
+
+
+
+

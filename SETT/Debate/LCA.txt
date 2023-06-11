@@ -1,0 +1,97 @@
+Is the life-cycle analysis of ETS useful and/or relevant?
+
+
+
+LCA provides a rigorous impacts of all the production process.
+Helps manufacturers improve
+Quality 
+Quantitative
+
+LCA studies shall include the goal and scope definition, inventory analysis, impact assessment and
+interpretation of results.
+
+LCI studies shall include definition of the goal and scope, inventory analysis and interpretation of results. The
+requirements and recommendations of this International Standard, with the exception of those provisions
+regarding impact assessment, also apply to life cycle inventory studies.An LCI study alone shall not be used for comparisons intended to be used in comparative assertions intended
+to be disclosed to the public.
+
+It should be recognized that there is no scientific basis for reducing LCA results to a single overall score or
+number.
+
+In defining the goal of an LCA, the following items shall be unambiguously stated:
+⎯ the intended application;
+⎯ the reasons for carrying out the study:
+⎯ the intended audience, i.e. to whom the results of the study are intended to be communicated:
+⎯ whether the results are intended to be used in comparative assertions intended to be disclosed to the
+public.
+
+In defining the scope of an LCA, the following items shall be considered and clearly described:
+⎯ the product system to be studied;
+⎯ the functions of the product system or, in the case of comparative studies, the systems;
+⎯ the functional unit;
+⎯ the system boundary;
+⎯ allocation procedures;
+⎯ LCIA methodology and types of impacts;
+⎯ interpretation to be used;
+⎯ data requirements;
+⎯ assumptions;
+⎯ value choices and optional elements;
+⎯ limitations;
+⎯ data quality requirements;
+⎯ type of critical review, if any;
+⎯ type and format of the report required for the study.
+
+In some cases, the goal and scope of the study may be revised due to unforeseen limitations, constraints or
+as a result of additional information. Such modifications, together with their justification, should be
+documented.
+
+Each of the unit processes should be initially described to define
+⎯ where the unit process begins, in terms of the receipt of raw materials or intermediate products,
+⎯ the nature of the transformations and operations that occur as part of the unit process, and
+⎯ where the unit process ends, in terms of the destination of the intermediate or final products.
+
+
+Several cut-off criteria are used in LCA practice to decide which inputs are to be included in the assessment,
+such as mass, energy and environmental significance. Making the initial identification of inputs based on mass
+contribution alone may result in important inputs being omitted from the study. Accordingly, energy and
+environmental significance should also be used as cut-off criteria in this process.
+a) Mass: an appropriate decision, when using mass as a criterion, would require the inclusion in the study of
+all inputs that cumulatively contribute more than a defined percentage to the mass input of the product
+system being modelled.
+b) Energy: similarly, an appropriate decision, when using energy as a criterion, would require the inclusion
+in the study of those inputs that cumulatively contribute more than a defined percentage of the product
+system’s energy inputs.
+c) Environmental significance: decisions on cut-off criteria should be made to include inputs that
+contribute more than an additional defined amount of the estimated quantity of individual data of the
+product system that are specially selected because of environmental relevance.
+
+
+Supply-chain sys poorly characterized (standardisation criteria and methodology needed)
+Large need for comprehensive dataset
+
+Solar panels, recycle wind--batteries
+
+mixed methods potential--optimisation LCA 
+
+Entering time of prolific data and (advanced) computation techniques
+
+Circular Economy--moving towards sustainability
+
+trade-off --- for recycle or other choice due to health or safety
+
+1st step in solving a problem to recognise the problem
+
+Sustainable development goals must comply with environmental goals (integration)
+
+pinpoint area of improvement -- informative
+
+e.g hot water detergent changed by cold water detergent
+
+LCA part in recycling
+
+Mass-Energy balance---needs robust analysis
+
+Comparability  --- ISO 1404.44 stand   (not exact result)
+
+sensitivity
+

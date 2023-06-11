@@ -1,0 +1,13 @@
+% --- Material volumes:
+
+% Produced Sun May 21 11:01:49 2023 by MC volume calculation routine by
+% sampling 1000000000 random points in the geometry.
+
+set mvol
+
+fuel            1 4.34730E+06 % (0.000)
+ZrO2            0 2.52081E+06 % (0.000)
+clad            0 2.35435E+06 % (0.000)
+steel           0 1.10056E+06 % (0.000)
+Na              0 4.77424E+07 % (0.000)
+Nacore          0 1.89266E+06 % (0.000)

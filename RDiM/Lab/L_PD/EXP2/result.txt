@@ -1,0 +1,5 @@
+Energy of perfect system = -8244.8686988773388293
+Energy of unrelaxed defected system = -8238.9103557478301809
+Energy of relaxed defected system = -8239.0347591221106995
+Unrelaxed vacancy formation energy = 1.8359087800708948635
+Relaxed vacancy formation energy = 1.7115054057903762441

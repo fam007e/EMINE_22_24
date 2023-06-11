@@ -1,0 +1,105 @@
+%%%%%%%%%%%%%%%%%%
+% Axial surfaces %
+%%%%%%%%%%%%%%%%%%
+
+
+/****** Axial surfaces for fuel rods, guide and instrument tubes ******/
+
+% lowest extent
+surf sBOT pz 0.0
+
+% bottom of support plate
+surf sSPBot pz 20
+
+% bottom of fuel rod
+surf sRodBot pz 35
+
+% bottom of active fuel
+surf sFuelBot pz 36.748
+
+% grid 1 bottom
+surf sG1Bot pz 37.1621
+
+% grid 1 top
+surf sG1Top pz 40.52
+
+% grid 2 bottom
+surf sG2Bot pz 98.025
+
+% grid 2 top
+surf sG2Top pz 103.74
+
+% grid 3 bottom
+surf sG3Bot pz 150.222
+
+% grid 3 top
+surf sG3Top pz 155.937
+
+% grid 4 bottom
+surf sG4Bot pz 202.419
+
+% grid 4 top
+surf sG4Top pz 208.134
+
+% grid 5 bottom
+surf sG5Bot pz 254.616
+
+% grid 5 top
+surf sG5Top pz 260.331
+
+% grid 6 bottom
+surf sG6Bot pz 306.813
+
+% grid 6 top
+surf sG6Top pz 312.528
+
+% grid 7 bottom
+surf sG7Bot pz 359.010
+
+% grid 7 top
+surf sG7Top pz 364.725
+
+% top of active fuel
+surf sFuelTop pz 402.508
+
+% grid 8 bottom
+surf sG8Bot pz 411.806
+
+% grid 8 top
+surf sG8Top pz 415.164
+
+% top of fuel rod plenum
+surf sPlTop pz 417.164
+
+% top of fuel rod
+surf sRodTop pz 419.704
+
+% bottom of upper nozzle
+surf sNozBot pz 423.049
+
+% top of upper nozzle
+surf sNozTop pz 431.876
+
+% highest extent
+surf sTOP pz 460
+
+
+/****** Axial surfaces for burnable absorbers ******/
+
+% bottom of BPRA rod
+surf sBABot pz 38.66
+
+% control rod step 0
+surf sCR0 pz 39.9580
+
+% bottom of active absorber
+surf sBActBot pz 40.5580
+
+% top of active absorber
+surf sBActTop pz 401.238
+
+% top of BPRA rod plenum
+surf sBATop pz 421.532
+
+
+

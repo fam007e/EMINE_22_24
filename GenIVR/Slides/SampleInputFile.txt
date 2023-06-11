@@ -1,0 +1,81 @@
+% Pin cell input for reactivity swing
+
+set title "Pin cell with sodium coolant"
+
+pin 1
+fuel 0.500
+void 0.550
+clad 0.600
+Na   
+
+surf 1 hexxc 0.0 0.0 0.70
+
+cell 1 0 fill 1    -1
+cell 2 0 outside    1
+
+mat fuel -10.5 % burn 1
+ 8016.15c 2.0
+92238.15c 0.894
+94239.15c 0.106
+
+mat clad -7.8
+26000.06c 1.0
+
+mat Na -0.86
+11023.09c 1.0
+
+mat fertile 1.0 92238.12c 1.0
+mat fissile 1.0 94239.12c 1.0
+mat cfissile 1.0 94240.12c 1.0
+mat ccfissile 1.0 94241.12c 1.0
+
+det flux            dm fuel
+det fission-fertile dm fuel dr -6  fertile dt 3 flux
+det capture-fertile dm fuel dr 102 fertile dt 3 flux
+det nubar-fertile   dm fuel dr -7  fertile dt 3 fission-fertile
+
+det fission-fissile dm fuel dr -6  fissile dt 3 flux
+det capture-fissile dm fuel dr 102 fissile dt 3 flux
+det nubar-fissile   dm fuel dr -7  fissile dt 3 fission-fissile
+
+det fission-cfissile dm fuel dr -6  cfissile dt 3 flux
+det capture-cfissile dm fuel dr 102 cfissile dt 3 flux
+det nubar-cfissile   dm fuel dr -7  cfissile dt 3 fission-cfissile
+
+det fission-ccfissile dm fuel dr -6  ccfissile dt 3 flux
+det capture-ccfissile dm fuel dr 102 ccfissile dt 3 flux
+det nubar-ccfissile   dm fuel dr -7  ccfissile dt 3 fission-ccfissile
+
+set nfylib "JEFF31NFY"
+set declib "JEFF311RDD"
+set acelib "jeff311.xsdata"
+
+set bc 3
+set pcc 0
+set power 300
+set pop 1000 220 20
+set printm 1
+
+% dep daystep 409 409 409 409 409 409 
+% set power 0.0
+% dep daystep 10 1450 
+
+set inventory
+902320
+912330
+922330
+922340
+922350
+922360
+922380
+932370
+932380
+942380
+942390
+942400
+942410
+942420
+952410
+952430
+962440
+

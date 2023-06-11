@@ -1,0 +1,18 @@
+% --- Material volumes:
+
+% Produced Thu May 25 15:57:48 2023 by MC volume calculation routine by
+% sampling 100000000 random points in the geometry.
+
+set mvol
+
+fuel            1 8.58124E+05 % (0.001)
+ZrN             0 7.97539E+03 % (0.009)
+ZrO2            0 1.31867E+06 % (0.001)
+Bnat4C          0 8.04998E+04 % (0.003)
+B104C           0 0.00000E+00 % (0.000)
+WB2             0 0.00000E+00 % (0.000)
+clad            0 2.98523E+06 % (0.000)
+FeCrAl          0 6.43744E+05 % (0.001)
+lead_AZ         0 1.51797E+06 % (0.001)
+lead_UC         0 1.78377E+07 % (0.000)
+lead_BC         0 1.68556E+07 % (0.000)
