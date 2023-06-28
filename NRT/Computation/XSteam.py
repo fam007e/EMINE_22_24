@@ -92,7 +92,7 @@ elif parameter == "h":
         rho = float(input("Enter the density in kg/m^3: "))
         # Enthalpy as a function of pressure and density
         print(f"Enthalpy: {steam_table.h_prho(P, rho)} kJ/kg")
-    if fof == "T":
+    elif fof == "T":
         T_K = float(input("Enter the temperature in K: "))
         # Saturated liquid enthalpy as a function of temperature
         print(f"Saturated liquid enthalpy: {steam_table.hL_t(T_K)} kJ/kg")
