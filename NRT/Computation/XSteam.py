@@ -19,7 +19,7 @@ T_S  Surface Tension (N/m)
 x    Vapor fraction
 x_v  Vapor Volume Fraction
 P_mlt Pressure along the melting curve (MPa)
-P_sub Pressure along the sublimation curve (MPa)""")
+P_sub Pressure along the sublimation curve (MPa)\n\n""")
 
 
 parameter = input("Enter the parameter you want to find (T, P, h, sp_v, rho, sp_S, sp_U, c_p, c_v, v_w, mu, k, T_S, x, x_v, P_mlt, P_sub): ")
