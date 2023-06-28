@@ -1,25 +1,26 @@
 from pyXSteam.XSteam import XSteam
 steam_table = XSteam(XSteam.UNIT_SYSTEM_BARE) # m/kg/sec/K/MPa/W
 
-print("""Parameter Descriptions:
-T     Temperature (K)
-P     Pressure (MPa)
-S     Entropy (kJ/K)
-h     Enthalpy (kJ/kg)
-sp_v  Specific volume (m^3/kg)
-rho   Density (kg/m^3)
-sp_S  Specific entropy (kJ/(kg K))
-sp_U  Specific internal energy (kJ/kg)
-c_p   Specific isobaric heat capacity (kJ/(kg K))
-c_v   Specific isochoric heat capacity (kJ/(kg K))
-v_w   Speed of sound (m/s)
-mu    Viscosity (N s/m^2)
-k     Thermal Conductivity (W/(m K))
-T_S   Surface Tension (N/m)
-x     Vapor fraction
-x_v   Vapor Volume Fraction
-P_mlt Pressure along the melting curve (MPa)
-P_sub Pressure along the sublimation curve (MPa)\n\n""")
+print("""********************************************************************************************
+*       Parameter Descriptions:                                                            *
+*       T     Temperature (K)                                                              *
+*       P     Pressure (MPa)                                                               *
+*       S     Entropy (kJ/K)                                                               *
+*       h     Enthalpy (kJ/kg)                                                             *
+*       sp_v  Specific volume (m^3/kg)                                                     *
+*       rho   Density (kg/m^3)                                                             *
+*       sp_S  Specific entropy (kJ/(kg K))                                                 *
+*       sp_U  Specific internal energy (kJ/kg)                                             *
+*       c_p   Specific isobaric heat capacity (kJ/(kg K))                                  *
+*       c_v   Specific isochoric heat capacity (kJ/(kg K))                                 *
+*       v_w   Speed of sound (m/s)                                                         *
+*       mu    Viscosity (N s/m^2)                                                          *
+*       k     Thermal Conductivity (W/(m K))                                               *
+*       T_S   Surface Tension (N/m)                                                        *
+*       x     Vapor fraction                                                               *
+*       x_v   Vapor Volume Fraction                                                        *
+*       P_mlt Pressure along the melting curve (MPa)                                       *
+*       P_sub Pressure along the sublimation curve (MPa)                                   *\n********************************************************************************************\n""")
 
 
 parameter = input("Enter the parameter you want to find (T, P, h, sp_v, rho, sp_S, sp_U, c_p, c_v, v_w, mu, k, T_S, x, x_v, P_mlt, P_sub): ")
