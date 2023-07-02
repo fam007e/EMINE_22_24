@@ -72,10 +72,10 @@ def plot_data(burnup_data, reactivity_data, reactivity_error_data, file_list):
         best_fit_curve_x = np.linspace(0, 50, 100)
         best_fit_curve_y = np.polyval(coeffs, best_fit_curve_x)
 
-        plt.errorbar(burnup_data[i], reactivity_data[i], yerr=reactivity_error_data[i], fmt='o', color='b', ecolor='r', capsize=4)
+        #plt.errorbar(burnup_data[i], reactivity_data[i], yerr=reactivity_error_data[i], fmt='o', color='b', ecolor='r', capsize=4)
         plt.plot(best_fit_curve_x, best_fit_curve_y)
 
-    legend_labels = [os.path.splitext(os.path.basename(file_name))[0] for file_name in file_list]
+    #legend_labels = [os.path.splitext(os.path.basename(file_name))[0] for file_name in file_list]
     plt.xlabel("Burnup (MWd/kgHM)")
     plt.ylabel(r"Reactivity, $\rho$ (pcm)")
     plt.grid(True)
