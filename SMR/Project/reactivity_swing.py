@@ -1,8 +1,9 @@
+'''
 import numpy as np
 import matplotlib.pyplot as plt
 import glob
 
-'''
+
 def generate_isotope_fractions(u235_fraction):
     u238_fraction = 1 - u235_fraction
     
@@ -83,7 +84,7 @@ def plot_data(burnup_data, reactivity_data, reactivity_error_data, file_list):
     plt.show()
 
 # Process multiple files
-file_pattern = "*.txt_res.m"
+file_pattern = "*.m"
 file_list = glob.glob(file_pattern)
 
 burnup_data = []
