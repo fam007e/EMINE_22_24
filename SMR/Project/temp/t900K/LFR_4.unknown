@@ -5,10 +5,10 @@
 % Modified: Aurora Jahan 2023-07-02
 % ---------------------------------------------------- %
 
+set seed 623078194
 
 set title "SUNRISE-LFR Simplified Example"
 
-set seed 123456789
 
 %% MATERIAL DEFINITIONS %%
 
@@ -84,23 +84,29 @@ mat FeCrAl     -7.6            % Wrapper tube steel (Fe10Cr4Al)
 % Below AZ: (Tin 420C) rho = -10.554
 % Above AZ: (Tout 550C) rho = -10.388
 
-mat lead_AZ -10.471 rgb 255 0 0
+mat lead_AZF -10.28945 rgb 255 0 0
 82204.09c  -0.0061
 82206.09c  -0.1074
 82207.09c  -0.0985
 82208.09c  -0.2328
+
+mat lead_AZ -10.471 rgb 255 0 0
+82204.06c  -0.0061
+82206.06c  -0.1074
+82207.06c  -0.0985
+82208.06c  -0.2328
 
 mat lead_UC -10.388 rgb 0 255 0
-82204.09c  -0.0061
-82206.09c  -0.1074
-82207.09c  -0.0985
-82208.09c  -0.2328
+82204.06c  -0.0061
+82206.06c  -0.1074
+82207.06c  -0.0985
+82208.06c  -0.2328
 
 mat lead_BC -10.554 rgb 0 0 255
-82204.09c  -0.0061
-82206.09c  -0.1074
-82207.09c  -0.0985
-82208.09c  -0.2328
+82204.06c  -0.0061
+82206.06c  -0.1074
+82207.06c  -0.0985
+82208.06c  -0.2328
 
 
 
@@ -112,7 +118,7 @@ pin 10         % fuel rod in central fuel assembly, level 0
 fuel   0.4901  % fuel pellet outer radius
 void   0.5101  % cladding inner radius
 clad   0.5601  % cladding outer radius
-lead_AZ         % coolant in central fuel assembly
+lead_AZF         % coolant in central fuel assembly
 
 % ---------------------------------------------------- %
 % Fuel rod segments: Below and above active core
@@ -239,7 +245,7 @@ lead_BC
 % ---------------------------------------------------- %
 
 pin 9               % dummy rod for filling of lattice with lead in active core region
-lead_AZ
+lead_AZF
 
 pin 9UC            % dummy rod for filling of lattice with lead above the active core region
 lead_UC
@@ -984,15 +990,15 @@ ene fastflux 1 0.1 20
 
 
 % PLOTTING %
-plot 3 2000 2000 -40		% 1. assembly inlet plenum
-plot 3 2000 2000 -23		% 2. lower end cap
-plot 3 2000 2000 -15		% 3. lower shield
-plot 3 2000 2000 -5		% 4. lower insulator
-plot 3 2000 2000 20		% 5. core
-plot 3 2000 2000 106.5  % 6. upper insulator
-plot 3 2000 2000 120		% 7. upper plenum
-plot 3 2000 2000 124		% 8. upper end cap
-plot 3 2000 2000 126		% 9. assembly outlet plenum
+%plot 3 2000 2000 -40		% 1. assembly inlet plenum
+%plot 3 2000 2000 -23		% 2. lower end cap
+%plot 3 2000 2000 -15		% 3. lower shield
+%plot 3 2000 2000 -5		% 4. lower insulator
+%plot 3 2000 2000 20		% 5. core
+%plot 3 2000 2000 106.5  % 6. upper insulator
+%plot 3 2000 2000 120		% 7. upper plenum
+%plot 3 2000 2000 124		% 8. upper end cap
+%plot 3 2000 2000 126		% 9. assembly outlet plenum
 %plot 3 10000 10000 40.0
 %plot 2 4000 4000
 %plot 1 4000 4000
