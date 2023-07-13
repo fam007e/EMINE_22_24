@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+from sklearn.linear_model import LinearRegression
 
 def rho_Na(T):
     return 1012 - 0.2205 * T - 1.923e-5 * T**2 + 5.637e-9 * T**3
@@ -170,6 +170,7 @@ ax.legend()
 plt.show()
 
 
+
 Am241_density = np.array([2.40626E-01, 2.40508E-01, 2.40033E-01, 2.27615E-01, 2.15221E-01, 2.02985E-01, 1.91093E-01, 1.79639E-01, 1.68638E-01, 1.58155E-01, 1.38828E-01])
 Am242m_density = np.array([0.00000E+00, 1.39170E-05, 6.92830E-05, 1.36482E-03, 2.40732E-03, 3.23539E-03, 3.87638E-03, 4.35889E-03, 4.71043E-03, 4.95077E-03, 5.17234E-03])
 Am243_density = np.array([2.42627E-01, 2.42471E-01, 2.41856E-01, 2.26481E-01, 2.12263E-01, 1.99041E-01, 1.86817E-01, 1.75503E-01, 1.64990E-01, 1.55234E-01, 1.37738E-01])
@@ -183,11 +184,48 @@ plt.plot(burnup, Am243_density, 'o-', label='Am243')
 plt.plot(burnup, Cm242_density, 'o-', label='Cm242')
 plt.plot(burnup, Cm244_density, 'o-', label='Cm244')
 
+
+Am241_mass = np.array([1.05237E+06, 1.05185E+06, 1.04979E+06, 9.95649E+05, 9.41484E+05, 8.88172E+05, 8.36218E+05, 7.86133E+05, 7.38086E+05, 6.92250E+05, 6.07757E+05])
+Am242m_mass = np.array([0.00000E+00, 6.06607E+01, 3.02050E+02, 5.95515E+03, 1.05126E+04, 1.41214E+04, 1.69239E+04, 1.90369E+04, 2.05731E+04, 2.16293E+04, 2.26016E+04])
+Am243_mass = np.array([1.06112E+06, 1.06044E+06, 1.05776E+06, 9.90680E+05, 9.28463E+05, 8.70863E+05, 8.17440E+05, 7.67948E+05, 7.22018E+05, 6.79337E+05, 6.02800E+05])
+Cm242_mass = np.array([0.00000E+00, 4.21497E+02, 2.60989E+03, 2.88185E+04, 3.25057E+04, 3.17517E+04, 3.02130E+04, 2.85243E+04, 2.68558E+04, 2.52890E+04, 2.23377E+04])
+Cm244_mass = np.array([0.00000E+00, 6.58694E+02, 3.32895E+03, 6.74536E+04, 1.22055E+05, 1.68083E+05, 2.06666E+05, 2.38588E+05, 2.64716E+05, 2.85794E+05, 3.15262E+05])
+
+total_mass_MA = (Am241_mass + Am242m_mass + Am243_mass + Cm242_mass + Cm244_mass) / 1e6
+
+#print(total_mass_MA)
+
+DAYS = np.array([0.00000E+00, 3.62188E+00, 1.81094E+01, 3.93698E+02, 7.68924E+02, 1.14451E+03, 1.52010E+03, 1.89533E+03, 2.27092E+03, 2.64650E+03, 3.39732E+03])
+
+YEARS = DAYS / 365.25
+
+
+
+
 plt.xlabel('Burnup (MWd/kgHM)')
 plt.ylabel(r'Mass Density ($g/cm^3$)')
 plt.title('Mass Density of Isotopes vs Burnup')
 plt.legend()
 plt.grid(True)
+plt.show()
+
+plt.plot(YEARS, total_mass_MA,'-o')
+plt.xlabel('time (yrs)')
+plt.ylabel('Total mass of MA (t)')
+plt.title('Total Mass of MA against Time Elapsed')
+plt.grid(True)
+
+# Fit linear regression to the data
+model = LinearRegression()
+model.fit(YEARS.reshape(-1, 1), total_mass_MA)
+
+# Get the slope (gradient)
+slope = abs(model.coef_[0])
+slope_annotation = f"Slope: - {slope:.3f} tMA/year"
+
+# Add the slope annotation to the graph
+plt.annotate(slope_annotation, xy=(0.5, 0.85), xycoords='axes fraction', fontsize=10)
+
 plt.show()
 
 sigma_c_U238 = 2.62644E-01
