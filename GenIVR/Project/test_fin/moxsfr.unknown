@@ -580,7 +580,7 @@ cell 92 0 outside   4               % Outside world
 
 % --- UOX fuel, pu enrichment 14.25%, burnup 25 MWd/kgU:
 
-mat fuel -10.8 burn 1 %
+mat fuel -10.865 burn 1 %
 92238.09c 0.807500   
 94238.09c 0.004987   
 94239.09c 0.073957   
