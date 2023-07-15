@@ -191,7 +191,7 @@ Am243_mass = np.array([1.06112E+06, 1.06044E+06, 1.05776E+06, 9.90680E+05, 9.284
 Cm242_mass = np.array([0.00000E+00, 4.21497E+02, 2.60989E+03, 2.88185E+04, 3.25057E+04, 3.17517E+04, 3.02130E+04, 2.85243E+04, 2.68558E+04, 2.52890E+04, 2.23377E+04])
 Cm244_mass = np.array([0.00000E+00, 6.58694E+02, 3.32895E+03, 6.74536E+04, 1.22055E+05, 1.68083E+05, 2.06666E+05, 2.38588E+05, 2.64716E+05, 2.85794E+05, 3.15262E+05])
 
-total_mass_MA = (Am241_mass + Am242m_mass + Am243_mass + Cm242_mass + Cm244_mass) / 1e6
+total_mass_MA = (Am241_mass + Am242m_mass + Am243_mass + Cm242_mass + Cm244_mass) / 1e3
 
 #print(total_mass_MA)
 
@@ -211,7 +211,7 @@ plt.show()
 
 plt.plot(YEARS, total_mass_MA,'-o')
 plt.xlabel('time (yrs)')
-plt.ylabel('Total mass of MA (t)')
+plt.ylabel('Total mass of MA (kg)')
 plt.title('Total Mass of MA against Time Elapsed')
 plt.grid(True)
 
@@ -221,12 +221,60 @@ model.fit(YEARS.reshape(-1, 1), total_mass_MA)
 
 # Get the slope (gradient)
 slope = abs(model.coef_[0])
-slope_annotation = f"Slope: - {slope:.3f} tMA/year"
+slope_annotation = f"Burnup rate: {slope:.1f} kgMA/year"
 
 # Add the slope annotation to the graph
 plt.annotate(slope_annotation, xy=(0.5, 0.85), xycoords='axes fraction', fontsize=10)
 
+# Generate predictions using the fitted model
+predictions = model.predict(YEARS.reshape(-1, 1))
+
+# Plot the regression line
+plt.plot(YEARS, predictions, 'r--', label='Regression Line')
+
+# Add a legend to the plot
+plt.legend()
 plt.show()
+
+
+
+
+
+
+
+burnup_TWh = burnup * (1e-3 * 24)
+
+plt.plot(burnup_TWh, total_mass_MA, '-o')
+plt.xlabel('Burnup (TWh)')
+plt.ylabel('Total mass of MA (kg)')
+plt.title('Total Mass of MA against Burnup')
+plt.grid(True)
+
+# Fit linear regression to the data
+models = LinearRegression()
+models.fit(burnup_TWh.reshape(-1, 1), total_mass_MA)
+
+# Get the slope (gradient)
+slopes = abs(models.coef_[0])
+slopes_annotation = f"Burnup rate: {slopes:.1f} kgMA/TWh"
+
+# Add the slope annotation to the graph
+plt.annotate(slopes_annotation, xy=(0.5, 0.85), xycoords='axes fraction', fontsize=10)
+
+# Generate predictions using the fitted model
+predictionss = models.predict(burnup_TWh.reshape(-1, 1))
+
+# Plot the regression line
+plt.plot(burnup_TWh, predictionss, 'r--', label='Regression Line')
+
+# Add a legend to the plot
+plt.legend()
+plt.show()
+
+
+
+
+
 
 sigma_c_U238 = 2.62644E-01
 con_U238 = 0.807500
