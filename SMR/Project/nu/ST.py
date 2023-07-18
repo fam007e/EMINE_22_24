@@ -222,7 +222,7 @@ for i in range(len(stability_classes)):
 
 plt.xlabel('Distance [m]')
 plt.ylabel('Chi')
-plt.title('Chi vs Distance for Xe135')
+plt.title('Chi vs Distance for I131')
 plt.legend()
 plt.grid(True)
 plt.show()
@@ -243,7 +243,7 @@ for i in range(len(stability_classes)):
 
 plt.xlabel('Distance [m]')
 plt.ylabel('Chi')
-plt.title('Chi vs Distance for Xe135')
+plt.title('Chi vs Distance for I133')
 plt.legend()
 plt.grid(True)
 plt.show()
