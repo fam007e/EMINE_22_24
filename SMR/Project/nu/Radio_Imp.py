@@ -72,6 +72,7 @@ def rate(N, t_half):
 amu = 1.66053906660e-24 #g
 N_A = 6.02214076e23
 
+'''
 t_half_Xe133 = 5 * 24 * 60 * 60
 M_Xe133 = 133
 N_Xe133 = Xe133_mass[101] * N_A / (M_Xe133 * amu)
@@ -99,7 +100,30 @@ eps_I133 = 4 * 1e-9 #Sv/Bq
 
 #R_tot = R_Xe133 + R_Xe135 + R_I131 + R_I131 + R_I133
 #print(R_tot)
+'''
 
+
+t_half = np.array([5 * 24 * 60 * 60, 9 * 60 * 60, 8 * 24 * 60 * 60, 21 * 60 * 60])
+M = np.array([133, 135, 131, 133])
+
+N = np.zeros(4)
+R = np.zeros(4)
+eps = np.zeros(4)
+
+mass = np.array([Xe133_mass[101], Xe135_mass[101], I131_mass[101], I133_mass[101]])
+
+N = mass * N_A / (M * amu)
+R = rate(N, t_half)
+
+eps[0] = 0.1 * 30 * 1e-9
+eps[1] = 1 * 30 * 1e-9
+eps[2] = 20 * 1e-9
+eps[3] = 4 * 1e-9
+
+nuclides = ['Xe133', 'Xe135', 'I131', 'I133']
+for i in range(4):
+    globals()['R_' + nuclides[i]] = R[i]
+    globals()['eps_' + nuclides[i]] = eps[i]
 
 # Pasquill stability classes and corresponding parameters from the table
 stability_classes = ['A', 'B', 'C', 'D', 'E', 'F']
@@ -161,6 +185,7 @@ chi_I131 = chi(R_I131, sigma_y, sigma_z, H, u)
 chi_I133 = chi(R_I133, sigma_y, sigma_z, H, u)
 '''
 
+'''
 
 # Calculate and plot chi_Xe133 for different Pasquill stability classes
 plt.figure(figsize=(10, 6))
@@ -252,3 +277,37 @@ plt.title('Dose rate vs Distance for I133')
 plt.legend()
 plt.grid(True)
 plt.show()
+'''
+
+def plot_dose_rate(nuclide):
+    plt.figure(figsize=(10, 6))
+    
+    for i in range(len(stability_classes)):
+        # Calculate sigma_y and sigma_z for the current stability class
+        sigma_y = np.exp(a_y[i] + b_y[i] * np.log(r / 1000) + c_y[i] * np.log(r / 1000) ** 2)
+        sigma_z = np.exp(a_z[i] + b_z[i] * np.log(r / 1000) + c_z[i] * np.log(r / 1000) ** 2)
+        
+        # Generate the variable name for R based on the nuclide
+        R_var = f"R_{nuclide}"
+        R_val = eval(R_var)
+        
+        # Calculate chi for the current nuclide and stability class
+        chi_val = chi(R_val, sigma_y, sigma_z, H, u)
+        
+        dose_rate = chi_val * Br * eval(f"eps_{nuclide}")
+        
+        # Plot dose rate for the current stability class
+        plt.plot(r, dose_rate, label=f'Stability {stability_classes[i]}')
+    
+    plt.xlabel('Distance [m]')
+    plt.ylabel('Dose rate [Sv/s]')
+    plt.title(f'Dose rate vs Distance for {nuclide}')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+
+# Call the function for each nuclide
+nuclides = ['Xe133', 'Xe135', 'I131', 'I133']
+for nuclide in nuclides:
+    plot_dose_rate(nuclide)
