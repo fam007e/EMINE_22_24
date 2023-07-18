@@ -112,13 +112,14 @@ eps = np.zeros(4)
 
 mass = np.array([Xe133_mass[101], Xe135_mass[101], I131_mass[101], I133_mass[101]])
 
-N = mass * N_A / (M * amu)
+#N = mass * N_A / (M * amu)
+N = mass * N_A / M
 R = rate(N, t_half)
 
-eps[0] = 0.1 * 30 * 1e-9
-eps[1] = 1 * 30 * 1e-9
-eps[2] = 20 * 1e-9
-eps[3] = 4 * 1e-9
+eps[0] = 0.1 * 30 * 1e-9 * 1e-6
+eps[1] = 1 * 30 * 1e-9 * 1e-6
+eps[2] = 20 * 1e-9 * 1e-6
+eps[3] = 4 * 1e-9 * 1e-6
 
 nuclides = ['Xe133', 'Xe135', 'I131', 'I133']
 for i in range(4):
@@ -176,7 +177,8 @@ def chi(Q, sig_y, sig_z, H, u):
 
 H = 2.5 #m
 u = 2.5 #m/s
-Br = 0.0113 / 60 #m^3/s      A = 20yrs avg adult
+#Br = 0.0113 / 60 #m^3/s      A = 20yrs avg adult
+Br = 2.1 / (60 * 60) #m^3/s      A = 20yrs avg adult
 
 '''
 chi_Xe133 = chi(R_Xe133, sigma_y, sigma_z, H, u)
@@ -294,13 +296,13 @@ def plot_dose_rate(nuclide):
         # Calculate chi for the current nuclide and stability class
         chi_val = chi(R_val, sigma_y, sigma_z, H, u)
         
-        dose_rate = chi_val * Br * eval(f"eps_{nuclide}")
+        dose_rate = chi_val * Br * eval(f"eps_{nuclide}") * 1e3
         
         # Plot dose rate for the current stability class
         plt.plot(r, dose_rate, label=f'Stability {stability_classes[i]}')
     
     plt.xlabel('Distance [m]')
-    plt.ylabel('Dose rate [Sv/s]')
+    plt.ylabel('Dose rate [mSv/s]')
     plt.title(f'Dose rate vs Distance for {nuclide}')
     plt.legend()
     plt.grid(True)
