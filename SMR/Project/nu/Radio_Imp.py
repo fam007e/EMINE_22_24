@@ -116,10 +116,10 @@ mass = np.array([Xe133_mass[101], Xe135_mass[101], I131_mass[101], I133_mass[101
 N = mass * N_A / M
 R = rate(N, t_half)
 
-eps[0] = 0.1 * 30 * 1e-9 * 1e-6
-eps[1] = 1 * 30 * 1e-9 * 1e-6
-eps[2] = 20 * 1e-9 * 1e-6
-eps[3] = 4 * 1e-9 * 1e-6
+eps[0] = 0.1 * 30 * 1e-9 * 1e-3
+eps[1] = 1 * 30 * 1e-9 * 1e-3
+eps[2] = 20 * 1e-9 * 1e-3
+eps[3] = 4 * 1e-9 * 1e-3
 
 nuclides = ['Xe133', 'Xe135', 'I131', 'I133']
 for i in range(4):
@@ -296,7 +296,7 @@ def plot_dose_rate(nuclide):
         # Calculate chi for the current nuclide and stability class
         chi_val = chi(R_val, sigma_y, sigma_z, H, u)
         
-        dose_rate = chi_val * Br * eval(f"eps_{nuclide}") * 1e3
+        dose_rate = chi_val * Br * eval(f"eps_{nuclide}")
         
         # Plot dose rate for the current stability class
         plt.plot(r, dose_rate, label=f'Stability {stability_classes[i]}')
