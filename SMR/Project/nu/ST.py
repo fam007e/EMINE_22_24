@@ -67,7 +67,7 @@ plt.show()
 def rate(N, t_half):
     return np.log(2) * N / t_half
 
-#print(BU[101])
+#print(BU[101]) for burnup 50 MWd/kg aka 50 GWd/t
 
 amu = 1.66053906660e-24 #g
 N_A = 6.02214076e23
@@ -76,14 +76,14 @@ t_half_Xe133 = 5 * 24 * 60 * 60
 M_Xe133 = 133
 N_Xe133 = Xe133_mass[101] * N_A / (M_Xe133 * amu)
 R_Xe133 = rate(N_Xe133, t_half_Xe133) #Bq
-eps_Xe133 = 0.1 * 30 #nSv/s/(Bq/m^3)
+eps_Xe133 = 0.1 * 30 #nSv/(Bq/m^3) d = 30 days aka safety criteria
 #print(N_Xe133, R_Xe133)
 
 t_half_Xe135 = 9 * 60 * 60
 M_Xe135 = 135
 N_Xe135 = Xe135_mass[101] * N_A / (M_Xe135 * amu)
 R_Xe135 = rate(N_Xe135, t_half_Xe135) #Bq
-eps_Xe135 = 1 * 30 #nSv/s/(Bq/m^3)
+eps_Xe135 = 1 * 30 #nSv/(Bq/m^3) d = 30 days aka safety criteria
 
 t_half_I131 = 8 * 24 * 60 * 60
 M_I131 = 131
