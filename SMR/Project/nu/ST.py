@@ -76,26 +76,26 @@ t_half_Xe133 = 5 * 24 * 60 * 60
 M_Xe133 = 133
 N_Xe133 = Xe133_mass[101] * N_A / (M_Xe133 * amu)
 R_Xe133 = rate(N_Xe133, t_half_Xe133) #Bq
-eps_Xe133 = 0.1 * 30 #nSv/(Bq/m^3) d = 30 days aka safety criteria
+eps_Xe133 = 0.1 * 30 * 1e-9 #Sv/(Bq/m^3) d = 30 days aka safety criteria
 #print(N_Xe133, R_Xe133)
 
 t_half_Xe135 = 9 * 60 * 60
 M_Xe135 = 135
 N_Xe135 = Xe135_mass[101] * N_A / (M_Xe135 * amu)
 R_Xe135 = rate(N_Xe135, t_half_Xe135) #Bq
-eps_Xe135 = 1 * 30 #nSv/(Bq/m^3) d = 30 days aka safety criteria
+eps_Xe135 = 1 * 30 * 1e-9 #Sv/(Bq/m^3) d = 30 days aka safety criteria
 
 t_half_I131 = 8 * 24 * 60 * 60
 M_I131 = 131
 N_I131 = I131_mass[101] * N_A / (M_I131 * amu)
 R_I131 = rate(N_I131, t_half_I131) #Bq
-eps_I131 = 20 #nSv/Bq
+eps_I131 = 20 * 1e-9 #Sv/Bq
 
 t_half_I133 = 21 * 60 * 60
 M_I133 = 133
 N_I133 = I133_mass[101] * N_A / (M_I133 * amu)
 R_I133 = rate(N_I133, t_half_I133) #Bq
-eps_I133 = 4 #nSv/Bq
+eps_I133 = 4 * 1e-9 #Sv/Bq
 
 #R_tot = R_Xe133 + R_Xe135 + R_I131 + R_I131 + R_I133
 #print(R_tot)
@@ -152,6 +152,7 @@ def chi(Q, sig_y, sig_z, H, u):
 
 H = 2.5 #m
 u = 2.5 #m/s
+Br = 0.0113 / 60 #m^3/s      A = 20yrs avg adult
 
 '''
 chi_Xe133 = chi(R_Xe133, sigma_y, sigma_z, H, u)
@@ -171,13 +172,14 @@ for i in range(len(stability_classes)):
     
     # Calculate chi_Xe133 for the current stability class
     chi_Xe133 = chi(R_Xe133, sigma_y, sigma_z, H, u)
+    Dose_Xe133 = chi_Xe133 * Br * eps_Xe133 
     
     # Plot chi_Xe133 for the current stability class
-    plt.plot(r, chi_Xe133, label=f'Stability {stability_classes[i]}')
+    plt.plot(r, Dose_Xe133, label=f'Stability {stability_classes[i]}')
 
 plt.xlabel('Distance [m]')
-plt.ylabel('Chi')
-plt.title('Chi vs Distance for Xe133')
+plt.ylabel('Dose rate [mSv/s]')
+plt.title('Dose rate vs Distance for Xe133')
 plt.legend()
 plt.grid(True)
 plt.show()
@@ -194,13 +196,14 @@ for i in range(len(stability_classes)):
     
     # Calculate chi_Xe133 for the current stability class
     chi_Xe135 = chi(R_Xe135, sigma_y, sigma_z, H, u)
+    Dose_Xe135 = chi_Xe135 * Br * eps_Xe135
     
     # Plot chi_Xe133 for the current stability class
-    plt.plot(r, chi_Xe135, label=f'Stability {stability_classes[i]}')
+    plt.plot(r, Dose_Xe135, label=f'Stability {stability_classes[i]}')
 
 plt.xlabel('Distance [m]')
-plt.ylabel('Chi')
-plt.title('Chi vs Distance for Xe135')
+plt.ylabel('Dose rate [mSv/s]')
+plt.title('Dose rate vs Distance for Xe135')
 plt.legend()
 plt.grid(True)
 plt.show()
@@ -216,13 +219,14 @@ for i in range(len(stability_classes)):
     
     # Calculate chi_Xe133 for the current stability class
     chi_I131 = chi(R_I131, sigma_y, sigma_z, H, u)
+    Dose_I131 = chi_I131 * Br * eps_I131
     
     # Plot chi_Xe133 for the current stability class
-    plt.plot(r, chi_I131, label=f'Stability {stability_classes[i]}')
+    plt.plot(r, Dose_I131, label=f'Stability {stability_classes[i]}')
 
 plt.xlabel('Distance [m]')
-plt.ylabel('Chi')
-plt.title('Chi vs Distance for I131')
+plt.ylabel('Dose rate [mSv/s]')
+plt.title('Dose rate vs Distance for I131')
 plt.legend()
 plt.grid(True)
 plt.show()
@@ -237,13 +241,14 @@ for i in range(len(stability_classes)):
     
     # Calculate chi_Xe133 for the current stability class
     chi_I133 = chi(R_I133, sigma_y, sigma_z, H, u)
+    Dose_I133 = chi_I133 * Br * eps_I133
     
     # Plot chi_Xe133 for the current stability class
-    plt.plot(r, chi_I133, label=f'Stability {stability_classes[i]}')
+    plt.plot(r, Dose_I133, label=f'Stability {stability_classes[i]}')
 
 plt.xlabel('Distance [m]')
-plt.ylabel('Chi')
-plt.title('Chi vs Distance for I133')
+plt.ylabel('Dose rate [mSv/s]')
+plt.title('Dose rate vs Distance for I133')
 plt.legend()
 plt.grid(True)
 plt.show()
