@@ -111,7 +111,7 @@ b_z = [2.1097, 1.0629, 0.9201, 0.7371, 0.6794, 0.6564]
 c_z = [0.2770, 0.0136, -0.0020, -0.0316, -0.0450, -0.0540]
 
 # Distance range in meters
-r = np.linspace(0, 1000, int(1e5))
+r = np.linspace(0, 3000, int(1e5))
 #r = 1000
 
 '''
@@ -194,11 +194,11 @@ for i in range(len(stability_classes)):
     sigma_y = np.exp(a_y[i] + b_y[i] * np.log(r / 1000) + c_y[i] * np.log(r / 1000) ** 2)
     sigma_z = np.exp(a_z[i] + b_z[i] * np.log(r / 1000) + c_z[i] * np.log(r / 1000) ** 2)
     
-    # Calculate chi_Xe133 for the current stability class
+    # Calculate chi_Xe135 for the current stability class
     chi_Xe135 = chi(R_Xe135, sigma_y, sigma_z, H, u)
     Dose_Xe135 = chi_Xe135 * Br * eps_Xe135
     
-    # Plot chi_Xe133 for the current stability class
+    # Plot chi_Xe135 for the current stability class
     plt.plot(r, Dose_Xe135, label=f'Stability {stability_classes[i]}')
 
 plt.xlabel('Distance [m]')
@@ -217,11 +217,11 @@ for i in range(len(stability_classes)):
     sigma_y = np.exp(a_y[i] + b_y[i] * np.log(r / 1000) + c_y[i] * np.log(r / 1000) ** 2)
     sigma_z = np.exp(a_z[i] + b_z[i] * np.log(r / 1000) + c_z[i] * np.log(r / 1000) ** 2)
     
-    # Calculate chi_Xe133 for the current stability class
+    # Calculate chi_I131 for the current stability class
     chi_I131 = chi(R_I131, sigma_y, sigma_z, H, u)
     Dose_I131 = chi_I131 * Br * eps_I131
     
-    # Plot chi_Xe133 for the current stability class
+    # Plot chi_I131 for the current stability class
     plt.plot(r, Dose_I131, label=f'Stability {stability_classes[i]}')
 
 plt.xlabel('Distance [m]')
@@ -239,11 +239,11 @@ for i in range(len(stability_classes)):
     sigma_y = np.exp(a_y[i] + b_y[i] * np.log(r / 1000) + c_y[i] * np.log(r / 1000) ** 2)
     sigma_z = np.exp(a_z[i] + b_z[i] * np.log(r / 1000) + c_z[i] * np.log(r / 1000) ** 2)
     
-    # Calculate chi_Xe133 for the current stability class
+    # Calculate chi_I133 for the current stability class
     chi_I133 = chi(R_I133, sigma_y, sigma_z, H, u)
     Dose_I133 = chi_I133 * Br * eps_I133
     
-    # Plot chi_Xe133 for the current stability class
+    # Plot chi_I133 for the current stability class
     plt.plot(r, Dose_I133, label=f'Stability {stability_classes[i]}')
 
 plt.xlabel('Distance [m]')
