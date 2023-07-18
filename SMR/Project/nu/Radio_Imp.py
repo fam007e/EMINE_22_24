@@ -301,6 +301,17 @@ def plot_dose_rate(nuclide):
         # Plot dose rate for the current stability class
         plt.plot(r, dose_rate, label=f'Stability {stability_classes[i]}')
     
+    # Draw a faint dotted black line parallel to the x-axis at y = 20
+    plt.axhline(y=20, color='black', linestyle='dotted', alpha=0.6)
+    
+    # Annotate "20 mSv/s" above the dotted line
+    #plt.annotate("20 mSv/s", xy=(r[0], 20), xytext=(r[0], 30), arrowprops=dict(facecolor='black', arrowstyle='->'))
+    #plt.annotate("20 mSv/s", xy=(r[-1], 20), xytext=(r[-1]-10, 10), ha='right', arrowprops=dict(facecolor='black', arrowstyle='->', connectionstyle='arc3,rad=-0.2'))
+    
+    mid_index = len(r) // 2
+    plt.annotate("20 mSv/s", xy=(r[mid_index], 20), xytext=(r[mid_index] + 10, 20))
+
+    
     plt.xlabel('Distance [m]')
     plt.ylabel('Dose rate [mSv/s]')
     plt.title(f'Dose rate vs Distance for {nuclide}')
