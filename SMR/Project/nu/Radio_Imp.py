@@ -110,7 +110,7 @@ N = np.zeros(4)
 R = np.zeros(4)
 eps = np.zeros(4)
 
-mass = np.array([Xe133_mass[101], Xe135_mass[101], I131_mass[101], I133_mass[101]])
+mass = np.array([Xe133_mass[101], Xe135_mass[101], I131_mass[101] * 1e-1 * 1e-2 * (100 - (135 / (135 + 30))), I133_mass[101] * 1e-1 * 1e-2 * (100 - (30 / (135 + 30)))])
 
 #N = mass * N_A / (M * amu)
 N = mass * N_A / M
@@ -175,9 +175,8 @@ plt.show()
 def chi(Q, sig_y, sig_z, H, u):
     return 2 * Q * np.exp(-0.5 * (H / sig_z)**2) / (2 * np.pi * sig_y * sig_z * u)
 
-H = 2.5 #m
+H = 3.5 #m
 u = 2.5 #m/s
-#Br = 0.0113 / 60 #m^3/s      A = 20yrs avg adult
 Br = 2.1 / (60 * 60) #m^3/s      A = 20yrs avg adult
 
 '''
