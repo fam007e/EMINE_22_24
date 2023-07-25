@@ -13,7 +13,7 @@ set title "SUNRISE-LFR Simplified Example"
 %% MATERIAL DEFINITIONS %%
 
 % Fuel
-mat fuel -10.767  burn 1 %
+mat fuel -10.423  burn 1 %
    8016.09c 2.000
   92235.09c 0.12
   92238.09c 0.88
@@ -949,11 +949,11 @@ surf 11 pz   -25.0       % Bottom of lower end cap
 surf 12 pz   -20.0       % Bottom of lower shield
 surf 13 pz   -10.0       % Bottom of insulator pellet
 surf 14 pz     0.0       % Active Core
-surf 17 pz   160       % Top of active zone
-surf 18 pz   161       % Top of insulator pellet+1
-surf 19 pz   177       % Top of gas plenum+9.5
-surf 20 pz   179       % Top of upper end cap+2
-surf 21 pz   181       % Top of assembly outlet
+surf 17 pz   161.738       % Top of active zone
+surf 18 pz   162.738       % Top of insulator pellet+1
+surf 19 pz   178.738       % Top of gas plenum+9.5
+surf 20 pz   180.738       % Top of upper end cap+2
+surf 21 pz   182.738       % Top of assembly outlet
 surf 22 pz   350
 
 cell 146 0 fill 2100       -92      14  -17  % Core
