@@ -25,7 +25,7 @@ def calculate_deltas(L_T900, T_T900):
     return L_T273, L_T1800, delta_L, rho_s_T900, rho_s_T1800
 
 # Given values
-L_T900 = 159
+L_T900 = 160
 T_T900 = 900
 
 # Calculate L(T=273), L(T=1800), delta L, and density at T=900 and T=1800
