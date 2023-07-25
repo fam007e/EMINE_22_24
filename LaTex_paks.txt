@@ -1,0 +1,85 @@
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+\usepackage{csquotes}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[a4paper, top=2.5cm, bottom=2cm, left=2cm, right=2cm, marginparwidth=1.75cm]{geometry}
+
+% Choose font
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{verbatim}
+
+% \usepackage[default,light,bold]{sourceserifpro}
+% \usepackage[T1]{fontenc}
+
+% Controls white space above chapters
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@makechapterhead}{\vspace*{50\p@}}{}{}{}%
+\patchcmd{\@makeschapterhead}{\vspace*{50\p@}}{}{}{}%
+\makeatother
+
+\setlength\parindent{0pt}   % no indentation at the beginning of paragraphs
+\setlength{\parskip}{7pt}   % skip 7pt after each paragraph
+
+% stop hyphenation
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{lipsum}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{lscape}
+
+% bibliography
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=ynt
+]{biblatex}
+\addbibresource{sample.bib}
+
+% Code listing
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
