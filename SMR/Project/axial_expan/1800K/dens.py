@@ -26,7 +26,7 @@ while True:
     L_required = calculate_L(T_required) * L_T273
     if L_required - L_T900 >= delta_L_required:
         break
-    T_required += 1
+    T_required += 1e-7
 
 # Calculate density at T=900 and T=T_required
 rho_T900 = calculate_density(T_T900)
