@@ -26,17 +26,17 @@ while True:
     L_required = calculate_L(T_required) * L_T273
     if L_required - L_T900 >= delta_L_required:
         break
-    T_required += 1e-7
+    T_required += 1e-4
 
 # Calculate density at T=900 and T=T_required
 rho_T900 = calculate_density(T_T900)
 rho_T_required = calculate_density(T_required)
 
 print(f"L(T=273) = {L_T273:.3f}")
-print(f"L(T={T_required:.3f}) = {calculate_L(T_required) * L_T273:.3f}")
-print(f"ΔL (L at T={T_required:.3f} - T=900) = {(calculate_L(T_required) * L_T273) - L_T900}:.3f")
-print(f"rho at T=900: {rho_T900:.3f}")
-print(f"rho at T={T_required}: {rho_T_required:.3f}")
+print(f"L(T={T_required:.3f}) = {(calculate_L(T_required) * L_T273):.3f}")
+print(f"ΔL (L at T={T_required:.3f} - T=900) = {(calculate_L(T_required) * L_T273) - L_T900:.3f}")
+print(f"rho at T=900: {rho_T900 / 1e3:.3f}")
+print(f"rho at T={T_required:.3f}: {rho_T_required / 1e3:.3f}")
 
 '''
 ########################################################################################################################################################
