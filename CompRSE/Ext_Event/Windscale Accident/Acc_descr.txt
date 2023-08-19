@@ -1,0 +1,341 @@
+Can you write a report describing the cause of the accident of Windscale acccident as if I am reporting the accident and obviously dont mention like it is said in the report below that they observed some reactor stuff as they physically visited obviously I didn't do that so for those kind of part just say they were taken from what report of "Report on the accident at Windscale No. 1
+Pile on 10 October 1957*
+William Penney1,6, Basil F J Schonland2,6, J M Kay3,6,
+Jack Diamond4,6 and David E H Peirson5,7
+1 Director, Atomic Weapons Research Establishment, Aldermaston, United Kingdom
+2 Deputy Director, Atomic Energy Research Establishment, Harwell, United Kingdom
+3 Professor of Engineering (Nuclear), Imperial College of Science and Technology,
+London, United Kingdom
+4 Professor of Mechanical Engineering, Manchester University, United Kingdom
+5 Authority Secretary, United Kingdom Atomic Energy Authority, United Kingdom
+6 Member of the Committee of Inquiry
+7 Secretary to the Committee of Inquiry" so write just those part with a \cite{}... I will later fill it in latex.... 
+'Events leading up to the accident:
+ 
+ The accident occurred in the course of a controlled release of stored Wigner energy
+from graphite.
+
+ The first time thatWigner energy was released in theWindscale piles occurred spontaneously
+in September, 1952. As a result of a study of this accident, a procedure was instituted for
+controlling releases of Wigner energy. Over the period to the end of 1956, eight such releases
+were carried out on No. 1 Pile. The general procedure has been to shut down the Pile, to
+arrange the appropriate instrumentation and then to cause the Pile to diverge with no coolant
+air flow, thus raising the graphite and uranium temperatures. By this means, the graphite is
+brought up to a temperature at which Wigner release is started. This has not always
+succeeded in annealing all the graphite in the Pile, e.g. in 1956 one attempt (in April) was
+completely unsuccessful and two others partially successful; that is to say, energy releases
+were recorded from certain regions of the Pile only, and pockets were left un-annealed.
+
+ Originally the procedure was to carry out Wigner releases after 20,000 cumulative
+megawatt days. Later this figure was increased to 30 000 megawatt days. The Windscale
+Works Technical Committee, in September 1957, considered a paper (reference IGRTN/
+W.586) which recommended an increase to 50 000 cumulative megawatt days in
+view of the increasing difficulties of obtaining a successful release. Until more
+experience had been obtained, it was decided that the next release should be at 40,000
+megawatt days. A Wigner release therefore became due in October, 1957.
+
+ A note on the loading of the pile is relevant at this stage. The Pile consists of a structure
+of graphite blocks pierced by horizontal channels on an 8¼″ square lattice pitch. Each
+channel contains a string of uranium fuel elements. For the purposes of charge and
+discharge the channels are arranged in groups of four, access to each group being by way
+of a charge hole in the front shield. In the middle of each of the groups is a channel of
+smaller diameter normally used for the irradiation of isotope cartridges.
+
+ At the material time, the Pile contained natural uranium and slightly enriched (1.28 Co)
+uranium in the fuel cartridges and a considerable variety of isotope cartridges.
+
+ There are vertical channels in the pile used for experiments connected with the civil
+reactor programme. At the time of the accident, all these channels were empty except
+one, which contained a small magnet under test.
+
+ On 7th October at 01.13 the Pile was shut down and the main blowers switched off in the
+preparation for the Wigner release. All necessary steps were taken to verify that the Pile
+was completely shut down. The thermocouples used for the following Wigner releases
+were then checked, and those which were unserviceable were replaced.*
+
+ The shut down fans were switched off and the door in the base of the chimney and the back
+inspection holes on the Pile roof were opened to minimise coolant air flow through the Pile. At
+19.25 the Pile was made to diverge to generate nuclear heat for triggering off Wigner energy.
+
+ The procedure for Wigner release is to concentrate as much flux, and therefore as much
+heat as possible, in the front lower region of the Pile by suitable manipulation of the
+lower coarse control rods, the upper control rods having been disconnected when fully in.
+
+ At 19.25, the pile began to generate nuclear heat and the power level was gradually
+increased so that, by about 01.00 on 8th October, 1.8MW was registering on the Pile
+power meter. (We have established that when the upper horizontal control rods are
+completely inserted, the ionisation chamber measuring pile power is masked. The power
+meter reads low. As, however, the Pile was being controlled on temperature recordings,
+the only effect was to alter the relation between the rod movements and the power
+changes and hence the ‘feel’ of the controls.)
+
+ It should be noted at this point that the operation of a Wigner release is the responsibility
+of the Pile Physicist and his two deputies, by virtue of their specialised knowledge. The
+Pile Control Engineers operate on the instructions of the Pile Physicists during Wigner
+releases. It appears that there is nothing in the nature of a Pile Operating Manual. The
+only written instruction which was produced for our inspection was a minute of 14th
+November, 1955, a copy of which is at appendix C. However, the Pile Manager informed
+us that there was a limit of 250 °C maximum cartridge temperature which, it had been
+laid down, should not be exceeded in the first instance during a Wigner release. This
+temperature was observed in two channels around midnight on 7th October; accordingly,
+control rods were run in again and the Pile was shut down by 04.00.
+
+Most of the graphite temperatures rose in the manner normal in Wigner releases.
+However, according to the Physicist in charge and the Pile Manager, at about 09.00 on
+8th October the general tendency was for the graphite temperatures to be dropping rather
+than riseing, and it seemed probable that unless more nuclear heat was applied, the
+release would stop.
+
+ We have carefully examined the thermocouple records on this point. They do not wholly
+bear out the observation reported in the previous paragraph. Undoubtedly, some of the
+graphite temperatures were falling and there were some in which no Wigner release was
+apparent; but a substantial number of the graphite thermocouple readings showed steady
+increases. We would not therefore endorse the observation that the general tendency was
+for the graphite temperatures to be dropping rather than riseing.
+
+ However, acting on the observation which he had made, the Physicist in charge decided
+to boost the release with more nuclear heating. (It should be noted that second nuclear
+heating had been utilised during three previous Wigner releases. On the first two
+occasions, in 1954 and 1955, it was not utilised until at least 24 hours after the last
+regional burst of temperature, and after all the graphite temperatures had been seen to
+be dropping. In 1956, all graphite thermocouples except one were showing a fall.)
+
+ The bottom rods were withdrawn and the Pile made divergent at 11.05 with the object of
+raising the maximum uranium temperature, which at that time was 300 °C to 350 °C. The
+uranium thermocouple readings show a sharp temperature increase when the Pile
+diverged for the second time. The highest uranium temperature recorded was in channel
+25/27; the thermocouple reading for this channel rose by 80 °C to 380 °C in a matter of
+15 minutes, with a maximum rate of rise of about 30 °C a minute. The thermocouple
+reading was reduced to 334 °C within 10 minutes by adjustment of the control rods.
+Nuclear heating was maintained at a lower level until 17.00, and during this period the
+highest uranium thermocouple readings rose to about 345 °C. At 17.00 the nuclear
+heating was terminated.
+
+ (It should be noted that the positions of the uranium thermocouples correspond to the
+readings of maximum temperature during normal operation, but that these are not the
+positions of maximum uranium temperature during a Wigner release.)
+
+ During Wednesday, 9th October, the uranium temperatures as recorded show a
+maximum of 360 °C, while at 22.00 the highest value recorded was 340 °C. The graphite
+temperatures showed considerable variation, but the general tendency was for the
+temperatures to increase following the second nuclear heating. One graphite temperature
+in particular, in channel 20/53, which had shown a reading of about 255 °C at the time
+when the second nuclear heating was applied, continued to rise steadily, until by 22.00 it
+had reached a temperature of 405 °C.
+
+ The high temperature being recorded in channel 20/53 caused the Pile Physicist, at
+21.00, to shut the chimney base and the inspection holes to allow the chimney draught to
+induce some flow of air from the Pile and thus cool it. The effects were not considered
+big enough and at 22.15 the fan dampers were opened to give a positive air flow through
+the reactor. The dampers were open for 15 minutes on this occasion. They were opened
+again for 10 minutes at 00.01 on 10th October, for 13 minutes at 02.15 and for
+30 minutes at 05.10. This had a cooling effect on all graphite temperatures except 20/53,
+where the temperature rise was merely arrested.
+
+The records from the pile stack activity meter show no special features during the early
+stages of the operation. There was an almost imperceptible increase in activity before
+and during the period of the first three damper openings. At 05.40, at the end of the
+fourth damper opening, there was a sharp increase of six curies. This was noted by the
+Physicist who was then on duty, but no special action was taken because he regarded it
+as the normal consequence of the first movement of air through the pile and up the
+stack. This increase was followed by a steady drop in the curve for about two and a half
+hours after which time stack activity rose steadily to a figure of 30 curies at 16.30 on
+10th October.
+
+ The outlet duct air temperature remained stationary at about 40 °C until 07.00 on 9th
+October, but rose steadily thereafter. With peaks occasioned by the successive damper
+openings, it had reached 85 °C by 08.00 on 10th October.
+
+ The graphite temperature in channel 20/53 continued to rise after temporary reductions
+during the periods of damper opening, until at 12.00 on 10th October a temperature of
+428 °C was recorded. The dampers were again opened for 15 minutes at 12.10 and for
+5 minutes at 13.40. During these openings, the second and very large increase in stack
+activity, which has already been mentioned, was noted. At about the same time, a high
+activity reading on the Meteorological Station roof was reported.
+
+ These effects suggested to the operating staff the existence of one or more burst
+cartridges. At 13.45, the shut down fans were switched on as a preliminary move in an
+attempt either to use the scanning gear to detect any burst cartridges or alternatively to
+blow the Pile cool. At 14.30, the turbo-exhauster was switched on in order to scan for the
+burst slug. It was then found that the scanning gear was jammed and could not be moved.
+The Pile Manager informed us that at the end of previous Wigner releases the scanning
+gear could not be moved, presumably because of over-heating. On the present occasion it
+was immovable despite the fact that the Maintenance Section had worked on it the
+previous day (9th October) and had moved it.
+
+ Being unable to operate the scanning gear, recourse was had to the MX 119 to sample the
+air coming from the Pile for particulate activity. This showed a large positive reading.
+
+ At this stage, the Works General Manager was informed by the Pile Manager that there
+appeared to have been a bad burst, and he instructed that the affected channel should be
+identified and discharged as soon as possible.
+
+ Since the scanning gear could not be used, it was decided to remove the charge plug and
+inspect the uranium channel showing the highest readings.
+
+ Certain steps had to be taken before entry could be effected to the charge hoist. An air
+count had to be taken to ensure that there would be safe working conditions and the
+operatives themselves had to have a full change into protective clothing. When access
+had been secured to the charge hoist, a further delay of a few minutes ensued because of
+incorrect labelling of a thermocouple. The temperature of fuel channel 21/53 had been
+recording very rapid increases until at 16.30 it was in the neighbourhood of 450 °C. At
+this time, the plug covering this group of four channels was pulled out and the metal was
+seen to be glowing; the graphite appeared to have its normal colour. No sign of
+abnormality was observed in the isotope channels, but no positive conclusion can be
+drawn from this because the annular gap is much less in the isotope channels than in the
+uranium channels.
+
+Cause of the accident:
+
+ We have come to the conclusion that the primary cause of the accident was the second
+nuclear heating.
+
+ This was carried out between 11.05 and 17.00 on Tuesday, 8th October, when parts of
+the pile were still rising in temperature. Having regard to the high temperatures already
+existing in parts of the pile at this time, the second nuclear heating was too soon and too
+rapidly applied.
+
+ The rate of heating for a short period from 11.20 to 11.35 was particularly severe and
+caused a maximum rate of rise of the observed uranium temperatures of approximately
+10 °C per minute.
+
+ The second nuclear heating led to the accident through a chain of events, and here we
+must put the possible consequences in order of probability. In our opinion, by far
+the most likely possibility is that the rapid rise of temperature of the fuel elements due to
+the second nuclear heating caused the failure of one or more of the fuel element cans. The
+exposed uranium oxidised and gave further release of heat, which, together with the
+rising temperatures occasioned by later Wigner releases, initiated the fire.
+
+ A second possibility, which we cannot entirely reject, is that a Lithium-Magnesium
+cartridge failed because the second nuclear heating triggered off pockets of Wigner
+energy at a time when the general level of temperatures through the pile was high. The
+oxidation of the Lithium-Magnesium could have added further heat and initiated the fire.
+
+ Once a cartridge had failed, whether it were Uranium or Lithium-Magnesium, the
+burning of the graphite would make some addition to the heat being released and would
+make its contribution to the development of the fire.
+
+ We have studied and rejected the possibility that the source of the fire was an isotope
+cartridge other than the Lithium-Magnesium type mentioned above. We have ascertained
+that the residual heating due to radioactive decay and gamma ray absorption is
+insignificant, and at most amounts to 3 °C.
+
+ We consider that the evidence points to the initiation of the fire being the result of the
+failure of the can of a fuel element giving rise to oxidation. We also consider that the
+origin lay in the region of the Pile just below the middle plane and towards the front.
+
+ The picture we have formed of this phase of the incident is as follows.
+
+ The uranium thermocouples were installed in all cases in cartridges about 16 feet from
+the front face of the Pile, where the maximum temperatures occur under normal operating
+conditions. Since 1954, these thermocouples have been used to control the progress
+of the nuclear heating for Wigner release.
+
+ The uranium thermocouple readings were lower than the maximum uranium
+temperatures elsewhere in the channels for two reasons. Firstly, the control rod positions
+were arranged to concentrate the nuclear heating in the front lower part of the Pile and we
+have examined a calculation which indicates that the peak neutron flux under these
+conditions was some 3 feet nearer the front face of the Pile than under normal operating
+conditions.
+
+ Secondly, every effort was made to minimise air flow through the channels to assist the
+nuclear heating in initiating the Wigner release; the position of the maximum uranium
+temperature thus corresponds to the position of peak neutron flux.
+
+ The combined effect of the distortion of neutron flux together with the transfer of the
+point of maximum temperature to coincide with the point of maximum flux resulted in
+the position of maximum uranium temperature occurring some seven feet nearer the front
+face of the Pile than the thermocouple positions. We estimate that the maximum
+temperature rise of the uranium could be 40% greater than the recorded temperature rise
+during nuclear heating.
+
+ The second nuclear heating was applied at 11.05 on 8th October, when the majority of
+the graphite temperatures and all the uranium temperatures in the channels in the affected
+region were rising, and when the maximum recorded uranium temperature in channel
+25/57 was 300 °C. The rate at which nuclear heating was applied was unusually rapid
+and led to a recorded rate of uranium temperature rise of about 10 °C/minute to a
+maximum value of 380 °C at a point 16 feet from the Pile face. The normal practice in
+pile operation is to limit such rises to 2 °C/minute.
+
+ We calculated that at that point of peak neutron flux, where a graphite temperature in the
+vicinity was measured as 315 °C, the uranium temperature could initially have been at
+340 °C. The maximum uranium temperature after the sudden nuclear heating could thus
+have been as much as 450 °C for some minutes.
+
+ That this treatment probably led to the immediate bursting of one or more uranium
+cartridges is deduced from the following.
+
+ Some of the Mark X fuel cartridges in the affected region had received an average of 287
+MWD/tonne. Evidence was given to us that under normal operating conditions in the
+Windscale piles, bursts of this type of cartridge occur very infrequently at doses below
+280 MWD/tonne, but that at higher dose rates bursts become increasingly frequent. With
+Mark X cartridges, the incidence of bursts has been mainly in the front end of the Pile,
+and many of these bursts have been caused by growth of the uranium rod causing a crack
+in the shoulder at the cartridge end.
+
+ We consider that in this way some cartridge bursts could have been produced during the
+early part of the second nuclear heating by the rapid differential growth of the uranium
+relative to the aluminium. The ends would have been pushed off cartridges which had
+already had a dosage which brought them into the state of increasing susceptibility
+to bursting.
+
+ Under these conditions, slow oxidation of the exposed uranium metal would occur.
+Laboratory tests have shown that complete oxidation of a uranium cartridge is possible
+within a period of 24 hours if the cartridge is held at a temperature of 400 °C inside a
+furnace. With sound undamaged cartridges the number of failures at this temperature
+would be extremely small, but with burst cartridges oxidation would be inevitable at
+400 °C and would accelerate rapidly at higher temperatures.
+
+ It may be noted that the total heat of combustion of the uranium in a complete channel
+comprising 17 Mark X cartridges and 4 Mark VI cartridges amounts to the very large
+figure of 50 000 kilogram calories. Once the assumption is made that a single uranium
+cartridge is ignited, there is no difficulty in visualising several probable routes by which
+final conflagration can be reached. It is to be expected that slow combustion
+continued during the period of stagnant air conditions until 22.15 on 9th October, when
+the shut down air dampers were first opened to admit air to the pile.
+
+ The rate at which air will begin to circulate through a pile on first closing the chimney
+base and opening air dampers on the inlet side will inevitably be slow. This is due to the
+fact that the air in the pile will be stagnant, the chimney will be cold, and there will be
+little pressure difference available to draw air through the core. The first three periods
+during which the dampers were opened were too short to permit any steady current of air
+to be established through the pile. For this reason the fission product activity released
+from the oxidising fuel elements was not carried to the top of the stack. But on the fourth
+opening of the dampers (at 05.10 on Thursday, 10th October), lasting for 30 minutes, a
+sufficient flow of air was established through the pile to carry a cloud of gaseous fission
+products and also some particulate activity up to the filter at the top of the chimney. At
+05.40, a sharp increase was recorded on the pile stack activity meter.
+
+ During this period, the intermittent supply of air to the pile caused an accelerated rate of
+oxidation of the smouldering uranium fuel elements in the affected zone. Slow
+combustion of uranium continued during the morning of Thursday, 10th October with
+locally rising graphite temperature. Switching on the shut-down fans at 13.45 had the
+effect of rapidly increasing the rate of combustion in the affected channels. By
+approximately 15.00, a serious fire was raging in the neighbourhood of the 20/53 group
+of channels.
+
+ The evidence which we obtained on the Lithium-Magnesium cartridges can be
+summarised as follows.
+
+ Of the various marks of can present, the most likely to have given trouble was the Mark
+III, which has a single can holding the alloy in the form of a rod. Laboratory tests have
+shown that above 427 °C, penetration of the can is possible as a result of the formation of
+a eutectic alloy. At 440 °C, all cartridges tested failed within 34 hours; at 450 °C, all
+failed in a few hours and some caught fire.
+
+ There is evidence from an analysis of particulate matter caught before 15.30 on October
+10th by a cyclone filter at the top of the stack that some lithium and magnesium had burnt
+by then. However, no temperature as high as 400 °C was recorded in the graphite
+structure until 17.00 on Wednesday, 9th, and then only momentarily and in one graphite
+channel (21/48). For this reason, we consider it unlikely that the lithium-magnesium
+cartridges were the immediate cause of the fire.
+
+ For a portion of a graphite block to have been ignited at an early stage would also have
+required temperatures of 450 °C. The possibility of a local large release of Wigner energy
+in a pocket of graphite which had escaped previous annealing has been considered by
+us in the light of both thermocouple readings, laboratory data and general information.
+The available data indicate that the oxidation rate of graphite is very slow indeed at
+temperatures below 400 °C, and since we can find no evidence for the likelihood of
+serious ‘pocket’ releases or of temperatures in excess of 400 °C, we do not accept this as
+an explanation of the accident.'
+
